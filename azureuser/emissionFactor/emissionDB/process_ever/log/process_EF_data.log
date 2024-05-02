@@ -1,0 +1,21 @@
+2024-04-09 15:19:15.414395 connection.mysql_connection [INFO] =================================================
+2024-04-09 15:19:15.416215 connection.mysql_connection [INFO] our db_config:
+2024-04-09 15:19:15.417302 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-09 15:19:15.418064 connection.mysql_connection [INFO] port: 3306
+2024-04-09 15:19:15.419094 connection.mysql_connection [INFO] user: eco
+2024-04-09 15:19:15.420203 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-09 15:19:15.421177 connection.mysql_connection [INFO] autocommit: True
+2024-04-09 15:19:15.421990 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-09 15:19:15.422640 connection.mysql_connection [INFO] =================================================
+2024-04-09 15:19:19.431315 root [DEBUG] {'Units': 'kg', 'name': 'Palm kernel shell (CO2only)', 'CH4(kgCH4/unit)': 'NULL', 'CO2(kgCO2/unit)': '1.85E+00', 'N2O(kgN2O/unit)': 'NULL L', 'Total(kgCO2eq/unit)': '1.8530', 'source': 'IPCC Vol.2 table 2.2, DEDE'}
+2024-04-09 15:19:19.433436 root [ERROR] Failed Replace (1265, "Data truncated for column 'N2O' at row 1")
+2024-04-09 15:19:19.610921 root [ERROR] REPLACE INTO mgmtCarbon.EF2(EFId, name, CO2, CH4, N2O, unit, year,CO2Unit, CH4Unit, N2OUnit, sourceId, everTable, everId) VALUES ('TH00032', 'Palm kernel shell (CO2only)', '1.85E+00', NULL, 'NULL L', 'kg', 2022, 'kgCO₂', 'kgCH₄', 'kgN₂O', 11, 'EF_data', '20 - Scope1_2')
+2024-04-09 15:19:20.521363 root [DEBUG] {'Units': 'kg', 'name': 'Compressed Natural Gas', 'CH4(kgCH4/unit)': '3.49E-03', 'CO2(kgCO2/unit)': '2.13E+00', 'N2O(kgN2O/unit)': '1.14E E-04', 'Total(kgCO2eq/unit)': '2.2609', 'source': 'IPCC Vol.2 table 3.2.1, 3.2.2, PTT'}
+2024-04-09 15:19:20.523216 root [ERROR] Failed Replace (1265, "Data truncated for column 'N2O' at row 1")
+2024-04-09 15:19:20.691589 root [ERROR] REPLACE INTO mgmtCarbon.EF2(EFId, name, CO2, CH4, N2O, unit, year,CO2Unit, CH4Unit, N2OUnit, sourceId, everTable, everId) VALUES ('TH00040', 'Compressed Natural Gas', '2.13E+00', '3.49E-03', '1.14E E-04', 'kg', 2022, 'kgCO₂', 'kgCH₄', 'kgN₂O', 11, 'EF_data', '27 - Scope1_2')
+2024-04-09 15:19:21.039382 root [DEBUG] {'Units': 'litre', 'name': 'Liquified Petroleum Gas', 'CH4(kgCH4/unit)': '1.65E-03', 'CO2(kgCO2/unit)': '1.68E+00', 'N2O(kgN2O/unit)': '5 5.32E-06', 'Total(kgCO2eq/unit)': '1.7306', 'source': 'IPCC Vol.2 table 3.2.1, 3.2.2, DEDE'}
+2024-04-09 15:19:21.041316 root [ERROR] Failed Replace (1265, "Data truncated for column 'N2O' at row 1")
+2024-04-09 15:19:21.212833 root [ERROR] REPLACE INTO mgmtCarbon.EF2(EFId, name, CO2, CH4, N2O, unit, year,CO2Unit, CH4Unit, N2OUnit, sourceId, everTable, everId) VALUES ('TH00042', 'Liquified Petroleum Gas', '1.68E+00', '1.65E-03', '5 5.32E-06', 'litre', 2022, 'kgCO₂', 'kgCH₄', 'kgN₂O', 11, 'EF_data', '28 - Scope1_2')
+2024-04-09 15:19:21.580053 root [DEBUG] {'Units': 'kg', 'name': 'Liquified Petroleum Gas', 'CH4(kgCH4/unit)': '3.06E-03', 'CO2(kgCO2/unit)': '3.11E+00', 'N2O(kgN2O/unit)': '9.86 6E-06', 'Total(kgCO2eq/unit)': '3.2049', 'source': 'IPCC Vol.2 table 3.2.1, 3.2.2, DEDE LPG 1 litre = 0.54 kg'}
+2024-04-09 15:19:21.583299 root [ERROR] Failed Replace (1265, "Data truncated for column 'N2O' at row 1")
+2024-04-09 15:19:21.751107 root [ERROR] REPLACE INTO mgmtCarbon.EF2(EFId, name, CO2, CH4, N2O, unit, year,CO2Unit, CH4Unit, N2OUnit, sourceId, everTable, everId) VALUES ('TH00044', 'Liquified Petroleum Gas', '3.11E+00', '3.06E-03', '9.86 6E-06', 'kg', 2022, 'kgCO₂', 'kgCH₄', 'kgN₂O', 11, 'EF_data', '29 - Scope1_2')

@@ -1,0 +1,1284 @@
+2024-04-15 14:02:01.198468 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-15 14:02:01.301773 connection.mysql_connection [INFO] =================================================
+2024-04-15 14:02:01.302576 connection.mysql_connection [INFO] our db_config:
+2024-04-15 14:02:01.303295 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-15 14:02:01.303905 connection.mysql_connection [INFO] port: 3306
+2024-04-15 14:02:01.304418 connection.mysql_connection [INFO] user: eco
+2024-04-15 14:02:01.304921 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-15 14:02:01.305234 connection.mysql_connection [INFO] autocommit: True
+2024-04-15 14:02:01.305634 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-15 14:02:01.305934 connection.mysql_connection [INFO] =================================================
+2024-04-15 14:02:02.190864 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (1, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '646f06d02ed6c48f4414795f')
+            
+2024-04-15 14:02:02.237546 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (2, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ed9c392c0281e83bea81e')
+            
+2024-04-15 14:02:02.284901 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (3, 'Fuel Type', '1', 'Other Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631edcb792c0281e83bea81f')
+            
+2024-04-15 14:02:02.329305 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (4, 'Fuel Type', '1', 'Biomass Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631eddc692c0281e83bea820')
+            
+2024-04-15 14:02:02.376300 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (5, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee04492c0281e83bea821')
+            
+2024-04-15 14:02:02.424056 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (6, 'Fuel Type', '1', 'Other Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee50892c0281e83bea823')
+            
+2024-04-15 14:02:02.468165 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (7, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee4d092c0281e83bea822')
+            
+2024-04-15 14:02:02.512704 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (8, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee85792c0281e83bea824')
+            
+2024-04-15 14:02:02.560565 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (9, 'Fuel Type', '1', 'Biomass Fuels - Liquid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee9cc92c0281e83bea825')
+            
+2024-04-15 14:02:02.606527 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (10, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee9cc92c0281e83bea826')
+            
+2024-04-15 14:02:02.653313 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (11, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755852')
+            
+2024-04-15 14:02:02.698367 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (12, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755853')
+            
+2024-04-15 14:02:02.744041 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (13, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755854')
+            
+2024-04-15 14:02:02.790556 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (14, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755855')
+            
+2024-04-15 14:02:02.836382 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (15, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755856')
+            
+2024-04-15 14:02:02.881556 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (16, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '647035bfaf8fe17f40237b7b')
+            
+2024-04-15 14:02:02.930650 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (17, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428324a38ff33ba85477f')
+            
+2024-04-15 14:02:02.975263 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (18, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428594a38ff33ba854781')
+            
+2024-04-15 14:02:03.032218 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (19, 'Fuel Type', '1', 'Biomass', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474285f4a38ff33ba854782')
+            
+2024-04-15 14:02:03.091957 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (20, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428674a38ff33ba854783')
+            
+2024-04-15 14:02:03.134815 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (21, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474286f4a38ff33ba854784')
+            
+2024-04-15 14:02:03.179736 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (22, 'Fuel Type', '1', 'Solid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428764a38ff33ba854785')
+            
+2024-04-15 14:02:03.225412 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (23, 'Fuel Type', '3', 'Anaerobically Digested (Dry Digestate with Curing)', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745421a3f326c8c2a5dd64')
+            
+2024-04-15 14:02:03.277252 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (24, 'Fuel Type', '3', 'Anaerobically Digested (Wet Digestate with Curing)', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745425a3f326c8c2a5dd65')
+            
+2024-04-15 14:02:03.322503 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (25, 'Fuel Type', '3', 'Combustion', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474542aa3f326c8c2a5dd66')
+            
+2024-04-15 14:02:03.376202 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (26, 'Fuel Type', '3', 'Compost', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474542ea3f326c8c2a5dd67')
+            
+2024-04-15 14:02:03.426636 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (27, 'Fuel Type', '3', 'Landfill', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745433a3f326c8c2a5dd68')
+            
+2024-04-15 14:02:03.471898 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (28, 'Fuel Type', '3', 'Recycled', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745438a3f326c8c2a5dd69')
+            
+2024-04-15 14:02:03.516047 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (29, 'Fuel Type', '3', 'Recycled', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455b9a3f326c8c2a5dd6a')
+            
+2024-04-15 14:02:03.626045 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (30, 'Fuel Type', '3', 'Landfill', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455bea3f326c8c2a5dd6b')
+            
+2024-04-15 14:02:03.674059 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (31, 'Fuel Type', '3', 'Compost', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455c3a3f326c8c2a5dd6c')
+            
+2024-04-15 14:02:03.718942 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (32, 'Fuel Type', '3', 'Combustion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455c8a3f326c8c2a5dd6d')
+            
+2024-04-15 14:02:03.765819 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (33, 'Fuel Type', '3', 'Anaerobically Digested (Wet Digestate with Curing)', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455d0a3f326c8c2a5dd6e')
+            
+2024-04-15 14:02:03.811128 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (34, 'Fuel Type', '3', 'Anaerobically Digested (Dry Digestate with Curing)', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455d7a3f326c8c2a5dd6f')
+            
+2024-04-15 14:02:03.854963 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (35, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6474596049261bb379615e63')
+            
+2024-04-15 14:02:03.903922 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (36, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64759f570af59419c99f98ef')
+            
+2024-04-15 14:02:03.946332 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (37, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae300af59419c99f98f0')
+            
+2024-04-15 14:02:03.994097 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (38, 'Fuel Type', '1', 'Other Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae3d0af59419c99f98f1')
+            
+2024-04-15 14:02:04.038057 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (39, 'Fuel Type', '1', 'Other Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae470af59419c99f98f2')
+            
+2024-04-15 14:02:04.084123 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (40, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae4f0af59419c99f98f3')
+            
+2024-04-15 14:02:04.128420 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (41, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae580af59419c99f98f4')
+            
+2024-04-15 14:02:04.170656 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (42, 'Fuel Type', '1', 'Biomass Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae630af59419c99f98f5')
+            
+2024-04-15 14:02:04.214501 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (43, 'Fuel Type', '1', 'Biomass Fuels - Liquid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae6c0af59419c99f98f6')
+            
+2024-04-15 14:02:04.259113 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (44, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae740af59419c99f98f7')
+            
+2024-04-15 14:02:04.301659 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (45, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cb663f9fd74db8e648df')
+            
+2024-04-15 14:02:04.344628 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (46, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cbc83f9fd74db8e648e0')
+            
+2024-04-15 14:02:04.387766 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (47, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cbdc3f9fd74db8e648e1')
+            
+2024-04-15 14:02:04.431094 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (48, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cc243f9fd74db8e648e2')
+            
+2024-04-15 14:02:04.472675 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (49, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cc2d3f9fd74db8e648e3')
+            
+2024-04-15 14:02:04.514372 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (50, 'Fuel Type', '3', 'Anaerobic digestion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7827c507c864a5645a4')
+            
+2024-04-15 14:02:04.557229 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (51, 'Fuel Type', '3', 'Closed-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7a87c507c864a5645a5')
+            
+2024-04-15 14:02:04.601396 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (52, 'Fuel Type', '3', 'Combustion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7be7c507c864a5645a6')
+            
+2024-04-15 14:02:04.643280 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (53, 'Fuel Type', '3', 'Compost', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7de7c507c864a5645a7')
+            
+2024-04-15 14:02:04.686282 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (54, 'Fuel Type', '3', 'Landfill', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7f27c507c864a5645a8')
+            
+2024-04-15 14:02:04.731305 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (55, 'Fuel Type', '3', 'Open-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c8027c507c864a5645a9')
+            
+2024-04-15 14:02:04.774344 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (56, 'Purchased Goods', '3', 'Closed-loop source', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476ccc44de3cb3a80acd3fd')
+            
+2024-04-15 14:02:04.816512 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (57, 'Purchased Goods', '3', 'Primary material production', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476ccc84de3cb3a80acd3fe')
+            
+2024-04-15 14:02:04.859196 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (58, 'Purchased Goods', '3', 'Re-used', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476cccd4de3cb3a80acd3ff')
+            
+2024-04-15 14:02:04.901606 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (59, 'Use of Assets (through leased equipment) by an Organization', '3', 'Vehicle', '4.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64796deb2fad9b17410b2eb2')
+            
+2024-04-15 14:02:04.941509 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (60, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '647d6257b1c6eb3718c8a7a9')
+            
+2024-04-15 14:02:04.983322 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (61, 'Fuel Type', '3', 'Homeworking', '6.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647d9566d650a91f29bf0e66')
+            
+2024-04-15 14:02:05.027361 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (62, 'Mobile Combustion', '1', 'Distance Activity', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647d9b94a6222805ac455385')
+            
+2024-04-15 14:02:05.072302 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (63, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647eadf1bed6d97c073ae590')
+            
+2024-04-15 14:02:05.114345 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (64, 'Mobile Combustion', '1', 'Distance Activity', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647eae2ebed6d97c073ae591')
+            
+2024-04-15 14:02:05.157333 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (65, 'Fuel Type', '1', 'Oil products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6486f1427c3e764b3416c154')
+            
+2024-04-15 14:02:05.199679 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (66, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Supply Chain Emission Factors without Margins', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a0')
+            
+2024-04-15 14:02:05.241764 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (67, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Margins of Supply Chain Emission Factors', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a1')
+            
+2024-04-15 14:02:05.285601 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (68, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Supply Chain Emission Factors with Margins', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a2')
+            
+2024-04-15 14:02:05.329706 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (69, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '648aeeb5691928514b3ed8b3')
+            
+2024-04-15 14:02:05.374406 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (70, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6492c50940212a145edcc551')
+            
+2024-04-15 14:02:05.419776 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (71, 'Fuel Type', '1', 'Enteric Fermentation', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1642')
+            
+2024-04-15 14:02:05.468396 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (72, 'Fuel Type', '1', 'Manure Management', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1643')
+            
+2024-04-15 14:02:05.525092 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (73, 'Fuel Type', '1', 'Forest land', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1644')
+            
+2024-04-15 14:02:05.568319 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (74, 'Fuel Type', '1', 'Cropland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1645')
+            
+2024-04-15 14:02:05.609444 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (75, 'Fuel Type', '1', 'Land Converted to Cropland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1646')
+            
+2024-04-15 14:02:05.652361 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (76, 'Fuel Type', '1', 'Land Converted to Grassland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1647')
+            
+2024-04-15 14:02:05.693685 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (77, 'Fuel Type', '1', 'Wetlands', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1648')
+            
+2024-04-15 14:02:05.736194 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (78, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64ab898be0b872f6ad0811aa')
+            
+2024-04-15 14:02:05.779573 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (79, 'Fuel Type', '3', 'Scheduled Waste', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8998e0b872f6ad0811ac')
+            
+2024-04-15 14:02:05.821774 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (80, 'Fuel Type', '3', 'Recycled', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8998e0b872f6ad0811ad')
+            
+2024-04-15 14:02:05.862303 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (81, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89a3e0b872f6ad0811af')
+            
+2024-04-15 14:02:05.904347 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (82, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64ab89aee0b872f6ad0811b1')
+            
+2024-04-15 14:02:05.945369 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (83, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '64ab89bae0b872f6ad0811b3')
+            
+2024-04-15 14:02:05.990207 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (84, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b5')
+            
+2024-04-15 14:02:06.031359 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (85, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b6')
+            
+2024-04-15 14:02:06.073317 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (86, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b7')
+            
+2024-04-15 14:02:06.140454 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (87, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b8')
+            
+2024-04-15 14:02:06.193433 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (88, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b9')
+            
+2024-04-15 14:02:06.239697 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (89, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811ba')
+            
+2024-04-15 14:02:06.284831 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (90, 'Fuel Type', '3', 'City Supply', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bc')
+            
+2024-04-15 14:02:06.327311 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (91, 'Fuel Type', '3', 'Physical Treatment Process', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bd')
+            
+2024-04-15 14:02:06.374253 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (92, 'Fuel Type', '3', 'Scheduled Waste', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811be')
+            
+2024-04-15 14:02:06.415360 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (93, 'Fuel Type', '3', 'Recycled', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bf')
+            
+2024-04-15 14:02:06.456740 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (94, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64dc8162d78b64c3eb30bd6a')
+            
+2024-04-15 14:02:06.508287 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (95, 'Mobile Combustion', '1', 'Fuel oil', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64d606e3e5d2d1ecc1b09871')
+            
+2024-04-15 14:02:06.557573 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (96, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da5bb162190603e5fff6')
+            
+2024-04-15 14:02:06.604491 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (97, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da51b162190603e5fff5')
+            
+2024-04-15 14:02:06.650571 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (98, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da49b162190603e5fff4')
+            
+2024-04-15 14:02:06.699691 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (99, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '64dc8195d78b64c3eb30bd6b')
+            
+2024-04-15 14:02:06.745592 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (100, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da44b162190603e5fff3')
+            
+2024-04-15 14:02:06.792371 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (101, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64464130fbe1b86e2f17046b')
+            
+2024-04-15 14:02:07.051182 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (102, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542fd')
+            
+2024-04-15 14:02:07.096208 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (103, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542fe')
+            
+2024-04-15 14:02:07.141412 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (104, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542ff')
+            
+2024-04-15 14:02:07.184470 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (105, 'Fuel Type', '1', 'Fire tank', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54300')
+            
+2024-04-15 14:02:07.228686 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (106, 'Fuel Type', '1', 'Chemical', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54301')
+            
+2024-04-15 14:02:07.276617 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (107, 'Fuel Type', '1', 'Bathrooms', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54302')
+            
+2024-04-15 14:02:07.319570 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (108, 'Fuel Type', '1', 'Waste Water', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54303')
+            
+2024-04-15 14:02:07.369201 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (109, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6539e8614b15539fa3f54304')
+            
+2024-04-15 14:02:07.414227 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (110, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54305')
+            
+2024-04-15 14:02:07.456413 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (111, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54306')
+            
+2024-04-15 14:02:07.497482 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (112, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54307')
+            
+2024-04-15 14:02:07.538703 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (113, 'Purchased Goods', '3', 'Raw Materials', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6539e8614b15539fa3f54308')
+            
+2024-04-15 14:02:07.587807 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (114, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '648980c3f1c8d3dbd8d0a1a8')
+            
+2024-04-15 14:02:07.629348 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (115, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d45e3f4c7cb4228b322')
+            
+2024-04-15 14:02:07.671382 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (116, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d4fe3f4c7cb4228b323')
+            
+2024-04-15 14:02:07.748864 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (117, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '65791d57e3f4c7cb4228b324')
+            
+2024-04-15 14:02:07.793625 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (118, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d68e3f4c7cb4228b325')
+            
+2024-04-15 14:02:07.835141 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (119, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791defe3f4c7cb4228b326')
+            
+2024-04-15 14:02:07.880997 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (120, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791e30e3f4c7cb4228b327')
+            
+2024-04-15 14:02:07.935480 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (121, 'Purchased Goods', '3', 'Water', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6581461eb653067119aa18ba')
+            
+2024-04-15 14:02:07.978630 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (122, 'Coal and Coke ', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b6')
+            
+2024-04-15 14:02:08.024678 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (123, 'Other fuel', '1', 'Other fuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b7')
+            
+2024-04-15 14:02:08.085575 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (124, 'Fuel oil', '1', 'Fuel oil', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b8')
+            
+2024-04-15 14:02:08.132532 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (125, 'Fuel gas', '1', 'Fuel gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b9')
+            
+2024-04-15 14:02:08.182478 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (126, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '659b741b43f11a2f3fc1d386')
+            
+2024-04-15 14:02:08.228127 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (127, 'Fuel Type', '3', 'Water', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65b7599147f83f5271928880')
+            
+2024-04-15 14:02:08.269416 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (128, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '65d7036874ebed296cb84cc7')
+            
+2024-04-15 14:02:08.315787 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (129, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65d709582a04b7e411ca0dd6')
+            
+2024-04-15 14:02:52.339161 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-15 14:02:52.436300 connection.mysql_connection [INFO] =================================================
+2024-04-15 14:02:52.436924 connection.mysql_connection [INFO] our db_config:
+2024-04-15 14:02:52.437324 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-15 14:02:52.437778 connection.mysql_connection [INFO] port: 3306
+2024-04-15 14:02:52.438115 connection.mysql_connection [INFO] user: eco
+2024-04-15 14:02:52.438551 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-15 14:02:52.438841 connection.mysql_connection [INFO] autocommit: True
+2024-04-15 14:02:52.439233 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-15 14:02:52.439684 connection.mysql_connection [INFO] =================================================
+2024-04-15 14:02:53.434032 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (1, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '646f06d02ed6c48f4414795f')
+            
+2024-04-15 14:02:53.479366 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (2, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ed9c392c0281e83bea81e')
+            
+2024-04-15 14:02:53.523680 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (3, 'Fuel Type', '1', 'Other Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631edcb792c0281e83bea81f')
+            
+2024-04-15 14:02:53.569026 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (4, 'Fuel Type', '1', 'Biomass Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631eddc692c0281e83bea820')
+            
+2024-04-15 14:02:53.613830 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (5, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee04492c0281e83bea821')
+            
+2024-04-15 14:02:53.660227 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (6, 'Fuel Type', '1', 'Other Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee50892c0281e83bea823')
+            
+2024-04-15 14:02:53.713423 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (7, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee4d092c0281e83bea822')
+            
+2024-04-15 14:02:53.760116 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (8, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee85792c0281e83bea824')
+            
+2024-04-15 14:02:53.805763 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (9, 'Fuel Type', '1', 'Biomass Fuels - Liquid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee9cc92c0281e83bea825')
+            
+2024-04-15 14:02:53.849384 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (10, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee9cc92c0281e83bea826')
+            
+2024-04-15 14:02:53.895656 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (11, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755852')
+            
+2024-04-15 14:02:53.940815 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (12, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755853')
+            
+2024-04-15 14:02:53.984821 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (13, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755854')
+            
+2024-04-15 14:02:54.031121 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (14, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755855')
+            
+2024-04-15 14:02:54.076091 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (15, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755856')
+            
+2024-04-15 14:02:54.121448 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (16, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '647035bfaf8fe17f40237b7b')
+            
+2024-04-15 14:02:54.169483 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (17, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428324a38ff33ba85477f')
+            
+2024-04-15 14:02:54.215443 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (18, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428594a38ff33ba854781')
+            
+2024-04-15 14:02:54.259467 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (19, 'Fuel Type', '1', 'Biomass', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474285f4a38ff33ba854782')
+            
+2024-04-15 14:02:54.304352 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (20, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428674a38ff33ba854783')
+            
+2024-04-15 14:02:54.364021 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (21, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474286f4a38ff33ba854784')
+            
+2024-04-15 14:02:54.408854 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (22, 'Fuel Type', '1', 'Solid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428764a38ff33ba854785')
+            
+2024-04-15 14:02:54.456208 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (23, 'Fuel Type', '3', 'Anaerobically Digested (Dry Digestate with Curing)', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745421a3f326c8c2a5dd64')
+            
+2024-04-15 14:02:54.506820 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (24, 'Fuel Type', '3', 'Anaerobically Digested (Wet Digestate with Curing)', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745425a3f326c8c2a5dd65')
+            
+2024-04-15 14:02:54.554807 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (25, 'Fuel Type', '3', 'Combustion', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474542aa3f326c8c2a5dd66')
+            
+2024-04-15 14:02:54.601094 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (26, 'Fuel Type', '3', 'Compost', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474542ea3f326c8c2a5dd67')
+            
+2024-04-15 14:02:54.645753 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (27, 'Fuel Type', '3', 'Landfill', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745433a3f326c8c2a5dd68')
+            
+2024-04-15 14:02:54.689318 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (28, 'Fuel Type', '3', 'Recycled', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745438a3f326c8c2a5dd69')
+            
+2024-04-15 14:02:54.732387 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (29, 'Fuel Type', '3', 'Recycled', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455b9a3f326c8c2a5dd6a')
+            
+2024-04-15 14:02:54.776610 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (30, 'Fuel Type', '3', 'Landfill', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455bea3f326c8c2a5dd6b')
+            
+2024-04-15 14:02:54.820115 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (31, 'Fuel Type', '3', 'Compost', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455c3a3f326c8c2a5dd6c')
+            
+2024-04-15 14:02:54.861782 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (32, 'Fuel Type', '3', 'Combustion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455c8a3f326c8c2a5dd6d')
+            
+2024-04-15 14:02:54.905319 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (33, 'Fuel Type', '3', 'Anaerobically Digested (Wet Digestate with Curing)', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455d0a3f326c8c2a5dd6e')
+            
+2024-04-15 14:02:54.954035 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (34, 'Fuel Type', '3', 'Anaerobically Digested (Dry Digestate with Curing)', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455d7a3f326c8c2a5dd6f')
+            
+2024-04-15 14:02:54.997134 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (35, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6474596049261bb379615e63')
+            
+2024-04-15 14:02:55.042878 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (36, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64759f570af59419c99f98ef')
+            
+2024-04-15 14:02:55.086542 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (37, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae300af59419c99f98f0')
+            
+2024-04-15 14:02:55.130171 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (38, 'Fuel Type', '1', 'Other Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae3d0af59419c99f98f1')
+            
+2024-04-15 14:02:55.172152 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (39, 'Fuel Type', '1', 'Other Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae470af59419c99f98f2')
+            
+2024-04-15 14:02:55.215298 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (40, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae4f0af59419c99f98f3')
+            
+2024-04-15 14:02:55.266187 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (41, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae580af59419c99f98f4')
+            
+2024-04-15 14:02:55.309419 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (42, 'Fuel Type', '1', 'Biomass Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae630af59419c99f98f5')
+            
+2024-04-15 14:02:55.358145 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (43, 'Fuel Type', '1', 'Biomass Fuels - Liquid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae6c0af59419c99f98f6')
+            
+2024-04-15 14:02:55.401564 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (44, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae740af59419c99f98f7')
+            
+2024-04-15 14:02:55.448079 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (45, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cb663f9fd74db8e648df')
+            
+2024-04-15 14:02:55.491155 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (46, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cbc83f9fd74db8e648e0')
+            
+2024-04-15 14:02:55.535449 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (47, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cbdc3f9fd74db8e648e1')
+            
+2024-04-15 14:02:55.579955 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (48, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cc243f9fd74db8e648e2')
+            
+2024-04-15 14:02:55.624946 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (49, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cc2d3f9fd74db8e648e3')
+            
+2024-04-15 14:02:55.671237 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (50, 'Fuel Type', '3', 'Anaerobic digestion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7827c507c864a5645a4')
+            
+2024-04-15 14:02:55.716317 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (51, 'Fuel Type', '3', 'Closed-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7a87c507c864a5645a5')
+            
+2024-04-15 14:02:55.760187 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (52, 'Fuel Type', '3', 'Combustion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7be7c507c864a5645a6')
+            
+2024-04-15 14:02:55.803174 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (53, 'Fuel Type', '3', 'Compost', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7de7c507c864a5645a7')
+            
+2024-04-15 14:02:55.848636 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (54, 'Fuel Type', '3', 'Landfill', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7f27c507c864a5645a8')
+            
+2024-04-15 14:02:55.895020 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (55, 'Fuel Type', '3', 'Open-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c8027c507c864a5645a9')
+            
+2024-04-15 14:02:55.937898 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (56, 'Purchased Goods', '3', 'Closed-loop source', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476ccc44de3cb3a80acd3fd')
+            
+2024-04-15 14:02:55.982088 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (57, 'Purchased Goods', '3', 'Primary material production', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476ccc84de3cb3a80acd3fe')
+            
+2024-04-15 14:02:56.024459 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (58, 'Purchased Goods', '3', 'Re-used', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476cccd4de3cb3a80acd3ff')
+            
+2024-04-15 14:02:56.068632 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (59, 'Use of Assets (through leased equipment) by an Organization', '3', 'Vehicle', '4.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64796deb2fad9b17410b2eb2')
+            
+2024-04-15 14:02:56.113041 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (60, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '647d6257b1c6eb3718c8a7a9')
+            
+2024-04-15 14:02:56.157234 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (61, 'Fuel Type', '3', 'Homeworking', '6.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647d9566d650a91f29bf0e66')
+            
+2024-04-15 14:02:56.220832 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (62, 'Mobile Combustion', '1', 'Distance Activity', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647d9b94a6222805ac455385')
+            
+2024-04-15 14:02:56.263078 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (63, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647eadf1bed6d97c073ae590')
+            
+2024-04-15 14:02:56.306019 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (64, 'Mobile Combustion', '1', 'Distance Activity', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647eae2ebed6d97c073ae591')
+            
+2024-04-15 14:02:56.350943 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (65, 'Fuel Type', '1', 'Oil products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6486f1427c3e764b3416c154')
+            
+2024-04-15 14:02:56.410195 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (66, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Supply Chain Emission Factors without Margins', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a0')
+            
+2024-04-15 14:02:56.458950 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (67, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Margins of Supply Chain Emission Factors', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a1')
+            
+2024-04-15 14:02:56.521964 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (68, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Supply Chain Emission Factors with Margins', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a2')
+            
+2024-04-15 14:02:56.565261 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (69, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '648aeeb5691928514b3ed8b3')
+            
+2024-04-15 14:02:56.610770 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (70, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6492c50940212a145edcc551')
+            
+2024-04-15 14:02:56.655253 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (71, 'Fuel Type', '1', 'Enteric Fermentation', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1642')
+            
+2024-04-15 14:02:56.702010 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (72, 'Fuel Type', '1', 'Manure Management', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1643')
+            
+2024-04-15 14:02:56.747880 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (73, 'Fuel Type', '1', 'Forest land', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1644')
+            
+2024-04-15 14:02:56.790074 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (74, 'Fuel Type', '1', 'Cropland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1645')
+            
+2024-04-15 14:02:56.831240 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (75, 'Fuel Type', '1', 'Land Converted to Cropland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1646')
+            
+2024-04-15 14:02:56.874319 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (76, 'Fuel Type', '1', 'Land Converted to Grassland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1647')
+            
+2024-04-15 14:02:56.916869 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (77, 'Fuel Type', '1', 'Wetlands', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1648')
+            
+2024-04-15 14:02:56.961473 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (78, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64ab898be0b872f6ad0811aa')
+            
+2024-04-15 14:02:57.008130 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (79, 'Fuel Type', '3', 'Scheduled Waste', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8998e0b872f6ad0811ac')
+            
+2024-04-15 14:02:57.057687 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (80, 'Fuel Type', '3', 'Recycled', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8998e0b872f6ad0811ad')
+            
+2024-04-15 14:02:57.101528 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (81, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89a3e0b872f6ad0811af')
+            
+2024-04-15 14:02:57.144418 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (82, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64ab89aee0b872f6ad0811b1')
+            
+2024-04-15 14:02:57.186626 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (83, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '64ab89bae0b872f6ad0811b3')
+            
+2024-04-15 14:02:57.230366 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (84, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b5')
+            
+2024-04-15 14:02:57.273107 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (85, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b6')
+            
+2024-04-15 14:02:57.317598 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (86, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b7')
+            
+2024-04-15 14:02:57.366476 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (87, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b8')
+            
+2024-04-15 14:02:57.409008 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (88, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b9')
+            
+2024-04-15 14:02:57.449953 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (89, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811ba')
+            
+2024-04-15 14:02:57.495201 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (90, 'Fuel Type', '3', 'City Supply', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bc')
+            
+2024-04-15 14:02:57.540795 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (91, 'Fuel Type', '3', 'Physical Treatment Process', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bd')
+            
+2024-04-15 14:02:57.589128 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (92, 'Fuel Type', '3', 'Scheduled Waste', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811be')
+            
+2024-04-15 14:02:57.631138 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (93, 'Fuel Type', '3', 'Recycled', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bf')
+            
+2024-04-15 14:02:57.681806 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (94, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64dc8162d78b64c3eb30bd6a')
+            
+2024-04-15 14:02:57.726224 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (95, 'Mobile Combustion', '1', 'Fuel oil', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64d606e3e5d2d1ecc1b09871')
+            
+2024-04-15 14:02:57.768126 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (96, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da5bb162190603e5fff6')
+            
+2024-04-15 14:02:57.810795 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (97, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da51b162190603e5fff5')
+            
+2024-04-15 14:02:57.852197 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (98, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da49b162190603e5fff4')
+            
+2024-04-15 14:02:57.908924 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (99, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '64dc8195d78b64c3eb30bd6b')
+            
+2024-04-15 14:02:57.962225 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (100, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da44b162190603e5fff3')
+            
+2024-04-15 14:02:58.006389 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (101, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64464130fbe1b86e2f17046b')
+            
+2024-04-15 14:02:58.259603 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (102, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542fd')
+            
+2024-04-15 14:02:58.303373 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (103, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542fe')
+            
+2024-04-15 14:02:58.346601 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (104, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542ff')
+            
+2024-04-15 14:02:58.390218 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (105, 'Fuel Type', '1', 'Fire tank', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54300')
+            
+2024-04-15 14:02:58.433229 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (106, 'Fuel Type', '1', 'Chemical', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54301')
+            
+2024-04-15 14:02:58.475742 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (107, 'Fuel Type', '1', 'Bathrooms', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54302')
+            
+2024-04-15 14:02:58.520824 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (108, 'Fuel Type', '1', 'Waste Water', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54303')
+            
+2024-04-15 14:02:58.568769 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (109, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6539e8614b15539fa3f54304')
+            
+2024-04-15 14:02:58.614589 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (110, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54305')
+            
+2024-04-15 14:02:58.658185 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (111, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54306')
+            
+2024-04-15 14:02:58.703446 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (112, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54307')
+            
+2024-04-15 14:02:58.753118 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (113, 'Purchased Goods', '3', 'Raw Materials', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6539e8614b15539fa3f54308')
+            
+2024-04-15 14:02:58.797582 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (114, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '648980c3f1c8d3dbd8d0a1a8')
+            
+2024-04-15 14:02:58.840627 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (115, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d45e3f4c7cb4228b322')
+            
+2024-04-15 14:02:58.884121 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (116, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d4fe3f4c7cb4228b323')
+            
+2024-04-15 14:02:58.927551 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (117, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '65791d57e3f4c7cb4228b324')
+            
+2024-04-15 14:02:58.972806 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (118, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d68e3f4c7cb4228b325')
+            
+2024-04-15 14:02:59.015036 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (119, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791defe3f4c7cb4228b326')
+            
+2024-04-15 14:02:59.061117 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (120, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791e30e3f4c7cb4228b327')
+            
+2024-04-15 14:02:59.106261 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (121, 'Purchased Goods', '3', 'Water', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6581461eb653067119aa18ba')
+            
+2024-04-15 14:02:59.149881 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (122, 'Coal and Coke ', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b6')
+            
+2024-04-15 14:02:59.193096 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (123, 'Other fuel', '1', 'Other fuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b7')
+            
+2024-04-15 14:02:59.235687 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (124, 'Fuel oil', '1', 'Fuel oil', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b8')
+            
+2024-04-15 14:02:59.279179 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (125, 'Fuel gas', '1', 'Fuel gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b9')
+            
+2024-04-15 14:02:59.321852 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (126, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '659b741b43f11a2f3fc1d386')
+            
+2024-04-15 14:02:59.368493 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (127, 'Fuel Type', '3', 'Water', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65b7599147f83f5271928880')
+            
+2024-04-15 14:02:59.411005 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (128, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '65d7036874ebed296cb84cc7')
+            
+2024-04-15 14:02:59.455568 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (129, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65d709582a04b7e411ca0dd6')
+            
+2024-04-15 14:02:59.498222 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (130, NULL, '3', '掩埋', '4.3', NULL, NULL, NULL, NULL, NULL, '660a09b45624ee9420515321')
+            
+2024-04-15 14:02:59.546433 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (131, NULL, '3', '焚化', '4.3', NULL, NULL, NULL, NULL, NULL, '660a09ca5624ee9420515322')
+            
+2024-04-15 14:02:59.593329 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (132, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '661605e47a67b28969d81ab5')
+            
+2024-04-15 14:04:24.809108 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-15 14:04:24.911293 connection.mysql_connection [INFO] =================================================
+2024-04-15 14:04:24.912145 connection.mysql_connection [INFO] our db_config:
+2024-04-15 14:04:24.912620 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-15 14:04:24.913016 connection.mysql_connection [INFO] port: 3306
+2024-04-15 14:04:24.913367 connection.mysql_connection [INFO] user: eco
+2024-04-15 14:04:24.913633 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-15 14:04:24.913996 connection.mysql_connection [INFO] autocommit: True
+2024-04-15 14:04:24.914521 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-15 14:04:24.915042 connection.mysql_connection [INFO] =================================================
+2024-04-15 14:04:25.822327 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (1, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '646f06d02ed6c48f4414795f')
+            
+2024-04-15 14:04:25.869899 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (2, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ed9c392c0281e83bea81e')
+            
+2024-04-15 14:04:25.915971 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (3, 'Fuel Type', '1', 'Other Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631edcb792c0281e83bea81f')
+            
+2024-04-15 14:04:25.962579 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (4, 'Fuel Type', '1', 'Biomass Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631eddc692c0281e83bea820')
+            
+2024-04-15 14:04:26.011254 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (5, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee04492c0281e83bea821')
+            
+2024-04-15 14:04:26.055321 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (6, 'Fuel Type', '1', 'Other Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee50892c0281e83bea823')
+            
+2024-04-15 14:04:26.100842 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (7, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee4d092c0281e83bea822')
+            
+2024-04-15 14:04:26.146669 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (8, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee85792c0281e83bea824')
+            
+2024-04-15 14:04:26.196209 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (9, 'Fuel Type', '1', 'Biomass Fuels - Liquid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee9cc92c0281e83bea825')
+            
+2024-04-15 14:04:26.242686 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (10, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '631ee9cc92c0281e83bea826')
+            
+2024-04-15 14:04:26.289927 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (11, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755852')
+            
+2024-04-15 14:04:26.336507 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (12, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755853')
+            
+2024-04-15 14:04:26.386757 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (13, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755854')
+            
+2024-04-15 14:04:26.432437 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (14, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755855')
+            
+2024-04-15 14:04:26.482880 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (15, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '646f1352dc77466cc2755856')
+            
+2024-04-15 14:04:26.542537 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (16, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '647035bfaf8fe17f40237b7b')
+            
+2024-04-15 14:04:26.591903 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (17, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428324a38ff33ba85477f')
+            
+2024-04-15 14:04:26.636451 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (18, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428594a38ff33ba854781')
+            
+2024-04-15 14:04:26.684282 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (19, 'Fuel Type', '1', 'Biomass', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474285f4a38ff33ba854782')
+            
+2024-04-15 14:04:26.737762 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (20, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428674a38ff33ba854783')
+            
+2024-04-15 14:04:26.782194 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (21, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474286f4a38ff33ba854784')
+            
+2024-04-15 14:04:26.827816 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (22, 'Fuel Type', '1', 'Solid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647428764a38ff33ba854785')
+            
+2024-04-15 14:04:26.870456 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (23, 'Fuel Type', '3', 'Anaerobically Digested (Dry Digestate with Curing)', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745421a3f326c8c2a5dd64')
+            
+2024-04-15 14:04:26.914143 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (24, 'Fuel Type', '3', 'Anaerobically Digested (Wet Digestate with Curing)', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745425a3f326c8c2a5dd65')
+            
+2024-04-15 14:04:26.956579 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (25, 'Fuel Type', '3', 'Combustion', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474542aa3f326c8c2a5dd66')
+            
+2024-04-15 14:04:26.999660 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (26, 'Fuel Type', '3', 'Compost', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6474542ea3f326c8c2a5dd67')
+            
+2024-04-15 14:04:27.041441 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (27, 'Fuel Type', '3', 'Landfill', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745433a3f326c8c2a5dd68')
+            
+2024-04-15 14:04:27.083955 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (28, 'Fuel Type', '3', 'Recycled', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64745438a3f326c8c2a5dd69')
+            
+2024-04-15 14:04:27.126638 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (29, 'Fuel Type', '3', 'Recycled', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455b9a3f326c8c2a5dd6a')
+            
+2024-04-15 14:04:27.172387 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (30, 'Fuel Type', '3', 'Landfill', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455bea3f326c8c2a5dd6b')
+            
+2024-04-15 14:04:27.213407 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (31, 'Fuel Type', '3', 'Compost', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455c3a3f326c8c2a5dd6c')
+            
+2024-04-15 14:04:27.255838 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (32, 'Fuel Type', '3', 'Combustion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455c8a3f326c8c2a5dd6d')
+            
+2024-04-15 14:04:27.300135 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (33, 'Fuel Type', '3', 'Anaerobically Digested (Wet Digestate with Curing)', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455d0a3f326c8c2a5dd6e')
+            
+2024-04-15 14:04:27.348102 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (34, 'Fuel Type', '3', 'Anaerobically Digested (Dry Digestate with Curing)', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647455d7a3f326c8c2a5dd6f')
+            
+2024-04-15 14:04:27.397327 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (35, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6474596049261bb379615e63')
+            
+2024-04-15 14:04:27.441808 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (36, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64759f570af59419c99f98ef')
+            
+2024-04-15 14:04:27.485707 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (37, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae300af59419c99f98f0')
+            
+2024-04-15 14:04:27.529683 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (38, 'Fuel Type', '1', 'Other Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae3d0af59419c99f98f1')
+            
+2024-04-15 14:04:27.578181 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (39, 'Fuel Type', '1', 'Other Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae470af59419c99f98f2')
+            
+2024-04-15 14:04:27.624069 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (40, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae4f0af59419c99f98f3')
+            
+2024-04-15 14:04:27.667001 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (41, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae580af59419c99f98f4')
+            
+2024-04-15 14:04:27.710947 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (42, 'Fuel Type', '1', 'Biomass Fuels - Solid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae630af59419c99f98f5')
+            
+2024-04-15 14:04:27.755029 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (43, 'Fuel Type', '1', 'Biomass Fuels - Liquid', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae6c0af59419c99f98f6')
+            
+2024-04-15 14:04:27.799034 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (44, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6475ae740af59419c99f98f7')
+            
+2024-04-15 14:04:27.841571 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (45, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cb663f9fd74db8e648df')
+            
+2024-04-15 14:04:27.885804 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (46, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cbc83f9fd74db8e648e0')
+            
+2024-04-15 14:04:27.929967 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (47, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cbdc3f9fd74db8e648e1')
+            
+2024-04-15 14:04:27.972651 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (48, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cc243f9fd74db8e648e2')
+            
+2024-04-15 14:04:28.016086 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (49, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6475cc2d3f9fd74db8e648e3')
+            
+2024-04-15 14:04:28.058506 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (50, 'Fuel Type', '3', 'Anaerobic digestion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7827c507c864a5645a4')
+            
+2024-04-15 14:04:28.100961 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (51, 'Fuel Type', '3', 'Closed-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7a87c507c864a5645a5')
+            
+2024-04-15 14:04:28.143738 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (52, 'Fuel Type', '3', 'Combustion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7be7c507c864a5645a6')
+            
+2024-04-15 14:04:28.193811 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (53, 'Fuel Type', '3', 'Compost', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7de7c507c864a5645a7')
+            
+2024-04-15 14:04:28.249793 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (54, 'Fuel Type', '3', 'Landfill', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c7f27c507c864a5645a8')
+            
+2024-04-15 14:04:28.299696 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (55, 'Fuel Type', '3', 'Open-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6476c8027c507c864a5645a9')
+            
+2024-04-15 14:04:28.354664 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (56, 'Purchased Goods', '3', 'Closed-loop source', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476ccc44de3cb3a80acd3fd')
+            
+2024-04-15 14:04:28.408547 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (57, 'Purchased Goods', '3', 'Primary material production', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476ccc84de3cb3a80acd3fe')
+            
+2024-04-15 14:04:28.462659 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (58, 'Purchased Goods', '3', 'Re-used', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6476cccd4de3cb3a80acd3ff')
+            
+2024-04-15 14:04:28.517948 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (59, 'Use of Assets (through leased equipment) by an Organization', '3', 'Vehicle', '4.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64796deb2fad9b17410b2eb2')
+            
+2024-04-15 14:04:28.573525 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (60, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '647d6257b1c6eb3718c8a7a9')
+            
+2024-04-15 14:04:28.628570 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (61, 'Fuel Type', '3', 'Homeworking', '6.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647d9566d650a91f29bf0e66')
+            
+2024-04-15 14:04:28.684669 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (62, 'Mobile Combustion', '1', 'Distance Activity', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647d9b94a6222805ac455385')
+            
+2024-04-15 14:04:28.730071 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (63, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647eadf1bed6d97c073ae590')
+            
+2024-04-15 14:04:28.774709 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (64, 'Mobile Combustion', '1', 'Distance Activity', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '647eae2ebed6d97c073ae591')
+            
+2024-04-15 14:04:28.820040 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (65, 'Fuel Type', '1', 'Oil products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6486f1427c3e764b3416c154')
+            
+2024-04-15 14:04:28.866461 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (66, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Supply Chain Emission Factors without Margins', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a0')
+            
+2024-04-15 14:04:28.911307 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (67, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Margins of Supply Chain Emission Factors', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a1')
+            
+2024-04-15 14:04:28.955825 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (68, 'Capital Goods that are Purchased and Amortized by an Organization', '3', 'Supply Chain Emission Factors with Margins', '4.2', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6487f95cfaf67ba5b14df0a2')
+            
+2024-04-15 14:04:29.002050 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (69, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '648aeeb5691928514b3ed8b3')
+            
+2024-04-15 14:04:29.044748 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (70, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6492c50940212a145edcc551')
+            
+2024-04-15 14:04:29.089718 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (71, 'Fuel Type', '1', 'Enteric Fermentation', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1642')
+            
+2024-04-15 14:04:29.136152 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (72, 'Fuel Type', '1', 'Manure Management', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1643')
+            
+2024-04-15 14:04:29.184242 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (73, 'Fuel Type', '1', 'Forest land', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1644')
+            
+2024-04-15 14:04:29.230351 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (74, 'Fuel Type', '1', 'Cropland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1645')
+            
+2024-04-15 14:04:29.274626 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (75, 'Fuel Type', '1', 'Land Converted to Cropland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1646')
+            
+2024-04-15 14:04:29.320547 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (76, 'Fuel Type', '1', 'Land Converted to Grassland', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1647')
+            
+2024-04-15 14:04:29.372093 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (77, 'Fuel Type', '1', 'Wetlands', '1.5', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6493e1eef6199f463f7c1648')
+            
+2024-04-15 14:04:29.416352 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (78, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64ab898be0b872f6ad0811aa')
+            
+2024-04-15 14:04:29.464541 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (79, 'Fuel Type', '3', 'Scheduled Waste', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8998e0b872f6ad0811ac')
+            
+2024-04-15 14:04:29.509636 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (80, 'Fuel Type', '3', 'Recycled', '5.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8998e0b872f6ad0811ad')
+            
+2024-04-15 14:04:29.552728 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (81, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89a3e0b872f6ad0811af')
+            
+2024-04-15 14:04:29.596267 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (82, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64ab89aee0b872f6ad0811b1')
+            
+2024-04-15 14:04:29.640089 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (83, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '64ab89bae0b872f6ad0811b3')
+            
+2024-04-15 14:04:29.687622 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (84, 'Fuel Type', '1', 'Natural Gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b5')
+            
+2024-04-15 14:04:29.729559 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (85, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b6')
+            
+2024-04-15 14:04:29.772371 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (86, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b7')
+            
+2024-04-15 14:04:29.815288 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (87, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b8')
+            
+2024-04-15 14:04:29.861236 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (88, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811b9')
+            
+2024-04-15 14:04:29.921917 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (89, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab89c7e0b872f6ad0811ba')
+            
+2024-04-15 14:04:29.967782 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (90, 'Fuel Type', '3', 'City Supply', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bc')
+            
+2024-04-15 14:04:30.013282 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (91, 'Fuel Type', '3', 'Physical Treatment Process', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bd')
+            
+2024-04-15 14:04:30.055843 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (92, 'Fuel Type', '3', 'Scheduled Waste', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811be')
+            
+2024-04-15 14:04:30.099230 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (93, 'Fuel Type', '3', 'Recycled', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64ab8a0ce0b872f6ad0811bf')
+            
+2024-04-15 14:04:30.142133 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (94, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64dc8162d78b64c3eb30bd6a')
+            
+2024-04-15 14:04:30.185751 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (95, 'Mobile Combustion', '1', 'Fuel oil', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '64d606e3e5d2d1ecc1b09871')
+            
+2024-04-15 14:04:30.248467 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (96, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da5bb162190603e5fff6')
+            
+2024-04-15 14:04:30.290768 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (97, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da51b162190603e5fff5')
+            
+2024-04-15 14:04:30.333489 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (98, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da49b162190603e5fff4')
+            
+2024-04-15 14:04:30.377312 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (99, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '64dc8195d78b64c3eb30bd6b')
+            
+2024-04-15 14:04:30.419789 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (100, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '64d9da44b162190603e5fff3')
+            
+2024-04-15 14:04:30.463898 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (101, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '64464130fbe1b86e2f17046b')
+            
+2024-04-15 14:04:30.933538 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (102, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542fd')
+            
+2024-04-15 14:04:30.978083 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (103, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542fe')
+            
+2024-04-15 14:04:31.021802 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (104, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f542ff')
+            
+2024-04-15 14:04:31.063948 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (105, 'Fuel Type', '1', 'Fire tank', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54300')
+            
+2024-04-15 14:04:31.106520 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (106, 'Fuel Type', '1', 'Chemical', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54301')
+            
+2024-04-15 14:04:31.148395 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (107, 'Fuel Type', '1', 'Bathrooms', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54302')
+            
+2024-04-15 14:04:31.190656 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (108, 'Fuel Type', '1', 'Waste Water', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6539e8614b15539fa3f54303')
+            
+2024-04-15 14:04:31.234762 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (109, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '6539e8614b15539fa3f54304')
+            
+2024-04-15 14:04:31.289042 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (110, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54305')
+            
+2024-04-15 14:04:31.334061 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (111, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54306')
+            
+2024-04-15 14:04:31.381540 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (112, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6539e8614b15539fa3f54307')
+            
+2024-04-15 14:04:31.427079 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (113, 'Purchased Goods', '3', 'Raw Materials', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6539e8614b15539fa3f54308')
+            
+2024-04-15 14:04:31.470198 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (114, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '648980c3f1c8d3dbd8d0a1a8')
+            
+2024-04-15 14:04:31.511332 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (115, 'Fuel Type', '1', 'Petroleum Products', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d45e3f4c7cb4228b322')
+            
+2024-04-15 14:04:31.555485 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (116, 'Fuel Type', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d4fe3f4c7cb4228b323')
+            
+2024-04-15 14:04:31.597374 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (117, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '65791d57e3f4c7cb4228b324')
+            
+2024-04-15 14:04:31.641381 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (118, 'Fuel Type', '1', 'Biomass Fuels - Gaseous', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791d68e3f4c7cb4228b325')
+            
+2024-04-15 14:04:31.684402 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (119, 'Fuel Type', '1', 'Biomass Fuels - Kraft Pulping Liquor, by Wood Furnish', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791defe3f4c7cb4228b326')
+            
+2024-04-15 14:04:31.727655 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (120, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65791e30e3f4c7cb4228b327')
+            
+2024-04-15 14:04:31.770552 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (121, 'Purchased Goods', '3', 'Water', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6581461eb653067119aa18ba')
+            
+2024-04-15 14:04:31.812567 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (122, 'Coal and Coke ', '1', 'Coal and Coke', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b6')
+            
+2024-04-15 14:04:31.858595 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (123, 'Other fuel', '1', 'Other fuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b7')
+            
+2024-04-15 14:04:31.902589 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (124, 'Fuel oil', '1', 'Fuel oil', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b8')
+            
+2024-04-15 14:04:31.946491 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (125, 'Fuel gas', '1', 'Fuel gas', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65855d9c20cc732e5e2721b9')
+            
+2024-04-15 14:04:31.989413 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (126, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '659b741b43f11a2f3fc1d386')
+            
+2024-04-15 14:04:32.033885 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (127, 'Fuel Type', '3', 'Water', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65b7599147f83f5271928880')
+            
+2024-04-15 14:04:32.076842 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (128, 'Refrigerants', '1', NULL, '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '65d7036874ebed296cb84cc7')
+            
+2024-04-15 14:04:32.120969 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (129, 'Mobile Combustion', '1', 'Fuel Use', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '65d709582a04b7e411ca0dd6')
+            
+2024-04-15 14:04:32.166947 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (130, NULL, '3', '掩埋', '4.3', NULL, NULL, NULL, NULL, NULL, '660a09b45624ee9420515321')
+            
+2024-04-15 14:04:32.213274 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (131, NULL, '3', '焚化', '4.3', NULL, NULL, NULL, NULL, NULL, '660a09ca5624ee9420515322')
+            
+2024-04-15 14:04:32.256536 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (132, 'Location Based', '2', 'Grid Average/Location Based', '2.1', 'category', 'calculateMethod', 'Location Based', NULL, NULL, '661605e47a67b28969d81ab5')
+            
+2024-04-15 14:04:32.299733 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (133, 'Mobile Combustion', '1', 'Distance Activity', '1.2', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '661646c23fc5d0b6967f2006')
+            
+2024-04-15 14:04:32.349078 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (134, 'Refrigerants', '1', 'null', '1.4', 'category', 'refrigerantsUsed', 'Refrigerants Used', NULL, NULL, '661646c83fc5d0b6967f2007')
+            
+2024-04-15 14:04:32.413925 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (135, 'Fuel Type', '1', 'Biomass', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '661646d83fc5d0b6967f2009')
+            
+2024-04-15 14:04:32.459771 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (136, 'Fuel Type', '1', 'Gaseous fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '661646e23fc5d0b6967f200a')
+            
+2024-04-15 14:04:32.526823 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (137, 'Fuel Type', '1', 'Liquid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '661646e83fc5d0b6967f200b')
+            
+2024-04-15 14:04:32.574821 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (138, 'Fuel Type', '1', 'Solid fuels', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '661646ef3fc5d0b6967f200c')
+            
+2024-04-15 14:04:32.622443 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (139, 'Fuel Type', '1', 'Biofuel', '1.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b4bc8dc7e21433918d54')
+            
+2024-04-15 14:04:32.672618 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (140, 'Purchased Goods', '3', 'Closed-loop source', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6618b5b48dc7e21433918d55')
+            
+2024-04-15 14:04:32.719265 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (141, 'Purchased Goods', '3', 'Primary material production', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6618b5ba8dc7e21433918d56')
+            
+2024-04-15 14:04:32.769657 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (142, 'Purchased Goods', '3', 'Re-used', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6618b5c08dc7e21433918d57')
+            
+2024-04-15 14:04:32.823385 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (143, 'Purchased Goods', '3', 'Water', '4.1', 'category', 'purchasedGood', 'Purchased', NULL, NULL, '6618b5c68dc7e21433918d58')
+            
+2024-04-15 14:04:32.868022 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (144, 'Fuel Type', '3', 'Anaerobic digestion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b5d18dc7e21433918d59')
+            
+2024-04-15 14:04:32.913468 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (145, 'Fuel Type', '3', 'Closed-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b5d68dc7e21433918d5a')
+            
+2024-04-15 14:04:32.960709 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (146, 'Fuel Type', '3', 'Combustion', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b5dc8dc7e21433918d5b')
+            
+2024-04-15 14:04:33.007950 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (147, 'Fuel Type', '3', 'Compost', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b5e38dc7e21433918d5c')
+            
+2024-04-15 14:04:33.056847 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (148, 'Fuel Type', '3', 'Landfill', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b5eb8dc7e21433918d5d')
+            
+2024-04-15 14:04:33.109717 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (149, 'Fuel Type', '3', 'Open-loop', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b5f48dc7e21433918d5e')
+            
+2024-04-15 14:04:33.157190 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (150, 'Fuel Type', '3', 'Water', '4.3', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b5fc8dc7e21433918d5f')
+            
+2024-04-15 14:04:33.205368 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (151, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6618b6058dc7e21433918d60')
+            
+2024-04-15 14:04:33.251377 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (152, 'Business Travel', '3', NULL, '3.5', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6618b60d8dc7e21433918d61')
+            
+2024-04-15 14:04:33.298325 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (153, 'Client and Visitor Transport', '3', NULL, '3.4', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6618b6168dc7e21433918d62')
+            
+2024-04-15 14:04:33.351479 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (154, 'Downstream T&D', '3', NULL, '3.2', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6618b61f8dc7e21433918d63')
+            
+2024-04-15 14:04:33.398755 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (155, 'Employee Commuting', '3', NULL, '3.3', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6618b62a8dc7e21433918d64')
+            
+2024-04-15 14:04:33.444491 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (156, 'Fuel Type', '3', 'Homeworking', '6.1', 'category', 'fuelType', 'Fuel Type', NULL, NULL, '6618b6318dc7e21433918d65')
+            
+2024-04-15 14:04:33.506459 root [DEBUG] 
+                REPLACE INTO mgmtCarbon.EFtype VALUES (157, 'Upstream T&D', '3', NULL, '3.1', 'category', 'vehicleType', 'Vehicle Type', NULL, NULL, '6618b6388dc7e21433918d66')
+            

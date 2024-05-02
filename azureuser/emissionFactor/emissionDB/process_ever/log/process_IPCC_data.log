@@ -1,0 +1,35 @@
+2024-04-08 08:45:49.883534 connection.mysql_connection [INFO] =================================================
+2024-04-08 08:45:49.885242 connection.mysql_connection [INFO] our db_config:
+2024-04-08 08:45:49.886538 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-08 08:45:49.888252 connection.mysql_connection [INFO] port: 3306
+2024-04-08 08:45:49.890559 connection.mysql_connection [INFO] user: eco
+2024-04-08 08:45:49.891770 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-08 08:45:49.892806 connection.mysql_connection [INFO] autocommit: True
+2024-04-08 08:45:49.893578 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-08 08:45:49.894426 connection.mysql_connection [INFO] =================================================
+2024-04-08 08:45:52.674432 root [DEBUG] Crude Oil, TJ/kt
+2024-04-08 08:45:52.675713 root [DEBUG] Anthracite, tC/TJ
+2024-04-08 08:45:52.676426 root [DEBUG] Other Bituminous Coal, KG/TJ
+2024-04-08 08:45:52.677164 root [DEBUG] Bio-Alcohol, g/km
+2024-04-08 08:45:52.677760 root [DEBUG] Bio-Alcohol, g/kg fuel
+2024-04-08 08:45:52.678371 root [DEBUG] Bio-Alcohol, g/MJ
+2024-04-08 08:45:52.679003 root [DEBUG] Undifferentiated Coal, %
+2024-04-08 08:45:52.679573 root [DEBUG] Wood/Wood Waste, MJ/kg
+2024-04-08 08:45:52.680896 root [DEBUG] Diesel Oil, g/kgl
+2024-04-08 08:45:52.681457 root [DEBUG] None, tonnes CO2/tonnes quicklime produced
+2024-04-08 08:45:52.681991 root [DEBUG] None, tonnes CO2/tonnes dolomitic lime
+2024-04-08 08:45:52.682523 root [DEBUG] None, Tonne CO2/tonne NH3 produced
+2024-04-08 08:45:52.683047 root [DEBUG] None, tonne CO2/tonne carbide produced
+2024-04-08 08:45:52.683550 root [DEBUG] None, tonne CO2/tonne carbide used
+2024-04-08 08:45:52.684711 root [DEBUG] None, g CH4/kg Production
+2024-04-08 08:45:52.685943 root [DEBUG] None, Tonne CO2/Tonne Reducing Agent
+2024-04-08 08:45:52.687184 root [DEBUG] None, Tonne CO2/Tonne Iron or Steel Product
+2024-04-08 08:45:52.688398 root [DEBUG] None, Tonne CO2/Tonne Product
+2024-04-08 08:45:52.689341 root [DEBUG] None, tonne CO2/tonne Al
+2024-04-08 08:45:52.690085 root [DEBUG] None, kg/tonne Al
+2024-04-08 08:45:52.690713 root [DEBUG] None, kg CF4 /tonne Al
+2024-04-08 08:45:52.691433 root [DEBUG] None, tonne CO2/tonne high calcium lime produced
+2024-04-08 08:45:52.692026 root [DEBUG] None, tonne CO2/tonne lime produced
+2024-04-08 08:45:52.692702 root [DEBUG] None, fraction
+2024-04-08 08:45:52.693274 root [DEBUG] None, kg/tonne adipic acid produced
+2024-04-08 08:45:52.694027 root [DEBUG] None, kg N2O/tonne nitric acid produced

@@ -1,0 +1,96 @@
+2024-04-15 15:26:52.105812 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-15 15:26:52.207743 connection.mysql_connection [INFO] =================================================
+2024-04-15 15:26:52.208914 connection.mysql_connection [INFO] our db_config:
+2024-04-15 15:26:52.209451 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-15 15:26:52.210004 connection.mysql_connection [INFO] port: 3306
+2024-04-15 15:26:52.210497 connection.mysql_connection [INFO] user: eco
+2024-04-15 15:26:52.211069 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-15 15:26:52.211960 connection.mysql_connection [INFO] autocommit: True
+2024-04-15 15:26:52.213805 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-15 15:26:52.214384 connection.mysql_connection [INFO] =================================================
+2024-04-15 15:26:53.407276 root [DEBUG] Total number of EF: 10251
+2024-04-15 15:26:53.408545 root [DEBUG] Total number of EF USA: 3658
+2024-04-15 15:26:53.409162 root [DEBUG] Total number of EF USA EPA: 565
+2024-04-15 15:26:53.409498 root [DEBUG] Total number of EF USA US EPA-SupplyChain-USD2021: 3048
+2024-04-15 15:26:53.410062 root [DEBUG] Total number of EF USA Knowles-EPA: 39
+2024-04-15 15:26:53.410556 root [DEBUG] Total number of EF USA Knowles - EPA: 6
+2024-04-15 15:26:53.411279 root [DEBUG] Total number of EF TW: 261
+2024-04-15 15:26:53.411929 root [DEBUG] Total number of EF UK: 2603
+2024-04-15 15:26:53.412347 root [DEBUG] Total number of EF GHG: 772
+2024-04-15 15:26:53.412705 root [DEBUG] Total number of EF IPCC: 631
+2024-04-15 15:26:53.413217 root [DEBUG] Total number of EF MY: 3
+2024-04-15 15:26:53.413545 root [DEBUG] Total number of EF TH: 43
+2024-04-15 15:26:53.413928 root [DEBUG] Total number of EF UNF: 44
+2024-04-15 15:26:53.414239 root [DEBUG] Total number of EF UNF Knowles-UNFCCC: 9
+2024-04-15 15:26:53.414474 root [DEBUG] Total number of EF UNF Knowles-UNFCC: 29
+2024-04-15 15:26:53.414772 root [DEBUG] Total number of EF UNF Knowles - UNFCC: 6
+2024-04-15 15:26:53.415055 root [DEBUG] Total number of EF OWID: 2
+2024-04-15 15:26:53.415259 root [DEBUG] Total number of EF KTIS: 37
+2024-04-15 15:26:53.415453 root [DEBUG] -------------------------------- The above from mongodb, below from mysql --------------------------------------
+2024-04-15 15:26:53.497318 root [DEBUG] Total number of EF: 10251
+2024-04-15 15:26:53.498131 root [DEBUG] Total number of EF USA: 3658
+2024-04-15 15:26:53.498793 root [DEBUG] Total number of EF USA EPA: 565
+2024-04-15 15:26:53.499240 root [DEBUG] Total number of EF USA US EPA-SupplyChain-USD2021: 3048
+2024-04-15 15:26:53.499766 root [DEBUG] Total number of EF USA Knowles-EPA: 39
+2024-04-15 15:26:53.500015 root [DEBUG] Total number of EF USA Knowles - EPA: 6
+2024-04-15 15:26:53.500411 root [DEBUG] Total number of EF TW: 261
+2024-04-15 15:26:53.500678 root [DEBUG] Total number of EF UK: 2603
+2024-04-15 15:26:53.501021 root [DEBUG] Total number of EF GHG: 772
+2024-04-15 15:26:53.501245 root [DEBUG] Total number of EF IPCC: 631
+2024-04-15 15:26:53.501587 root [DEBUG] Total number of EF MY: 3
+2024-04-15 15:26:53.501966 root [DEBUG] Total number of EF TH: 43
+2024-04-15 15:26:53.502278 root [DEBUG] Total number of EF UNF: 44
+2024-04-15 15:26:53.502725 root [DEBUG] Total number of EF UNF Knowles-UNFCCC: 9
+2024-04-15 15:26:53.503095 root [DEBUG] Total number of EF UNF Knowles-UNFCC: 29
+2024-04-15 15:26:53.503399 root [DEBUG] Total number of EF UNF Knowles - UNFCC: 6
+2024-04-15 15:26:53.503699 root [DEBUG] Total number of EF OWID: 2
+2024-04-15 15:26:53.503924 root [DEBUG] Total number of EF KTIS: 37
+2024-04-15 15:26:53.556701 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-04-15 15:37:20.983821 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-15 15:37:21.079980 connection.mysql_connection [INFO] =================================================
+2024-04-15 15:37:21.080611 connection.mysql_connection [INFO] our db_config:
+2024-04-15 15:37:21.081140 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-15 15:37:21.081421 connection.mysql_connection [INFO] port: 3306
+2024-04-15 15:37:21.081728 connection.mysql_connection [INFO] user: eco
+2024-04-15 15:37:21.082016 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-15 15:37:21.082401 connection.mysql_connection [INFO] autocommit: True
+2024-04-15 15:37:21.082869 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-15 15:37:21.083169 connection.mysql_connection [INFO] =================================================
+2024-04-15 15:37:22.167011 root [DEBUG] Total number of EF: 10251
+2024-04-15 15:37:22.167742 root [DEBUG] Total number of EF USA: 3658
+2024-04-15 15:37:22.168360 root [DEBUG] Total number of EF USA EPA: 565
+2024-04-15 15:37:22.168980 root [DEBUG] Total number of EF USA US EPA-SupplyChain-USD2021: 3048
+2024-04-15 15:37:22.169545 root [DEBUG] Total number of EF USA Knowles-EPA: 39
+2024-04-15 15:37:22.170145 root [DEBUG] Total number of EF USA Knowles - EPA: 6
+2024-04-15 15:37:22.170791 root [DEBUG] Total number of EF TW: 261
+2024-04-15 15:37:22.171288 root [DEBUG] Total number of EF UK: 2603
+2024-04-15 15:37:22.171580 root [DEBUG] Total number of EF GHG: 772
+2024-04-15 15:37:22.172043 root [DEBUG] Total number of EF IPCC: 631
+2024-04-15 15:37:22.172669 root [DEBUG] Total number of EF MY: 3
+2024-04-15 15:37:22.173043 root [DEBUG] Total number of EF TH: 43
+2024-04-15 15:37:22.173422 root [DEBUG] Total number of EF UNF: 44
+2024-04-15 15:37:22.173804 root [DEBUG] Total number of EF UNF Knowles-UNFCCC: 9
+2024-04-15 15:37:22.174070 root [DEBUG] Total number of EF UNF Knowles-UNFCC: 29
+2024-04-15 15:37:22.174311 root [DEBUG] Total number of EF UNF Knowles - UNFCC: 6
+2024-04-15 15:37:22.174792 root [DEBUG] Total number of EF OWID: 2
+2024-04-15 15:37:22.175149 root [DEBUG] Total number of EF KTIS: 37
+2024-04-15 15:37:22.175463 root [DEBUG] -------------------------------- The above from mongodb, below from mysql --------------------------------------
+2024-04-15 15:37:22.283249 root [DEBUG] Total number of EF: 10251
+2024-04-15 15:37:22.284021 root [DEBUG] Total number of EF USA: 3658
+2024-04-15 15:37:22.284564 root [DEBUG] Total number of EF USA EPA: 565
+2024-04-15 15:37:22.285216 root [DEBUG] Total number of EF USA US EPA-SupplyChain-USD2021: 3048
+2024-04-15 15:37:22.285677 root [DEBUG] Total number of EF USA Knowles-EPA: 39
+2024-04-15 15:37:22.286280 root [DEBUG] Total number of EF USA Knowles - EPA: 6
+2024-04-15 15:37:22.286626 root [DEBUG] Total number of EF TW: 261
+2024-04-15 15:37:22.286992 root [DEBUG] Total number of EF UK: 2603
+2024-04-15 15:37:22.287301 root [DEBUG] Total number of EF GHG: 772
+2024-04-15 15:37:22.287696 root [DEBUG] Total number of EF IPCC: 631
+2024-04-15 15:37:22.288181 root [DEBUG] Total number of EF MY: 3
+2024-04-15 15:37:22.288586 root [DEBUG] Total number of EF TH: 43
+2024-04-15 15:37:22.289041 root [DEBUG] Total number of EF UNF: 44
+2024-04-15 15:37:22.289348 root [DEBUG] Total number of EF UNF Knowles-UNFCCC: 9
+2024-04-15 15:37:22.289812 root [DEBUG] Total number of EF UNF Knowles-UNFCC: 29
+2024-04-15 15:37:22.290089 root [DEBUG] Total number of EF UNF Knowles - UNFCC: 6
+2024-04-15 15:37:22.290385 root [DEBUG] Total number of EF OWID: 2
+2024-04-15 15:37:22.290591 root [DEBUG] Total number of EF KTIS: 37
+2024-04-15 15:37:22.344124 connection.mongo_connection [INFO] Closed MongoDB connection
