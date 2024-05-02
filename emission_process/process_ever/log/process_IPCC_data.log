@@ -1,0 +1,71 @@
+2024-04-12 16:17:28.546682 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:17:28.547736 connection.mysql_connection [INFO] our db_config:
+2024-04-12 16:17:28.548478 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-12 16:17:28.549335 connection.mysql_connection [INFO] port: 3306
+2024-04-12 16:17:28.550315 connection.mysql_connection [INFO] user: eco
+2024-04-12 16:17:28.551021 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-12 16:17:28.551637 connection.mysql_connection [INFO] autocommit: True
+2024-04-12 16:17:28.552301 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-12 16:17:28.554284 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:17:28.565664 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-12 16:17:55.955606 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:17:55.957252 connection.mysql_connection [INFO] our db_config:
+2024-04-12 16:17:55.958392 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-12 16:17:55.959461 connection.mysql_connection [INFO] port: 3306
+2024-04-12 16:17:55.960507 connection.mysql_connection [INFO] user: eco
+2024-04-12 16:17:55.961512 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-12 16:17:55.962551 connection.mysql_connection [INFO] autocommit: True
+2024-04-12 16:17:55.963693 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-12 16:17:55.964426 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:17:55.989029 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-12 16:26:38.772559 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:26:38.773902 connection.mysql_connection [INFO] our db_config:
+2024-04-12 16:26:38.775645 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-12 16:26:38.777082 connection.mysql_connection [INFO] port: 3306
+2024-04-12 16:26:38.778607 connection.mysql_connection [INFO] user: eco
+2024-04-12 16:26:38.779902 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-12 16:26:38.781183 connection.mysql_connection [INFO] autocommit: True
+2024-04-12 16:26:38.782445 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-12 16:26:38.783625 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:26:38.806325 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-12 16:26:39.349156 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:26:39.349561 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:26:39.349748 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:26:39.350082 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:26:39.350451 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:26:39.350740 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:26:39.351043 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:03.937651 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:27:03.938953 connection.mysql_connection [INFO] our db_config:
+2024-04-12 16:27:03.939814 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-12 16:27:03.940446 connection.mysql_connection [INFO] port: 3306
+2024-04-12 16:27:03.941002 connection.mysql_connection [INFO] user: eco
+2024-04-12 16:27:03.941868 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-12 16:27:03.942594 connection.mysql_connection [INFO] autocommit: True
+2024-04-12 16:27:03.943373 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-12 16:27:03.944081 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:27:03.959934 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-12 16:27:04.502721 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:04.504236 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:04.505406 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:04.506711 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:04.507726 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:04.508610 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:04.509468 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:06.220216 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:27:06.221017 connection.mysql_connection [INFO] our db_config:
+2024-04-12 16:27:06.221739 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-12 16:27:06.222427 connection.mysql_connection [INFO] port: 3306
+2024-04-12 16:27:06.223075 connection.mysql_connection [INFO] user: eco
+2024-04-12 16:27:06.223737 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-12 16:27:06.224241 connection.mysql_connection [INFO] autocommit: True
+2024-04-12 16:27:06.224857 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-12 16:27:06.225514 connection.mysql_connection [INFO] =================================================
+2024-04-12 16:27:06.245198 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-12 16:27:06.772447 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:06.773310 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:06.774073 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:06.774658 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:06.774960 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:06.775259 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)
+2024-04-12 16:27:06.775691 root [DEBUG] Land Use, Land Use Change and Forestry (LULUCF)

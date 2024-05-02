@@ -1,0 +1,36 @@
+2024-04-10 08:34:38.997702 connection.mysql_connection [INFO] =================================================
+2024-04-10 08:34:38.998643 connection.mysql_connection [INFO] our db_config:
+2024-04-10 08:34:38.999206 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-10 08:34:38.999865 connection.mysql_connection [INFO] port: 3306
+2024-04-10 08:34:39.000360 connection.mysql_connection [INFO] user: eco
+2024-04-10 08:34:39.000857 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-10 08:34:39.001460 connection.mysql_connection [INFO] autocommit: True
+2024-04-10 08:34:39.002018 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-10 08:34:39.004088 connection.mysql_connection [INFO] =================================================
+2024-04-10 08:37:34.467729 connection.mysql_connection [INFO] =================================================
+2024-04-10 08:37:34.469880 connection.mysql_connection [INFO] our db_config:
+2024-04-10 08:37:34.471611 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-10 08:37:34.473617 connection.mysql_connection [INFO] port: 3306
+2024-04-10 08:37:34.475074 connection.mysql_connection [INFO] user: eco
+2024-04-10 08:37:34.475912 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-10 08:37:34.476612 connection.mysql_connection [INFO] autocommit: True
+2024-04-10 08:37:34.477336 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-10 08:37:34.478387 connection.mysql_connection [INFO] =================================================
+2024-04-10 08:37:39.948008 connection.mysql_connection [INFO] =================================================
+2024-04-10 08:37:39.949161 connection.mysql_connection [INFO] our db_config:
+2024-04-10 08:37:39.950016 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-10 08:37:39.951005 connection.mysql_connection [INFO] port: 3306
+2024-04-10 08:37:39.951959 connection.mysql_connection [INFO] user: eco
+2024-04-10 08:37:39.952963 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-10 08:37:39.953870 connection.mysql_connection [INFO] autocommit: True
+2024-04-10 08:37:39.954773 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-10 08:37:39.955995 connection.mysql_connection [INFO] =================================================
+2024-04-10 08:38:08.433833 connection.mysql_connection [INFO] =================================================
+2024-04-10 08:38:08.435667 connection.mysql_connection [INFO] our db_config:
+2024-04-10 08:38:08.436956 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-10 08:38:08.438234 connection.mysql_connection [INFO] port: 3306
+2024-04-10 08:38:08.439654 connection.mysql_connection [INFO] user: eco
+2024-04-10 08:38:08.440947 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-10 08:38:08.442418 connection.mysql_connection [INFO] autocommit: True
+2024-04-10 08:38:08.443711 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-10 08:38:08.445003 connection.mysql_connection [INFO] =================================================

@@ -1,0 +1,4 @@
+2024-04-22 08:56:29.737128 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-22 08:56:29.737779 root [INFO] Cleaning MongoDB collections call cal_approaches
+2024-04-22 08:56:30.091569 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-04-22 08:56:30.093229 root [INFO] Execution time: 0.39475131034851074 seconds

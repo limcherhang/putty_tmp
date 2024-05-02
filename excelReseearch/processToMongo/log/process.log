@@ -1,0 +1,34 @@
+2024-04-22 08:54:40.467312 connection.mysql_connection [INFO] =================================================
+2024-04-22 08:54:40.467996 connection.mysql_connection [INFO] our db_config:
+2024-04-22 08:54:40.468579 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-22 08:54:40.469200 connection.mysql_connection [INFO] port: 3306
+2024-04-22 08:54:40.469796 connection.mysql_connection [INFO] user: eco
+2024-04-22 08:54:40.470370 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-22 08:54:40.470912 connection.mysql_connection [INFO] autocommit: True
+2024-04-22 08:54:40.471556 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-22 08:54:40.472173 connection.mysql_connection [INFO] =================================================
+2024-04-22 08:54:40.488960 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-22 08:55:45.564938 connection.mysql_connection [INFO] =================================================
+2024-04-22 08:55:45.566232 connection.mysql_connection [INFO] our db_config:
+2024-04-22 08:55:45.566840 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-22 08:55:45.567648 connection.mysql_connection [INFO] port: 3306
+2024-04-22 08:55:45.568171 connection.mysql_connection [INFO] user: eco
+2024-04-22 08:55:45.568660 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-22 08:55:45.569099 connection.mysql_connection [INFO] autocommit: True
+2024-04-22 08:55:45.569785 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-22 08:55:45.570289 connection.mysql_connection [INFO] =================================================
+2024-04-22 08:55:45.585161 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-22 08:55:52.671529 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-04-22 08:55:52.672299 root [INFO] Time taken to process: 7.224497556686401 seconds
+2024-04-22 08:56:08.288924 connection.mysql_connection [INFO] =================================================
+2024-04-22 08:56:08.289637 connection.mysql_connection [INFO] our db_config:
+2024-04-22 08:56:08.290081 connection.mysql_connection [INFO] host: 20.205.24.18
+2024-04-22 08:56:08.290458 connection.mysql_connection [INFO] port: 3306
+2024-04-22 08:56:08.290887 connection.mysql_connection [INFO] user: eco
+2024-04-22 08:56:08.291356 connection.mysql_connection [INFO] password: ECO4ever
+2024-04-22 08:56:08.291786 connection.mysql_connection [INFO] autocommit: True
+2024-04-22 08:56:08.292229 connection.mysql_connection [INFO] dictionary mode: False
+2024-04-22 08:56:08.292730 connection.mysql_connection [INFO] =================================================
+2024-04-22 08:56:08.303525 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-22 08:56:15.137591 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-04-22 08:56:15.138472 root [INFO] Time taken to process: 6.957409620285034 seconds

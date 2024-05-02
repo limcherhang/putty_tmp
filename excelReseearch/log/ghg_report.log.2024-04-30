@@ -1,0 +1,167 @@
+2024-04-30 16:31:07.829155 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:31:07.829892 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630ac4b630c69f4622ea6e4, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630ac4b630c69f4622ea6e4"}, "remainingTimeMS": 29}
+2024-04-30 16:31:08.197490 root [INFO] 生成 1-基本資料
+2024-04-30 16:31:08.200772 root [INFO] 生成 2-定性盤查
+2024-04-30 16:31:12.583380 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:31:14.081992 root [INFO] 生成 3-定量盤查
+2024-04-30 16:31:14.137381 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:31:14.149527 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:31:14.151192 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:31:14.153057 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:31:14.176504 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:31:14.214530 root [INFO] 生成 6-彙總表
+2024-04-30 16:31:14.218481 root [INFO] 生成 附表一
+2024-04-30 16:31:14.226965 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:31:14.295089 root [INFO] Time used for generating GHG report: 6 sec.
+2024-04-30 16:33:25.178642 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:33:25.179772 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630acd5d4e1860770c4e0d4, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630acd5d4e1860770c4e0d4"}, "remainingTimeMS": 29}
+2024-04-30 16:33:25.571332 root [INFO] 生成 1-基本資料
+2024-04-30 16:33:25.574639 root [INFO] 生成 2-定性盤查
+2024-04-30 16:33:29.747027 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:33:31.167406 root [INFO] 生成 3-定量盤查
+2024-04-30 16:33:31.245965 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:33:31.258767 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:33:31.260421 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:33:31.263392 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:33:31.289804 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:33:31.330646 root [INFO] 生成 6-彙總表
+2024-04-30 16:33:31.335502 root [INFO] 生成 附表一
+2024-04-30 16:33:31.345610 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:33:31.449143 root [INFO] Time used for generating GHG report: 6 sec.
+2024-04-30 16:34:54.464603 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:34:54.465377 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630ad2eb858bc3ea8f1ecc7, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630ad2eb858bc3ea8f1ecc7"}, "remainingTimeMS": 29}
+2024-04-30 16:34:54.813961 root [INFO] 生成 1-基本資料
+2024-04-30 16:34:54.818853 root [INFO] 生成 2-定性盤查
+2024-04-30 16:35:16.249219 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:35:19.397212 root [INFO] 生成 3-定量盤查
+2024-04-30 16:35:19.494612 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:35:19.514278 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:35:19.515972 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:35:19.518116 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:35:19.548958 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:35:19.595622 root [INFO] 生成 6-彙總表
+2024-04-30 16:35:19.600999 root [INFO] 生成 附表一
+2024-04-30 16:35:19.611528 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:35:19.713869 root [INFO] Time used for generating GHG report: 25 sec.
+2024-04-30 16:41:09.262548 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:41:09.263627 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630aea50ffd096bebd4c878, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630aea50ffd096bebd4c878"}, "remainingTimeMS": 29}
+2024-04-30 16:41:17.971070 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:41:17.972183 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630aead5d7443969425d847, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630aead5d7443969425d847"}, "remainingTimeMS": 29}
+2024-04-30 16:41:18.362150 root [INFO] 生成 1-基本資料
+2024-04-30 16:41:18.366010 root [INFO] 生成 2-定性盤查
+2024-04-30 16:41:22.400223 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:41:23.694744 root [INFO] 生成 3-定量盤查
+2024-04-30 16:41:23.754927 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:41:23.768590 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:41:23.771072 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:41:23.774211 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:41:23.799580 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:41:23.839467 root [INFO] 生成 6-彙總表
+2024-04-30 16:41:23.843687 root [INFO] 生成 附表一
+2024-04-30 16:41:23.853211 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:41:23.950128 root [INFO] Time used for generating GHG report: 6 sec.
+2024-04-30 16:42:51.600453 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:42:51.601759 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630af0b5855d40cbb6ba775, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630af0b5855d40cbb6ba775"}, "remainingTimeMS": 29}
+2024-04-30 16:42:51.984598 root [INFO] 生成 1-基本資料
+2024-04-30 16:42:51.986997 root [INFO] 生成 2-定性盤查
+2024-04-30 16:42:56.160972 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:42:57.561579 root [INFO] 生成 3-定量盤查
+2024-04-30 16:42:57.630885 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:42:57.643968 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:42:57.645684 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:42:57.647592 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:42:57.671492 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:42:57.710137 root [INFO] 生成 6-彙總表
+2024-04-30 16:42:57.714123 root [INFO] 生成 附表一
+2024-04-30 16:42:57.722818 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:42:57.831509 root [INFO] Time used for generating GHG report: 6 sec.
+2024-04-30 16:44:38.271679 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:44:38.272563 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630af765a6b3b35c4450eaa, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630af765a6b3b35c4450eaa"}, "remainingTimeMS": 29}
+2024-04-30 16:44:38.619692 root [INFO] 生成 1-基本資料
+2024-04-30 16:44:38.622167 root [INFO] 生成 2-定性盤查
+2024-04-30 16:44:42.665637 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:44:44.508478 root [INFO] 生成 3-定量盤查
+2024-04-30 16:44:44.564520 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:44:44.580969 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:44:44.583741 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:44:44.585556 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:44:44.608530 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:44:44.659968 root [INFO] 生成 6-彙總表
+2024-04-30 16:44:44.664830 root [INFO] 生成 附表一
+2024-04-30 16:44:44.677258 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:44:44.757836 root [INFO] Time used for generating GHG report: 7 sec.
+2024-04-30 16:47:35.391058 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:47:35.392358 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630b027a949024e12d3badc, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630b027a949024e12d3badc"}, "remainingTimeMS": 29}
+2024-04-30 16:47:35.748651 root [INFO] 生成 1-基本資料
+2024-04-30 16:47:35.751575 root [INFO] 生成 2-定性盤查
+2024-04-30 16:47:55.142737 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:48:00.243991 root [INFO] 生成 3-定量盤查
+2024-04-30 16:48:00.300716 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:48:00.314030 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:48:00.316802 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:48:00.319300 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:48:00.344376 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:48:00.389842 root [INFO] 生成 6-彙總表
+2024-04-30 16:48:00.396336 root [INFO] 生成 附表一
+2024-04-30 16:48:00.405391 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:48:00.489048 root [INFO] Time used for generating GHG report: 25 sec.
+2024-04-30 16:52:56.301289 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:52:56.302206 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630b168b038ecf60338c5a2, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630b168b038ecf60338c5a2"}, "remainingTimeMS": 29}
+2024-04-30 16:52:56.654489 root [INFO] 生成 1-基本資料
+2024-04-30 16:52:56.658652 root [INFO] 生成 2-定性盤查
+2024-04-30 16:53:15.553065 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:53:19.245459 root [INFO] 生成 3-定量盤查
+2024-04-30 16:53:19.307187 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:53:19.320596 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:53:19.322003 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:53:19.323794 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:53:19.347413 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:53:19.388663 root [INFO] 生成 6-彙總表
+2024-04-30 16:53:19.392657 root [INFO] 生成 附表一
+2024-04-30 16:53:19.401920 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:53:19.492145 root [INFO] Time used for generating GHG report: 23 sec.
+2024-04-30 16:55:39.677946 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:55:39.678698 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630b20bf3946d55feced0a2, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630b20bf3946d55feced0a2"}, "remainingTimeMS": 29}
+2024-04-30 16:55:40.022797 root [INFO] 生成 1-基本資料
+2024-04-30 16:55:40.025717 root [INFO] 生成 2-定性盤查
+2024-04-30 16:55:44.323995 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:55:45.796690 root [INFO] 生成 3-定量盤查
+2024-04-30 16:55:45.849328 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:55:45.862839 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:55:45.865142 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:55:45.866981 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:55:45.891896 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:55:45.952352 root [INFO] 生成 6-彙總表
+2024-04-30 16:55:45.958999 root [INFO] 生成 附表一
+2024-04-30 16:55:45.972385 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:55:46.060897 root [INFO] Time used for generating GHG report: 6 sec.
+2024-04-30 16:58:50.739312 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 16:58:50.740295 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630b2cab2b102c740b7f737, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630b2cab2b102c740b7f737"}, "remainingTimeMS": 29}
+2024-04-30 16:58:51.164603 root [INFO] 生成 1-基本資料
+2024-04-30 16:58:51.166983 root [INFO] 生成 2-定性盤查
+2024-04-30 16:59:06.389606 root [INFO] 生成 2.1-重大性準則
+2024-04-30 16:59:11.157423 root [INFO] 生成 3-定量盤查
+2024-04-30 16:59:11.213929 root [INFO] 生成 3.1-排放係數
+2024-04-30 16:59:11.228963 root [INFO] 生成 3.2-上游運輸
+2024-04-30 16:59:11.230619 root [INFO] 生成 3.3-下游運輸
+2024-04-30 16:59:11.232578 root [INFO] 生成 4-數據品質管理
+2024-04-30 16:59:11.259364 root [INFO] 生成 5-不確定性之評估
+2024-04-30 16:59:11.309639 root [INFO] 生成 6-彙總表
+2024-04-30 16:59:11.314022 root [INFO] 生成 附表一
+2024-04-30 16:59:11.323634 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 16:59:11.424551 root [INFO] Time used for generating GHG report: 21 sec.
+2024-04-30 17:03:55.041072 connection.mongo_connection [INFO] Connected to MongoDB
+2024-04-30 17:03:55.042158 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6630b3fbdd25fb6d93a3f2b6, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6630b3fbdd25fb6d93a3f2b6"}, "remainingTimeMS": 29}
+2024-04-30 17:03:55.433773 root [INFO] 生成 1-基本資料
+2024-04-30 17:03:55.437113 root [INFO] 生成 2-定性盤查
+2024-04-30 17:04:14.287284 root [INFO] 生成 2.1-重大性準則
+2024-04-30 17:04:17.641740 root [INFO] 生成 3-定量盤查
+2024-04-30 17:04:17.696655 root [INFO] 生成 3.1-排放係數
+2024-04-30 17:04:17.709356 root [INFO] 生成 3.2-上游運輸
+2024-04-30 17:04:17.711677 root [INFO] 生成 3.3-下游運輸
+2024-04-30 17:04:17.714467 root [INFO] 生成 4-數據品質管理
+2024-04-30 17:04:17.738004 root [INFO] 生成 5-不確定性之評估
+2024-04-30 17:04:17.788272 root [INFO] 生成 6-彙總表
+2024-04-30 17:04:17.792353 root [INFO] 生成 附表一
+2024-04-30 17:04:17.801856 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-04-30 17:04:17.916762 root [INFO] Time used for generating GHG report: 23 sec.
