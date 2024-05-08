@@ -890,8 +890,10 @@ if __name__ == "__main__":
                         assetName = asset["supplierName"]
                     elif "transportationName" in asset:
                         assetName = asset["transportationName"]
-                    else:
+                    elif "name" in asset:
                         assetName = asset["name"]
+                    else: 
+                        assetName = ""
                     
                     # 根據判斷式去設定排放源（因為每個類別都有可能有一樣的排放源）
                     if "fuelType" in asset:
@@ -907,6 +909,8 @@ if __name__ == "__main__":
                     elif "wasteTreatmentMethod" in asset:
                         fuelType = translate4CalApproaches.get(asset["wasteTreatmentMethod"], asset["wasteTreatmentMethod"])
                     else:
+                        fuelType = ""
+                    if fuelType is None:
                         fuelType = ""
 
                     # 判斷是否為生質能源
@@ -1043,13 +1047,12 @@ if __name__ == "__main__":
                         logger.error(f"Language {language} not supported")
 
                     # 收集各個溫室氣體的資訊
-                    logger.info(asset)
                     co2 = asset.get("baseEmissionFactor")
-                    co2Unit = asset.get("emissionUnit", "") + "/" + asset.get("baseUnit")
+                    co2Unit = asset.get("emissionUnit", "") + "/" + asset.get("baseUnit", "")
                     ch4 = asset.get("ch4EmissionValue")
-                    ch4Unit = asset.get("ch4Unit", "") + "/" + asset.get("baseUnit")
+                    ch4Unit = asset.get("ch4Unit", "") + "/" + asset.get("baseUnit", "")
                     n2o = asset.get("n2oEmissonValue")
-                    n2oUnit = asset.get("n2oUnit", "") + "/" + asset.get("baseUnit")
+                    n2oUnit = asset.get("n2oUnit", "") + "/" + asset.get("baseUnit", "")
                     hfc = asset.get("hfcsEmissonValue")
                     pfc = asset.get("pfcsEmissonValue")
                     sf6 = asset.get("sf6EmissonValue")
@@ -1088,7 +1091,7 @@ if __name__ == "__main__":
                     # 取得活動數據、單位、總排放量等資訊
                     asset_datas = db.assetdatas.find({"company": ObjectId(companyId), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
                     activityData = 0            # 初始活動數據
-                    unit = asset["baseUnit"]    
+                    unit = asset.get("baseUnit", "No base unit")
                     for asset_data in asset_datas:
                         consumption_datas = asset_data["consumption_data"]
                         for consumption_data in consumption_datas:
@@ -1314,8 +1317,10 @@ if __name__ == "__main__":
                             sub_assetName = sub_asset["supplierName"]
                         elif "transportationName" in sub_asset:
                             sub_assetName = sub_asset["transportationName"]
-                        else:
+                        elif "name" in sub_asset:
                             sub_assetName = sub_asset["name"]
+                        else:
+                            sub_assetName = ""
                         
                         if "fuelType" in sub_asset:
                             sub_fuelType = translate4CalApproaches.get(sub_asset["fuelType"], sub_asset["fuelType"])
@@ -1327,8 +1332,13 @@ if __name__ == "__main__":
                             sub_fuelType = translate4CalApproaches.get(sub_asset["capitalGood"], sub_asset["capitalGood"])
                         elif "Waste Treatment Method" in sub_asset: 
                             sub_fuelType = translate4CalApproaches.get(sub_asset["Waste Treatment Method"], sub_asset["Waste Treatment Method"])
-                        else:
+                        elif "wasteTreatmentMethod" in sub_asset:
                             sub_fuelType = translate4CalApproaches.get(sub_asset["wasteTreatmentMethod"], sub_asset["wasteTreatmentMethod"])
+                        else:
+                            sub_fuelType = ""
+                        
+                        if sub_fuelType is None:
+                            sub_fuelType = ""
 
                         sub_biomass = sub_asset.get("isBiomass")
                         if language.lower() in ("tw", "zh"):
@@ -1461,11 +1471,11 @@ if __name__ == "__main__":
                             logger.error(f"Language {language} not supported")
 
                         sub_co2 = sub_asset.get("baseEmissionFactor")
-                        sub_co2Unit = sub_asset.get("emissionUnit", "") + "/" + sub_asset.get("baseUnit")
+                        sub_co2Unit = sub_asset.get("emissionUnit", "") + "/" + sub_asset.get("baseUnit", "")
                         sub_ch4 = sub_asset.get("ch4EmissionValue")
-                        sub_ch4Unit = sub_asset.get("ch4Unit", "") + "/" + sub_asset.get("baseUnit")
+                        sub_ch4Unit = sub_asset.get("ch4Unit", "") + "/" + sub_asset.get("baseUnit", "")
                         sub_n2o = sub_asset.get("n2oEmissonValue")
-                        sub_n2oUnit = sub_asset.get("n2oUnit", "") + "/" + sub_asset.get("baseUnit")
+                        sub_n2oUnit = sub_asset.get("n2oUnit", "") + "/" + sub_asset.get("baseUnit", "")
                         sub_hfc = sub_asset.get("hfcsEmissonValue")
                         sub_pfc = sub_asset.get("pfcsEmissonValue")
                         sub_sf6 = sub_asset.get("sf6EmissonValue")
@@ -1879,9 +1889,8 @@ if __name__ == "__main__":
         on_boarding_info = {}
         
         # 從MongoDB取得邊界設定資料
-        onboardingRating = db.get_collection("onbording-ratings").find({"companyId":ObjectId(companyId)})
-        logger.info(onboardingRating)
-        if not list(onboardingRating):
+        onboardingRating = list(db.get_collection("onbording-ratings").find({"companyId": ObjectId(companyId)}))
+        if len(onboardingRating) == 0:
             sys.exit(f"{companyName} has no onboarding rating data")
 
         # 取得邊界設定的翻譯
@@ -1922,6 +1931,7 @@ if __name__ == "__main__":
             logger.error(f"Language {language} is not supported")
 
         # 完成邊界設定資料的儲存
+        threshold = 3
         for OR in onboardingRating:
             threshold = OR.get("threshold", 0)         # 重大間接溫室氣體排放源之評估門檻的閥值
             rating = OR["rating"]               # 各個類別的rating
@@ -2366,6 +2376,7 @@ V: 排放量
         # 資料寫入，大部分都是套公式
         for i in range(3, len(ef) + 3):
             ef_info = ef[i-2]
+            logger.info(ef_info)
             category_type1 = ef_info["category1_type"]# current_list[i-3][6]
             fuelType = ef_info.get("fuelType", "")
             scopeName = ef[i-2].get("scopeName")
