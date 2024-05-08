@@ -1,0 +1,395 @@
+2024-05-03 10:48:56.988998 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:48:56.990070 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663450987a904d56df5e81dd, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663450987a904d56df5e81dd"}, "remainingTimeMS": 29}
+2024-05-03 10:48:58.050324 root [INFO] activityDataTypes: {'1-1': 'Continuous measurement', '2-2': 'Periodic (intermittent) measurement', '3-3': 'Financial accounting estimates', '4-3': 'Self-assessment'}
+2024-05-03 10:48:58.051173 root [INFO] activityTrustedDataTypes: {'1-1': '(1) (1) Those who have performed external calibration or have multiple sets of data to support this', '2-2': '(2) (2) Those with certificates such as internal correction or accounting visa', '3-3': '(3) (3) Failure to perform instrument calibration or record compilation'}
+2024-05-03 10:48:58.051754 root [INFO] emissionFactorTypes: {'1-1': '1 1 In-house development coefficient/mass balance coefficient', '2-1': '2 2 Same process/equipment experience coefficient', '3-1': '3 3 The manufacturer provides coefficients', '4-3': '4 4 Regional emission coefficient', '5-3': '5 5 National emission coefficient', '6-3': '6 6 International emission coefficient'}
+2024-05-03 10:48:58.065134 root [INFO] 生成 1-基本資料
+2024-05-03 10:48:58.068909 root [INFO] 生成 2-定性盤查
+2024-05-03 10:49:01.755221 root [INFO] 生成 2.1-重大性準則
+2024-05-03 10:49:03.661255 root [INFO] 生成 3-定量盤查
+2024-05-03 10:49:03.675676 root [INFO] 生成 3.1-排放係數
+2024-05-03 10:49:03.679700 root [INFO] 生成 3.2-上游運輸
+2024-05-03 10:49:03.681801 root [INFO] 生成 3.3-下游運輸
+2024-05-03 10:49:03.683978 root [INFO] 生成 4-數據品質管理
+2024-05-03 10:49:03.691378 root [INFO] 生成 5-不確定性之評估
+2024-05-03 10:49:03.703096 root [INFO] 生成 6-彙總表
+2024-05-03 10:49:03.707718 root [INFO] 生成 附表一
+2024-05-03 10:49:03.721975 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 10:49:03.780739 root [INFO] Time used for generating GHG report: 7 sec.
+2024-05-03 10:49:07.180609 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:49:07.181358 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663450a302245b5a8aaf970f, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663450a302245b5a8aaf970f"}, "remainingTimeMS": 29}
+2024-05-03 10:49:07.973523 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 10:49:07.974084 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 10:49:07.974489 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 10:49:07.988660 root [INFO] 生成 1-基本資料
+2024-05-03 10:49:07.991298 root [INFO] 生成 2-定性盤查
+2024-05-03 10:49:10.035165 root [INFO] 生成 2.1-重大性準則
+2024-05-03 10:49:11.594101 root [INFO] 生成 3-定量盤查
+2024-05-03 10:49:11.609093 root [INFO] 生成 3.1-排放係數
+2024-05-03 10:49:11.613901 root [INFO] 生成 3.2-上游運輸
+2024-05-03 10:49:11.615438 root [INFO] 生成 3.3-下游運輸
+2024-05-03 10:49:11.616679 root [INFO] 生成 4-數據品質管理
+2024-05-03 10:49:11.623251 root [INFO] 生成 5-不確定性之評估
+2024-05-03 10:49:11.634421 root [INFO] 生成 6-彙總表
+2024-05-03 10:49:11.638293 root [INFO] 生成 附表一
+2024-05-03 10:49:11.652278 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 10:49:11.718944 root [INFO] Time used for generating GHG report: 5 sec.
+2024-05-03 10:49:54.333812 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:49:54.334586 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663450d20e39f061a666044c, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663450d20e39f061a666044c"}, "remainingTimeMS": 29}
+2024-05-03 10:49:55.003110 root [INFO] activityDataTypes: {'1-1': 'Continuous measurement', '2-2': 'Periodic (intermittent) measurement', '3-3': 'Financial accounting estimates', '4-3': 'Self-assessment'}
+2024-05-03 10:49:55.003698 root [INFO] activityTrustedDataTypes: {'1-1': '(1) (1) Those who have performed external calibration or have multiple sets of data to support this', '2-2': '(2) (2) Those with certificates such as internal correction or accounting visa', '3-3': '(3) (3) Failure to perform instrument calibration or record compilation'}
+2024-05-03 10:49:55.004080 root [INFO] emissionFactorTypes: {'1-1': '1 In-house development coefficient/mass balance coefficient', '2-1': '2 Same process/equipment experience coefficient', '3-1': '3 The manufacturer provides coefficients', '4-3': '4 egional emission coefficient', '5-3': '5 National emission coefficient', '6-3': '6 International emission coefficient'}
+2024-05-03 10:49:55.015813 root [INFO] 生成 1-基本資料
+2024-05-03 10:49:55.018712 root [INFO] 生成 2-定性盤查
+2024-05-03 10:49:56.635618 root [INFO] 生成 2.1-重大性準則
+2024-05-03 10:49:58.302239 root [INFO] 生成 3-定量盤查
+2024-05-03 10:49:58.317224 root [INFO] 生成 3.1-排放係數
+2024-05-03 10:49:58.321567 root [INFO] 生成 3.2-上游運輸
+2024-05-03 10:49:58.323749 root [INFO] 生成 3.3-下游運輸
+2024-05-03 10:49:58.325251 root [INFO] 生成 4-數據品質管理
+2024-05-03 10:49:58.332165 root [INFO] 生成 5-不確定性之評估
+2024-05-03 10:49:58.343196 root [INFO] 生成 6-彙總表
+2024-05-03 10:49:58.347045 root [INFO] 生成 附表一
+2024-05-03 10:49:58.356868 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 10:49:58.434847 root [INFO] Time used for generating GHG report: 4 sec.
+2024-05-03 10:51:31.304394 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:51:31.305236 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663451339ef150541ac527ef, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663451339ef150541ac527ef"}, "remainingTimeMS": 29}
+2024-05-03 10:51:31.944014 root [INFO] activityDataTypes: {'1-1': 'Continuous measurement', '2-2': 'Periodic (intermittent) measurement', '3-3': 'Financial accounting estimates', '4-3': 'Self-assessment'}
+2024-05-03 10:51:31.944812 root [INFO] activityTrustedDataTypes: {'1-1': '(1) (1) Those who have performed external calibration or have multiple sets of data to support this', '2-2': '(2) (2) Those with certificates such as internal correction or accounting visa', '3-3': '(3) (3) Failure to perform instrument calibration or record compilation'}
+2024-05-03 10:51:31.945467 root [INFO] emissionFactorTypes: {'1-1': '1 In-house development coefficient/mass balance coefficient', '2-1': '2 Same process/equipment experience coefficient', '3-1': '3 The manufacturer provides coefficients', '4-3': '4 egional emission coefficient', '5-3': '5 National emission coefficient', '6-3': '6 International emission coefficient'}
+2024-05-03 10:52:36.712794 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:52:36.713803 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345174d1b88783aef6bf16, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345174d1b88783aef6bf16"}, "remainingTimeMS": 29}
+2024-05-03 10:52:37.387363 root [INFO] activityDataTypes: {'1-1': 'Continuous measurement', '2-2': 'Periodic (intermittent) measurement', '3-3': 'Financial accounting estimates', '4-3': 'Self-assessment'}
+2024-05-03 10:52:37.388012 root [INFO] 
+2024-05-03 10:52:37.388668 root [INFO] activityTrustedDataTypes: {'1-1': '(1) (1) Those who have performed external calibration or have multiple sets of data to support this', '2-2': '(2) (2) Those with certificates such as internal correction or accounting visa', '3-3': '(3) (3) Failure to perform instrument calibration or record compilation'}
+2024-05-03 10:52:37.389251 root [INFO] 
+2024-05-03 10:52:37.389650 root [INFO] emissionFactorTypes: {'1-1': '1 In-house development coefficient/mass balance coefficient', '2-1': '2 Same process/equipment experience coefficient', '3-1': '3 The manufacturer provides coefficients', '4-3': '4 egional emission coefficient', '5-3': '5 National emission coefficient', '6-3': '6 International emission coefficient'}
+2024-05-03 10:52:50.115995 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:52:50.116875 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345182a37fec4b365f24fa, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345182a37fec4b365f24fa"}, "remainingTimeMS": 29}
+2024-05-03 10:52:50.828311 root [INFO] activityDataTypes: {'1-1': 'Continuous measurement', '2-2': 'Periodic (intermittent) measurement', '3-3': 'Financial accounting estimates', '4-3': 'Self-assessment'}
+2024-05-03 10:52:50.829219 root [INFO] 
+2024-05-03 10:52:50.829829 root [INFO] activityTrustedDataTypes: {'1-1': '(1) (1) Those who have performed external calibration or have multiple sets of data to support this', '2-2': '(2) (2) Those with certificates such as internal correction or accounting visa', '3-3': '(3) (3) Failure to perform instrument calibration or record compilation'}
+2024-05-03 10:52:50.830411 root [INFO] 
+2024-05-03 10:52:50.830925 root [INFO] emissionFactorTypes: {'1-1': '1 In-house development coefficient/mass balance coefficient', '2-1': '2 Same process/equipment experience coefficient', '3-1': '3 The manufacturer provides coefficients', '4-3': '4 egional emission coefficient', '5-3': '5 National emission coefficient', '6-3': '6 International emission coefficient'}
+2024-05-03 10:53:00.056681 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:53:00.057523 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6634518c4fe94ca0c7a9e6fd, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6634518c4fe94ca0c7a9e6fd"}, "remainingTimeMS": 29}
+2024-05-03 10:53:00.712804 root [INFO] activityDataTypes: {'1-1': 'Continuous measurement', '2-2': 'Periodic (intermittent) measurement', '3-3': 'Financial accounting estimates', '4-3': 'Self-assessment'}
+2024-05-03 10:53:00.713326 root [INFO] 
+2024-05-03 10:53:00.713773 root [INFO] activityTrustedDataTypes: {'1-1': '(1) (1) Those who have performed external calibration or have multiple sets of data to support this', '2-2': '(2) (2) Those with certificates such as internal correction or accounting visa', '3-3': '(3) (3) Failure to perform instrument calibration or record compilation'}
+2024-05-03 10:53:00.714191 root [INFO] 
+2024-05-03 10:53:00.714648 root [INFO] emissionFactorTypes: {'1-1': '1 In-house development coefficient/mass balance coefficient', '2-1': '2 Same process/equipment experience coefficient', '3-1': '3 The manufacturer provides coefficients', '4-3': '4 egional emission coefficient', '5-3': '5 National emission coefficient', '6-3': '6 International emission coefficient'}
+2024-05-03 10:53:09.124383 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:53:09.125397 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345195a3018e8af1d71290, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345195a3018e8af1d71290"}, "remainingTimeMS": 29}
+2024-05-03 10:53:10.004974 root [INFO] activityDataTypes: {'1-1': 'Continuous measurement', '2-2': 'Periodic (intermittent) measurement', '3-3': 'Financial accounting estimates', '4-3': 'Self-assessment'}
+2024-05-03 10:53:10.005523 root [INFO] 
+2024-05-03 10:53:10.005901 root [INFO] activityTrustedDataTypes: {'1-1': '(1) (1) Those who have performed external calibration or have multiple sets of data to support this', '2-2': '(2) (2) Those with certificates such as internal correction or accounting visa', '3-3': '(3) (3) Failure to perform instrument calibration or record compilation'}
+2024-05-03 10:53:10.006232 root [INFO] 
+2024-05-03 10:53:10.006548 root [INFO] emissionFactorTypes: {'1-1': '1 In-house development coefficient/mass balance coefficient', '2-1': '2 Same process/equipment experience coefficient', '3-1': '3 The manufacturer provides coefficients', '4-3': '4 egional emission coefficient', '5-3': '5 National emission coefficient', '6-3': '6 International emission coefficient'}
+2024-05-03 10:53:40.078710 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 10:53:40.079714 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663451b4868b8e7b595ee2ee, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663451b4868b8e7b595ee2ee"}, "remainingTimeMS": 29}
+2024-05-03 10:53:40.718736 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 10:53:40.719531 root [INFO] 
+2024-05-03 10:53:40.720246 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 10:53:40.720898 root [INFO] 
+2024-05-03 10:53:40.721393 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 10:53:40.736494 root [INFO] 生成 1-基本資料
+2024-05-03 10:53:40.739953 root [INFO] 生成 2-定性盤查
+2024-05-03 10:53:42.889044 root [INFO] 生成 2.1-重大性準則
+2024-05-03 10:53:44.334614 root [INFO] 生成 3-定量盤查
+2024-05-03 10:53:44.351225 root [INFO] 生成 3.1-排放係數
+2024-05-03 10:53:44.354974 root [INFO] 生成 3.2-上游運輸
+2024-05-03 10:53:44.356596 root [INFO] 生成 3.3-下游運輸
+2024-05-03 10:53:44.357831 root [INFO] 生成 4-數據品質管理
+2024-05-03 10:53:44.366313 root [INFO] 生成 5-不確定性之評估
+2024-05-03 10:53:44.377518 root [INFO] 生成 6-彙總表
+2024-05-03 10:53:44.382553 root [INFO] 生成 附表一
+2024-05-03 10:53:44.392778 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 10:53:44.451818 root [INFO] Time used for generating GHG report: 4 sec.
+2024-05-03 11:19:09.333965 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:19:09.335435 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663457ad332c1c95be9bfd93, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663457ad332c1c95be9bfd93"}, "remainingTimeMS": 29}
+2024-05-03 11:19:09.977499 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:19:09.978011 root [INFO] 
+2024-05-03 11:19:09.978399 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:19:09.978762 root [INFO] 
+2024-05-03 11:19:09.979313 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:19:09.993754 root [INFO] 生成 1-基本資料
+2024-05-03 11:19:09.997403 root [INFO] 生成 2-定性盤查
+2024-05-03 11:19:11.561263 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:19:13.028185 root [INFO] 生成 3-定量盤查
+2024-05-03 11:19:13.042682 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:19:13.046961 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:19:13.049366 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:19:13.051162 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:19:13.058506 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:19:13.069653 root [INFO] 生成 6-彙總表
+2024-05-03 11:19:13.075375 root [INFO] 生成 附表一
+2024-05-03 11:19:13.084165 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:19:13.158131 root [INFO] Time used for generating GHG report: 4 sec.
+2024-05-03 11:36:20.200394 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:36:20.201245 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345bb47422a046f80d8386, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345bb47422a046f80d8386"}, "remainingTimeMS": 29}
+2024-05-03 11:36:20.836623 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:36:20.837389 root [INFO] 
+2024-05-03 11:36:20.837878 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:36:20.838421 root [INFO] 
+2024-05-03 11:36:20.838951 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:36:20.852490 root [INFO] 生成 1-基本資料
+2024-05-03 11:36:20.855146 root [INFO] 生成 2-定性盤查
+2024-05-03 11:36:40.480607 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:36:41.869354 root [INFO] 生成 3-定量盤查
+2024-05-03 11:36:42.171553 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:36:42.213137 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:36:42.214551 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:36:42.219810 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:36:42.353181 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:36:42.560267 root [INFO] 生成 6-彙總表
+2024-05-03 11:36:42.566386 root [INFO] 生成 附表一
+2024-05-03 11:36:42.574632 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:36:42.748374 root [INFO] Time used for generating GHG report: 23 sec.
+2024-05-03 11:37:32.635974 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:37:32.636786 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345bfc7190af4aac5e7f50, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345bfc7190af4aac5e7f50"}, "remainingTimeMS": 29}
+2024-05-03 11:37:33.281176 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:37:33.281594 root [INFO] 
+2024-05-03 11:37:33.281851 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:37:33.282062 root [INFO] 
+2024-05-03 11:37:33.282301 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:37:33.297681 root [INFO] 生成 1-基本資料
+2024-05-03 11:37:33.299835 root [INFO] 生成 2-定性盤查
+2024-05-03 11:37:52.634245 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:37:54.061422 root [INFO] 生成 3-定量盤查
+2024-05-03 11:37:54.409050 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:37:54.461629 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:37:54.463429 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:37:54.469562 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:37:54.613072 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:37:54.831039 root [INFO] 生成 6-彙總表
+2024-05-03 11:37:54.837166 root [INFO] 生成 附表一
+2024-05-03 11:37:54.847034 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:37:55.036207 root [INFO] Time used for generating GHG report: 22 sec.
+2024-05-03 11:39:14.377069 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:39:14.378766 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345c6266da1811586c2d02, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345c6266da1811586c2d02"}, "remainingTimeMS": 29}
+2024-05-03 11:39:14.991817 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:39:14.992443 root [INFO] 
+2024-05-03 11:39:14.992868 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:39:14.993241 root [INFO] 
+2024-05-03 11:39:14.993570 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:39:15.007827 root [INFO] 生成 1-基本資料
+2024-05-03 11:39:15.010540 root [INFO] 生成 2-定性盤查
+2024-05-03 11:39:34.432250 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:39:35.789770 root [INFO] 生成 3-定量盤查
+2024-05-03 11:39:36.076479 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:39:36.120134 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:39:36.122044 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:39:36.127641 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:39:36.268239 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:39:36.475668 root [INFO] 生成 6-彙總表
+2024-05-03 11:39:36.479671 root [INFO] 生成 附表一
+2024-05-03 11:39:36.489584 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:39:36.663647 root [INFO] Time used for generating GHG report: 22 sec.
+2024-05-03 11:43:05.470338 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:43:05.470942 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345d49622c85a982aed3d7, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345d49622c85a982aed3d7"}, "remainingTimeMS": 29}
+2024-05-03 11:43:06.141375 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:43:06.141943 root [INFO] 
+2024-05-03 11:43:06.142272 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:43:06.142653 root [INFO] 
+2024-05-03 11:43:06.143066 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:43:06.155934 root [INFO] 生成 1-基本資料
+2024-05-03 11:43:06.158216 root [INFO] 生成 2-定性盤查
+2024-05-03 11:43:25.993041 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:43:27.511584 root [INFO] 生成 3-定量盤查
+2024-05-03 11:43:27.774939 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:43:27.817395 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:43:27.818465 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:43:27.823047 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:43:27.939874 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:43:28.140770 root [INFO] 生成 6-彙總表
+2024-05-03 11:43:28.145242 root [INFO] 生成 附表一
+2024-05-03 11:43:28.153396 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:43:28.309835 root [INFO] Time used for generating GHG report: 23 sec.
+2024-05-03 11:47:04.628435 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:47:04.629231 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345e387ac494b49ebc8656, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345e387ac494b49ebc8656"}, "remainingTimeMS": 29}
+2024-05-03 11:47:05.299152 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:47:05.299638 root [INFO] 
+2024-05-03 11:47:05.299983 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:47:05.300340 root [INFO] 
+2024-05-03 11:47:05.300616 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:47:14.554552 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:47:14.555280 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345e42bc8e12c0c1ed5137, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345e42bc8e12c0c1ed5137"}, "remainingTimeMS": 29}
+2024-05-03 11:47:15.192785 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:47:15.193560 root [INFO] 
+2024-05-03 11:47:15.193990 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:47:15.194364 root [INFO] 
+2024-05-03 11:47:15.194933 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:47:15.211080 root [INFO] 生成 1-基本資料
+2024-05-03 11:47:15.213637 root [INFO] 生成 2-定性盤查
+2024-05-03 11:47:35.172307 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:47:36.645355 root [INFO] 生成 3-定量盤查
+2024-05-03 11:47:36.923235 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:47:36.963522 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:47:36.965276 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:47:36.969895 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:47:37.093455 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:47:37.297199 root [INFO] 生成 6-彙總表
+2024-05-03 11:47:37.300727 root [INFO] 生成 附表一
+2024-05-03 11:47:37.311575 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:47:37.478725 root [INFO] Time used for generating GHG report: 23 sec.
+2024-05-03 11:48:02.129191 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:48:02.130026 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345e72fd6578773c8ccaf1, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345e72fd6578773c8ccaf1"}, "remainingTimeMS": 29}
+2024-05-03 11:48:02.944242 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:48:02.944950 root [INFO] 
+2024-05-03 11:48:02.945359 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:48:02.945807 root [INFO] 
+2024-05-03 11:48:02.946200 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:48:02.957331 root [INFO] 生成 1-基本資料
+2024-05-03 11:48:02.959632 root [INFO] 生成 2-定性盤查
+2024-05-03 11:48:26.013244 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:48:28.232037 root [INFO] 生成 3-定量盤查
+2024-05-03 11:48:28.558437 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:48:28.625200 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:48:28.626456 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:48:28.635653 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:48:28.848300 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:48:29.181218 root [INFO] 生成 6-彙總表
+2024-05-03 11:48:29.186185 root [INFO] 生成 附表一
+2024-05-03 11:48:29.198086 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:48:29.426254 root [INFO] Time used for generating GHG report: 27 sec.
+2024-05-03 11:51:13.014425 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:51:13.015148 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345f307fb19aaad29a711b, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345f307fb19aaad29a711b"}, "remainingTimeMS": 29}
+2024-05-03 11:51:13.656607 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:51:13.657050 root [INFO] 
+2024-05-03 11:51:13.657302 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:51:13.657502 root [INFO] 
+2024-05-03 11:51:13.657694 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:51:13.669886 root [INFO] 生成 1-基本資料
+2024-05-03 11:51:13.672248 root [INFO] 生成 2-定性盤查
+2024-05-03 11:51:32.572211 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:51:34.038061 root [INFO] 生成 3-定量盤查
+2024-05-03 11:51:34.324689 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:51:34.380398 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:51:34.382139 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:51:34.388425 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:51:34.513867 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:51:34.725076 root [INFO] 生成 6-彙總表
+2024-05-03 11:51:34.728948 root [INFO] 生成 附表一
+2024-05-03 11:51:34.742771 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:51:34.941813 root [INFO] Time used for generating GHG report: 22 sec.
+2024-05-03 11:53:26.902212 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:53:26.903126 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345fb63e528227130f7d95, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345fb63e528227130f7d95"}, "remainingTimeMS": 29}
+2024-05-03 11:53:27.545803 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:53:27.546500 root [INFO] 
+2024-05-03 11:53:27.546946 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:53:27.547434 root [INFO] 
+2024-05-03 11:53:27.547800 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:53:33.229758 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 11:53:33.230627 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66345fbd02049455d3e4a533, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66345fbd02049455d3e4a533"}, "remainingTimeMS": 29}
+2024-05-03 11:53:33.973056 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 11:53:33.973908 root [INFO] 
+2024-05-03 11:53:33.974685 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 11:53:33.975470 root [INFO] 
+2024-05-03 11:53:33.976048 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 11:53:33.991425 root [INFO] 生成 1-基本資料
+2024-05-03 11:53:33.995438 root [INFO] 生成 2-定性盤查
+2024-05-03 11:53:54.179834 root [INFO] 生成 2.1-重大性準則
+2024-05-03 11:53:55.682569 root [INFO] 生成 3-定量盤查
+2024-05-03 11:53:55.919542 root [INFO] 生成 3.1-排放係數
+2024-05-03 11:53:55.957706 root [INFO] 生成 3.2-上游運輸
+2024-05-03 11:53:55.959212 root [INFO] 生成 3.3-下游運輸
+2024-05-03 11:53:55.963908 root [INFO] 生成 4-數據品質管理
+2024-05-03 11:53:56.068621 root [INFO] 生成 5-不確定性之評估
+2024-05-03 11:53:56.245085 root [INFO] 生成 6-彙總表
+2024-05-03 11:53:56.248452 root [INFO] 生成 附表一
+2024-05-03 11:53:56.255832 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 11:53:56.405688 root [INFO] Time used for generating GHG report: 23 sec.
+2024-05-03 12:51:46.373466 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 12:51:46.374344 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66346d62f228d30e86c26b7a, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66346d62f228d30e86c26b7a"}, "remainingTimeMS": 29}
+2024-05-03 12:51:47.029254 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 12:51:47.030135 root [INFO] 
+2024-05-03 12:51:47.030821 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 12:51:47.031467 root [INFO] 
+2024-05-03 12:51:47.032098 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 12:51:47.046660 root [INFO] 生成 1-基本資料
+2024-05-03 12:51:47.049015 root [INFO] 生成 2-定性盤查
+2024-05-03 12:52:06.853438 root [INFO] 生成 2.1-重大性準則
+2024-05-03 12:52:08.243880 root [INFO] 生成 3-定量盤查
+2024-05-03 12:52:08.501550 root [INFO] 生成 3.1-排放係數
+2024-05-03 12:52:08.542125 root [INFO] 生成 3.2-上游運輸
+2024-05-03 12:52:08.543134 root [INFO] 生成 3.3-下游運輸
+2024-05-03 12:52:08.547518 root [INFO] 生成 4-數據品質管理
+2024-05-03 12:52:08.656628 root [INFO] 生成 5-不確定性之評估
+2024-05-03 12:52:08.842188 root [INFO] 生成 6-彙總表
+2024-05-03 12:52:08.846216 root [INFO] 生成 附表一
+2024-05-03 12:52:08.853713 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 12:52:09.010751 root [INFO] Time used for generating GHG report: 23 sec.
+2024-05-03 12:53:34.673709 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 12:53:34.674547 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66346dce03d117c41d187b4d, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66346dce03d117c41d187b4d"}, "remainingTimeMS": 29}
+2024-05-03 12:53:35.344105 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 12:53:35.344673 root [INFO] 
+2024-05-03 12:53:35.345055 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 12:53:35.345415 root [INFO] 
+2024-05-03 12:53:35.345721 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 12:53:40.107788 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 12:53:40.108549 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66346dd432bd2b0fff8bfd01, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66346dd432bd2b0fff8bfd01"}, "remainingTimeMS": 29}
+2024-05-03 12:53:40.712731 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 12:53:40.713495 root [INFO] 
+2024-05-03 12:53:40.714080 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 12:53:40.714753 root [INFO] 
+2024-05-03 12:53:40.715453 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 12:53:40.730171 root [INFO] 生成 1-基本資料
+2024-05-03 12:53:40.733632 root [INFO] 生成 2-定性盤查
+2024-05-03 12:53:59.949410 root [INFO] 生成 2.1-重大性準則
+2024-05-03 12:54:01.345645 root [INFO] 生成 3-定量盤查
+2024-05-03 12:54:01.615419 root [INFO] 生成 3.1-排放係數
+2024-05-03 12:54:01.660843 root [INFO] 生成 3.2-上游運輸
+2024-05-03 12:54:01.662607 root [INFO] 生成 3.3-下游運輸
+2024-05-03 12:54:01.668561 root [INFO] 生成 4-數據品質管理
+2024-05-03 12:54:01.796532 root [INFO] 生成 5-不確定性之評估
+2024-05-03 12:54:02.007491 root [INFO] 生成 6-彙總表
+2024-05-03 12:54:02.012620 root [INFO] 生成 附表一
+2024-05-03 12:54:02.021544 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 12:54:02.190898 root [INFO] Time used for generating GHG report: 22 sec.
+2024-05-03 13:22:26.175640 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 13:22:26.176477 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66347492a98c3c295c5668ad, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66347492a98c3c295c5668ad"}, "remainingTimeMS": 29}
+2024-05-03 13:22:26.852585 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 13:22:26.853325 root [INFO] 
+2024-05-03 13:22:26.853872 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 13:22:26.854452 root [INFO] 
+2024-05-03 13:22:26.854885 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 13:22:32.989610 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 13:22:32.990659 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6634749868cc328d92af42f4, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6634749868cc328d92af42f4"}, "remainingTimeMS": 29}
+2024-05-03 13:22:33.590862 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 13:22:33.591566 root [INFO] 
+2024-05-03 13:22:33.592117 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 13:22:33.592597 root [INFO] 
+2024-05-03 13:22:33.593053 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 13:22:33.607940 root [INFO] 生成 1-基本資料
+2024-05-03 13:22:33.610443 root [INFO] 生成 2-定性盤查
+2024-05-03 13:22:52.718819 root [INFO] 生成 2.1-重大性準則
+2024-05-03 13:22:54.117529 root [INFO] 生成 3-定量盤查
+2024-05-03 13:22:54.388003 root [INFO] 生成 3.1-排放係數
+2024-05-03 13:22:54.430675 root [INFO] 生成 3.2-上游運輸
+2024-05-03 13:22:54.431698 root [INFO] 生成 3.3-下游運輸
+2024-05-03 13:22:54.436428 root [INFO] 生成 4-數據品質管理
+2024-05-03 13:22:54.555913 root [INFO] 生成 5-不確定性之評估
+2024-05-03 13:22:54.755322 root [INFO] 生成 6-彙總表
+2024-05-03 13:22:54.759683 root [INFO] 生成 附表一
+2024-05-03 13:22:54.768166 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 13:22:54.941800 root [INFO] Time used for generating GHG report: 22 sec.
+2024-05-03 13:37:51.083594 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-03 13:37:51.084616 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6634782ff8f0a39028ce2604, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6634782ff8f0a39028ce2604"}, "remainingTimeMS": 29}
+2024-05-03 13:37:51.831721 root [INFO] activityDataTypes: {'1-1': '連續量測', '2-2': '定期(間歇)量測', '3-3': '財務會計推估', '4-3': '自行評估'}
+2024-05-03 13:37:51.832456 root [INFO] 
+2024-05-03 13:37:51.832953 root [INFO] activityTrustedDataTypes: {'1-1': '(1) 有進行外部校正或有多組數據茲佐證者', '2-2': '(2) 有進行內部校正或經過會計簽證等証明者', '3-3': '(3) 未進行儀器校正或未進行紀錄彙整者'}
+2024-05-03 13:37:51.833430 root [INFO] 
+2024-05-03 13:37:51.833895 root [INFO] emissionFactorTypes: {'1-1': '1 自廠發展係數/質量平衡所得係數', '2-1': '2 同製程/設備經驗係數', '3-1': '3 製造廠提供係數', '4-3': '4 區域排放係數', '5-3': '5 國家排放係數', '6-3': '6 國際排放係數'}
+2024-05-03 13:37:51.848631 root [INFO] 生成 1-基本資料
+2024-05-03 13:37:51.852405 root [INFO] 生成 2-定性盤查
+2024-05-03 13:38:34.614481 root [INFO] 生成 2.1-重大性準則
+2024-05-03 13:38:37.596812 root [INFO] 生成 3-定量盤查
+2024-05-03 13:38:37.866697 root [INFO] 生成 3.1-排放係數
+2024-05-03 13:38:37.906649 root [INFO] 生成 3.2-上游運輸
+2024-05-03 13:38:37.907965 root [INFO] 生成 3.3-下游運輸
+2024-05-03 13:38:37.913143 root [INFO] 生成 4-數據品質管理
+2024-05-03 13:38:38.031584 root [INFO] 生成 5-不確定性之評估
+2024-05-03 13:38:38.228405 root [INFO] 生成 6-彙總表
+2024-05-03 13:38:38.232516 root [INFO] 生成 附表一
+2024-05-03 13:38:38.240960 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-03 13:38:38.402743 root [INFO] Time used for generating GHG report: 47 sec.
