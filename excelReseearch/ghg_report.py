@@ -24,7 +24,7 @@ if __name__ == "__main__":
     companyId = sys.argv[1]
     inventory_year = int(sys.argv[2])
     env = sys.argv[3]
-    language = "tw"#sys.argv[4]
+    language = "tw"# sys.argv[4]
 
     config = configparser.ConfigParser()
     config.read(rootPath+"/config.ini")
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     logFile = os.path.splitext(basename)[0]
     logPath = os.getcwd()
 
-    logger = myLog.get_logger(logPath, f"{logFile}.log", config["mysql_azureV2"], level=logging.INFO)
+    logger = myLog.get_logger(logPath, f"{logFile}.log", level=logging.INFO)
 
     if env == "production":
         client = MongoConn(config["mongo_production_nxmap"])
@@ -47,6 +47,8 @@ if __name__ == "__main__":
 
     site_modules = db.site_modules.find_one({"_id": ObjectId(companyId)})
     companyName = site_modules["companyName"]
+    logger.info(f"companyName: {companyName} & {companyId}")
+    # print(f"companyName: {companyName}")
 
     if language.lower() == "tw":
         filename = f"溫室氣體盤查清冊v1.2_{companyName}_{inventory_year}.xlsx"
@@ -85,12 +87,9 @@ if __name__ == "__main__":
     category6_list = ["GHG Emissions or Removals from Other Sources"] 
     
     emission_view = db.translations.find_one({"url": "emission-view"})
-    # logger.info("emission_view: "+str(emission_view["tran"]))
     for tran in emission_view["tran"]:
         if tran["name"] == language:
             emission_view_translate = tran["data"]
-
-    # logger.info(emission_view_translate)
 
     # 以下三行分別是活動數據種類、活動數據可信種類、排放係數種類
     activityDataTypes = {
@@ -869,20 +868,58 @@ if __name__ == "__main__":
         # 海（空）運和陸運的分類
         ModeOfTransport = [[translate4CalApproaches.get("Air", "Air"), translate4CalApproaches.get("Ship", "Ship")], [translate4CalApproaches.get("Bus", "Bus"), translate4CalApproaches.get("Car", "Car"), translate4CalApproaches.get("Garbage truck", "Garbage truck"), translate4CalApproaches.get("Motorcycle", "Motorcycle"), translate4CalApproaches.get("Rail", "Rail"), translate4CalApproaches.get("Refrigerated trucks", "Refrigerated trucks"), translate4CalApproaches.get("Tour bus", "Tour bus"), translate4CalApproaches.get("truck", "truck"), translate4CalApproaches.get("Diesel", "Diesel")]]
 
+        # 取得公司各個排放活動的資訊以及數據等等
+        asset_datas = db.assetdatas.find({"company": ObjectId(companyId), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
+
+        # 用於儲存公司資產、活動數據、排放活動等等
+        asset_info = {}
+
+        for asset_data in asset_datas:
+            consumption_datas = asset_data["consumption_data"]
+            for consumption_data in consumption_datas:
+                consumption_yearly_data = consumption_data["consumption_yearly_data"]
+                for yearly_data in consumption_yearly_data:
+                    assetId = yearly_data["assetId"]
+                    consumptionValues = yearly_data["consumptionValue"]
+
+                    baseUnit = ""
+                    
+                    for consumptionValue in consumptionValues:
+                        activityData = consumptionValue["consumptionValue"]         # 取得活動數據
+                        if baseUnit == "":
+                            baseUnit = consumptionValue["baseUnit"]                 # 取得排放活動單位
+                        conversionValue = consumptionValue["conversionValue"]       # 若活動數據的單位不等於排放活動單位，則進行轉換
+                        if conversionValue is None:
+                            conversionValue = 1                                     # 若沒有轉換值，則以1作為默認值
+                        convertedActivityData = consumptionValue["convertedConsumptionValue"]       # 已經算好的 活動數據 * 轉換值，用於核對是否一樣
+                        if assetId not in asset_info:                                               # 若assetId不存在則新增
+                            asset_info[assetId] = {
+                                "unit": baseUnit,
+                                "convertedActivityData_calculate": activityData * conversionValue,  # 自己計算的 活動數據 * 轉換值
+                                "convertedActivityData": convertedActivityData                      # 資料庫存的 活動數據 * 轉換值
+                            }
+                        else:                                                                       # 否則加上 活動數據 * 轉換值
+                            asset_info[assetId]["convertedActivityData_calculate"] += activityData * conversionValue
+                            asset_info[assetId]["convertedActivityData"] += convertedActivityData
+
         # 到母公司的資產獲取資料並放進ef, upstream_info, downstream_info
         for globalAsset in company_assets_head:
             # 取得公司排放係數的資料
             companyAssets = globalAsset["companyAsset"]
             # 根據各個類別去處理
             for companyAsset in companyAssets:
-                scope = companyAsset["scope"]
+                scope = companyAsset["scope"]               # 範疇 
                 scopeName = companyAsset["scopeName"]       # 類別名稱（並非范疇名稱）
                 assets = companyAsset["assets"]             # 各個類別的資料
+
+                upstream_activityData = {}                  # 用於儲存上游活動數據
+                downstream_activityData = {}                # 用於儲存下游活動數據
 
                 for asset in assets:
                     if asset["category"] == "Emission Removal & Mitigation":        # 這個類別跳過
                         continue
 
+                    assetId = asset["_id"]
                     # 根據判斷式去設定設備名稱（因為每個類別都有可能有一樣的設備名稱）
                     if "assetName" in asset:
                         assetName = asset["assetName"]
@@ -1058,7 +1095,6 @@ if __name__ == "__main__":
                     sf6 = asset.get("sf6EmissonValue")
                     nf3 = asset.get("nf3EmissonValue")
                     source = asset.get("source", asset.get("dataSource"))
- 
                     if source == "EPA Taiwan" or source == "EPA(Taiwan)":
                         source = "台灣環境部"
                     elif source == "custom":
@@ -1070,7 +1106,7 @@ if __name__ == "__main__":
                     activityTrustedDataType = asset.get("activityTrustedDataType")
                     activityTrustedDataTypeValue = asset.get("activityTrustedDataTypeValue")
                     emissionFactorType = asset.get("emissionFactorType")
-                    emissionFactorTypeValue = asset.get("0-emissionFactorTypeValue")
+                    emissionFactorTypeValue = asset.get("emissionFactorTypeValue")
 
                     # 取得活動數據種類、活動數據可信種類以及排放係數種類的名稱
                     if activityDataType:
@@ -1087,23 +1123,21 @@ if __name__ == "__main__":
                         final_EFT = emissionFactorTypes.get(f"{emissionFactorType}-{emissionFactorTypeValue}", "")
                     else:
                         final_EFT = ""
-            
-                    # 取得活動數據、單位、總排放量等資訊
-                    asset_datas = db.assetdatas.find({"company": ObjectId(companyId), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
-                    activityData = 0            # 初始活動數據
-                    unit = asset.get("baseUnit", "No base unit")
-                    for asset_data in asset_datas:
-                        consumption_datas = asset_data["consumption_data"]
-                        for consumption_data in consumption_datas:
-                            consumption_yearly_data = consumption_data["consumption_yearly_data"]
-                            for yearly_data in consumption_yearly_data:
-                                if yearly_data["assetId"] == asset["_id"]:
-                                    consumptionValues = yearly_data["consumptionValue"]
-                                    for consumptionValue in consumptionValues:
-                                        activityData += consumptionValue["consumptionValue"]
+
+                    # 判斷asset_info裡面的活動數據（計算的）和活動數據（converted的）是否一樣
+                    if assetId in asset_info:
+                        activityDataCalculate = asset_info[assetId]["convertedActivityData_calculate"]
+                        activityDataConverted = asset_info[assetId]["convertedActivityData"]
+                        unit = asset_info[assetId]["unit"]
+                        if activityDataCalculate - activityDataConverted > 0.001:
+                            util.alert_line(f"\n{companyName}\nWarning: {assetName} activity data is not consistent with converted data where \nconverted data: {activityDataConverted} \ncalculated data: {activityDataCalculate}")
+                    else:
+                        activityDataCalculate = 0
+                        activityDataConverted = 0
+                        unit = asset.get("unit")
 
                     # 增加ef資訊
-                    if fuelType in refrigerants_list:
+                    if fuelType in refrigerants_list:           # 如果是冷媒
                         ef[current_index] = {
                             "companyName": companyName,
                             "assetName": assetName,
@@ -1129,7 +1163,7 @@ if __name__ == "__main__":
                             "activityDataType": final_ADT,
                             "activityTrustedDataType": final_ATDT,
                             "emissionFactorType": final_EFT,
-                            "activityData": activityData,
+                            "activityData": activityDataCalculate,
                             "unit": unit
                         }
                     else:
@@ -1158,12 +1192,12 @@ if __name__ == "__main__":
                             "activityDataType": final_ADT,
                             "activityTrustedDataType": final_ATDT,
                             "emissionFactorType": final_EFT,
-                            "activityData": activityData,
+                            "activityData": activityDataCalculate,
                             "unit": unit
                         }
-                        if ef.get(current_index-1) and scopeName in ("Upstream T&D", "Downstream T&D"):
-                            if ef[current_index-1]["companyName"] == companyName and ef[current_index-1]["assetName"] == assetName:
-                                if ef[current_index-1].get("asset_index") is None:
+                        if ef.get(current_index-1) and scopeName in ("Upstream T&D", "Downstream T&D"):     # 若起一個也是上游或下遊，我們需要把兩個資源的 國際運輸 & 國內運輸 合併
+                            if ef[current_index-1]["companyName"] == companyName and ef[current_index-1]["assetName"] == assetName:    # 若同一個公司同一個設備
+                                if ef[current_index-1].get("asset_index") is None:                         
                                     ef[current_index-1]["asset_index"] = asset_index
                                     ef[current_index]["asset_index"] = asset_index
                                     ef[current_index-1]["scopeName"] = scopeName
@@ -1183,7 +1217,7 @@ if __name__ == "__main__":
                                 "serialNumber": current_index_upstream,
                                 "companyName": companyName,
                                 "assetName": assetName,
-                                "activityData1": "",        # 海運/空運 的活動數據
+                                "activityData1": 0,        # 海運/空運 的活動數據
                                 "unit1": "",                # 海運/空運 的單位
                                 "ghg1": "",                 # 海運/空運 的GHG
                                 "emissionFactor1": "",      # 海運/空運 的排放因子
@@ -1191,7 +1225,7 @@ if __name__ == "__main__":
                                 "emission1": f"""=IF(D{current_index_upstream+3}="", "", D{current_index_upstream+3}*G{current_index_upstream+3})""",            # 海運/空運 的排放量
                                 "GWP1": "",                  # 海運/空運 的GWP
                                 "totalemission1": f"""=IF(D{current_index_upstream+3}="", "", I{current_index_upstream+3}*J{current_index_upstream+3})""",            # 海運/空運 的總排放量   
-                                "activityData2": "",        # 陸運 的活動數據
+                                "activityData2": 0,        # 陸運 的活動數據
                                 "unit2": "",                # 陸運 的單位emissionFactorValue
                                 "ghg2": "",                 # 陸運 的GHG
                                 "emissionFactor2": "",      # 陸運 的排放因子
@@ -1203,40 +1237,22 @@ if __name__ == "__main__":
                             current_index_upstream += 1     # 上游編號+1
                     
                         # 取得上游活動數據、單位、GHG、排放因子、GWP、總排放量等資訊
-                        asset_datas = db.assetdatas.find({"company": ObjectId(companyId), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
-                        activityData = 0
-                        unit = ""
-                        for asset_data in asset_datas:
-                            consumption_datas = asset_data["consumption_data"]
-                            for consumption_data in consumption_datas:
-                                consumption_yearly_data = consumption_data["consumption_yearly_data"]
-                                for yearly_data in consumption_yearly_data:
-                                    if yearly_data["assetId"] == asset["_id"]:
-                                        consumptionValues = yearly_data["consumptionValue"]
-                                        for consumptionValue in consumptionValues:
-                                            activityData += consumptionValue["consumptionValue"]
-                                            unit = consumptionValue["unit"]
-                                            ghg = "CO₂"
-                                            emissionFactorValue = consumptionValue["emissionFactorValue"]
-                                            GWP = 1
-                                            emissionUnit = asset["emissionUnit"]
-
-                                            if fuelType in ModeOfTransport[0]:
-                                                upstream_info[companyName+assetName]["activityData1"] = activityData
-                                                upstream_info[companyName+assetName]["unit1"] = unit
-                                                upstream_info[companyName+assetName]["ghg1"] = ghg
-                                                upstream_info[companyName+assetName]["emissionFactor1"] = emissionFactorValue
-                                                upstream_info[companyName+assetName]["emissionUnit1"] = emissionUnit
-                                                upstream_info[companyName+assetName]["GWP1"] = GWP
-                                            elif fuelType in ModeOfTransport[1]:
-                                                upstream_info[companyName+assetName]["activityData2"] = activityData
-                                                upstream_info[companyName+assetName]["unit2"] = unit
-                                                upstream_info[companyName+assetName]["ghg2"] = ghg
-                                                upstream_info[companyName+assetName]["emissionFactor2"] = emissionFactorValue
-                                                upstream_info[companyName+assetName]["emissionUnit2"] = emissionUnit
-                                                upstream_info[companyName+assetName]["GWP2"] = GWP
-                                            else:
-                                                logger.error(f"Error fuelType: {fuelType}")
+                        if fuelType in ModeOfTransport[0]:
+                            upstream_info[companyName+assetName]["activityData1"] += activityDataCalculate
+                            upstream_info[companyName+assetName]["unit1"] = unit
+                            upstream_info[companyName+assetName]["ghg1"] = "CO₂"
+                            upstream_info[companyName+assetName]["emissionFactor1"] = co2
+                            upstream_info[companyName+assetName]["emissionUnit1"] = co2Unit
+                            upstream_info[companyName+assetName]["GWP1"] = f"""='{sheet12}'!G3"""
+                        elif fuelType in ModeOfTransport[1]:
+                            upstream_info[companyName+assetName]["activityData2"] += activityDataCalculate
+                            upstream_info[companyName+assetName]["unit2"] = unit
+                            upstream_info[companyName+assetName]["ghg2"] = "CO₂"
+                            upstream_info[companyName+assetName]["emissionFactor2"] = co2
+                            upstream_info[companyName+assetName]["emissionUnit2"] = co2Unit
+                            upstream_info[companyName+assetName]["GWP2"] = f"""='{sheet12}'!G3"""
+                        else:
+                            logger.error(f"Error fuelType: {fuelType}")
 
                     # 處理上游資料以便寫入3.3 下游運輸
                     if scopeName == "Downstream T&D":
@@ -1245,7 +1261,7 @@ if __name__ == "__main__":
                                 "serialNumber": current_index_downtream,
                                 "companyName": companyName, 
                                 "assetName": assetName,
-                                "activityData1": "",        # 海運/空運 的活動數據
+                                "activityData1": 0,        # 海運/空運 的活動數據
                                 "unit1": "",                # 海運/空運 的單位
                                 "ghg1": "",                 # 海運/空運 的GHG
                                 "emissionFactor1": "",      # 海運/空運 的排放因子
@@ -1253,7 +1269,7 @@ if __name__ == "__main__":
                                 "emission1": f"""=IF(D{current_index_downtream+3}="", "", D{current_index_downtream+3}*G{current_index_downtream+3})""",            # 海運/空運 的排放量
                                 "GWP1": "",                  # 海運/空運 的GWP
                                 "totalemission1": f"""=IF(D{current_index_downtream+3}="", "", I{current_index_downtream+3}*J{current_index_downtream+3})""",            # 海運/空運 的總排放量   
-                                "activityData2": "",        # 陸運 的活動數據
+                                "activityData2": 0,        # 陸運 的活動數據
                                 "unit2": "",                # 陸運 的單位emissionFactorValue
                                 "ghg2": "",                 # 陸運 的GHG
                                 "emissionFactor2": "",      # 陸運 的排放因子
@@ -1263,43 +1279,58 @@ if __name__ == "__main__":
                                 "totalemission2": f"""=IF(L{current_index_downtream+3}="", "", Q{current_index_downtream+3}*R{current_index_downtream+3})""",            # 陸運 的總排放量
                             }
                             current_index_downtream += 1
-                        asset_datas = db.assetdatas.find({"company": ObjectId(companyId), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
-                        activityData = 0
-                        unit = ""
-                        for asset_data in asset_datas:
-                            consumption_datas = asset_data["consumption_data"]
-                            for consumption_data in consumption_datas:
-                                consumption_yearly_data = consumption_data["consumption_yearly_data"]
-                                for yearly_data in consumption_yearly_data:
-                                    if yearly_data["assetId"] == asset["_id"]:
-                                        consumptionValues = yearly_data["consumptionValue"]
-                                        for consumptionValue in consumptionValues:
-                                            activityData += consumptionValue["consumptionValue"]
-                                            unit = consumptionValue["unit"]
-                                            ghg = "CO₂"
-                                            emissionFactorValue = consumptionValue["emissionFactorValue"]
-                                            GWP = 1
-                                            emissionUnit = asset["emissionUnit"]
-
-                                            if fuelType in ModeOfTransport[0]:
-                                                downstream_info[companyName+assetName]["activityData1"] = activityData
-                                                downstream_info[companyName+assetName]["unit1"] = unit
-                                                downstream_info[companyName+assetName]["ghg1"] = ghg
-                                                downstream_info[companyName+assetName]["emissionFactor1"] = emissionFactorValue
-                                                downstream_info[companyName+assetName]["emissionUnit1"] = emissionUnit
-                                                downstream_info[companyName+assetName]["GWP1"] = GWP
-                                            elif fuelType in ModeOfTransport[1]:
-                                                downstream_info[companyName+assetName]["activityData2"] = activityData
-                                                downstream_info[companyName+assetName]["unit2"] = unit
-                                                downstream_info[companyName+assetName]["ghg2"] = ghg
-                                                downstream_info[companyName+assetName]["emissionFactor2"] = emissionFactorValue
-                                                downstream_info[companyName+assetName]["emissionUnit2"] = emissionUnit
-                                                downstream_info[companyName+assetName]["GWP2"] = GWP
-                                            else:
-                                                logger.error(f"Error fuelType: {fuelType}")
+                        
+                        # 取得下游活動數據、單位、GHG、排放因子、GWP、總排放量等資訊
+                        if fuelType in ModeOfTransport[0]:
+                            downstream_info[companyName+assetName]["activityData1"] += activityDataCalculate
+                            downstream_info[companyName+assetName]["unit1"] = unit
+                            downstream_info[companyName+assetName]["ghg1"] = "CO₂"
+                            downstream_info[companyName+assetName]["emissionFactor1"] = co2
+                            downstream_info[companyName+assetName]["emissionUnit1"] = co2Unit
+                            downstream_info[companyName+assetName]["GWP1"] = f"""='{sheet12}'!G3"""
+                        elif fuelType in ModeOfTransport[1]:
+                            downstream_info[companyName+assetName]["activityData2"] += activityDataCalculate
+                            downstream_info[companyName+assetName]["unit2"] = unit
+                            downstream_info[companyName+assetName]["ghg2"] = "CO₂"
+                            downstream_info[companyName+assetName]["emissionFactor2"] = co2
+                            downstream_info[companyName+assetName]["emissionUnit2"] = co2Unit
+                            downstream_info[companyName+assetName]["GWP2"] = f"""='{sheet12}'!G3"""
+                        else:
+                            logger.error(f"Error fuelType: {fuelType}")
 
         # 到子公司的資產獲取資料並放進ef, upstream_info, downstream_info（跟母公司邏輯一樣）
         for subName, _id in site_modules_sub.items():
+            sub_asset_info = {}
+
+            sub_asset_datas = db.assetdatas.find({"company": ObjectId(_id), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
+            for sub_asset_data in sub_asset_datas:
+                sub_consumption_datas = sub_asset_data["consumption_data"]
+                for sub_consumption_data in sub_consumption_datas:
+                    sub_consumption_yearly_data = sub_consumption_data["consumption_yearly_data"]
+                    for sub_yearly_data in sub_consumption_yearly_data:
+                        sub_assetId = sub_yearly_data["assetId"]
+                        sub_consumptionValues = sub_yearly_data["consumptionValue"]
+
+                        sub_baseUnit = ""
+
+                        for sub_consumptionValue in sub_consumptionValues:
+                            sub_activityData = sub_consumptionValue["consumptionValue"]
+                            if sub_baseUnit == "":
+                                sub_baseUnit = sub_consumptionValue["baseUnit"]
+                            sub_conversionValue = sub_consumptionValue["conversionValue"]
+                            if sub_conversionValue is None:
+                                sub_conversionValue = 1
+                            sub_convertedActivityData = sub_consumptionValue["convertedConsumptionValue"]
+                            if sub_assetId not in sub_asset_info:
+                                sub_asset_info[sub_assetId] = {
+                                    "unit": sub_baseUnit,
+                                    "convertedActivityData_calculate": sub_activityData * sub_conversionValue,
+                                    "convertedActivityData": sub_convertedActivityData
+                                }
+                            else:
+                                sub_asset_info[sub_assetId]["convertedActivityData_calculate"] += sub_activityData * sub_conversionValue
+                                sub_asset_info[sub_assetId]["convertedActivityData"] += sub_convertedActivityData
+            
             sub_company_assets = db.company_assets.find({"company": ObjectId(_id)})
             for sub_globalAsset in sub_company_assets:
                 sub_companyAssets = sub_globalAsset["companyAsset"]
@@ -1308,9 +1339,14 @@ if __name__ == "__main__":
                     sub_scopeName = sub_companyAsset["scopeName"]
                     sub_assets = sub_companyAsset["assets"]
 
+                    sub_upstream_activityData = {}
+                    sub_downstream_activityData = {}
+
                     for sub_asset in sub_assets:
                         if sub_asset["category"] == "Emission Removal & Mitigation":
                             continue
+
+                        sub_assetId = sub_asset["_id"]
                         if "assetName" in sub_asset:
                             sub_assetName = sub_asset["assetName"]
                         elif "supplierName" in sub_asset:
@@ -1486,42 +1522,38 @@ if __name__ == "__main__":
                         elif sub_source == "custom":
                             sub_source = "自定義"
 
-                        activityDataType = sub_asset.get("activityDataType")
-                        activityDataTypeValue = sub_asset.get("activityDataTypeValue")
-                        activityTrustedDataType = sub_asset.get("activityTrustedDataType")
-                        activityTrustedDataTypeValue = sub_asset.get("activityTrustedDataTypeValue")
-                        emissionFactorType = sub_asset.get("emissionFactorType")
-                        emissionFactorTypeValue = sub_asset.get("emissionFactorTypeValue")
+                        sub_activityDataType = sub_asset.get("activityDataType")
+                        sub_activityDataTypeValue = sub_asset.get("activityDataTypeValue")
+                        sub_activityTrustedDataType = sub_asset.get("activityTrustedDataType")
+                        sub_activityTrustedDataTypeValue = sub_asset.get("activityTrustedDataTypeValue")
+                        sub_emissionFactorType = sub_asset.get("emissionFactorType")
+                        sub_emissionFactorTypeValue = sub_asset.get("emissionFactorTypeValue")
 
-                        if activityDataType:
-                            final_ADT = activityDataTypes.get(f"{activityDataType}-{activityDataTypeValue}")
+                        if sub_activityDataType:
+                            sub_final_ADT = activityDataTypes.get(f"{sub_activityDataType}-{sub_activityDataTypeValue}")
                         else:
-                            final_ADT = ""
+                            sub_final_ADT = ""
 
-                        if activityTrustedDataType:
-                            final_ATDT = activityTrustedDataTypes.get(f"{activityTrustedDataType}-{activityTrustedDataTypeValue}")
+                        if sub_activityTrustedDataType:
+                            sub_final_ATDT = activityTrustedDataTypes.get(f"{sub_activityTrustedDataType}-{sub_activityTrustedDataTypeValue}")
                         else:
-                            final_ATDT = ""
+                            sub_final_ATDT = ""
 
-                        if emissionFactorType:
-                            final_EFT = emissionFactorTypes.get(f"{emissionFactorType}-{emissionFactorTypeValue}")
+                        if sub_emissionFactorType:
+                            sub_final_EFT = emissionFactorTypes.get(f"{sub_emissionFactorType}-{sub_emissionFactorTypeValue}")
                         else:
-                            final_EFT = ""
+                            sub_final_EFT = ""
 
-                        sub_asset_datas = db.assetdatas.find({"company": ObjectId(_id), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
-                        sub_activityData = 0
-                        sub_unit = ""
-                        for sub_asset_data in sub_asset_datas:
-                            sub_consumption_datas = sub_asset_data["consumption_data"]
-                            for sub_consumption_data in sub_consumption_datas:
-                                sub_consumption_yearly_data = sub_consumption_data["consumption_yearly_data"]
-                                for sub_yearly_data in sub_consumption_yearly_data:
-                                    
-                                    if sub_yearly_data["assetId"] == sub_asset["_id"]:
-                                        sub_consumptionValues = sub_yearly_data["consumptionValue"]
-                                        for sub_consumptionValue in sub_consumptionValues:
-                                            sub_activityData += sub_consumptionValue["consumptionValue"]
-                                            sub_unit = sub_consumptionValue["unit"]
+                        if sub_assetId in sub_asset_info:
+                            sub_activityDataCalculate = sub_asset_info[sub_assetId]["convertedActivityData_calculate"]
+                            sub_activityDataConverted = sub_asset_info[sub_assetId]["convertedActivityData"]
+                            sub_unit = sub_asset_info[sub_assetId]["unit"]
+                            if sub_activityDataCalculate - sub_activityDataConverted > 0.001:
+                                util.alert_line(f"\n{subName}\nWarning: {sub_assetName} activity data is not consistent with converted data where \nconverted data: {sub_activityDataConverted} \ncalculated data: {sub_activityDataCalculate}")
+                        else:
+                            sub_activityDataCalculate = 0
+                            sub_activityDataConverted = 0
+                            sub_unit = sub_asset.get("baseUnit")
 
                         if sub_fuelType in refrigerants_list:
                             ef[current_index] = {
@@ -1534,7 +1566,7 @@ if __name__ == "__main__":
                                 "category1_type": sub_category1_type,
                                 "CO2": {"co2": "", "Unit": sub_co2Unit if sub_co2 else "", "source": sub_source},
                                 "CH4": {"ch4": "", "Unit": sub_ch4Unit if sub_ch4 else "", "source": sub_source if sub_ch4 else ""},
-                                "N2O": {"n2o": sub_n2o, "Unit": sub_n2oUnit if sub_n2o else "", "source": sub_source if sub_n2o else ""},
+                                "N2O": {"n2o": "", "Unit": sub_n2oUnit if sub_n2o else "", "source": sub_source if sub_n2o else ""},
                                 "HFC": {"hfc": sub_co2, "source": sub_source if sub_co2 else ""},
                                 "PFC": {"pfc": "", "source": sub_source if sub_pfc else ""},
                                 "SF6": {"sf6": "", "source": sub_source if sub_sf6 else ""},
@@ -1546,10 +1578,10 @@ if __name__ == "__main__":
                                 "pfcLabel": "V" if sub_pfc else "",
                                 "sf6Label": "V" if sub_sf6 else "",
                                 "nf3Label": "V" if sub_nf3 else "",
-                                "activityDataType": final_ADT,
-                                "activityTrustedDataType": final_ATDT,
-                                "emissionFactorType": final_EFT,
-                                "activityData": sub_activityData,
+                                "activityDataType": sub_final_ADT,
+                                "activityTrustedDataType": sub_final_ATDT,
+                                "emissionFactorType": sub_final_EFT,
+                                "activityData": sub_activityDataCalculate,
                                 "unit": sub_unit
                             }
                         else:
@@ -1575,10 +1607,10 @@ if __name__ == "__main__":
                                 "pfcLabel": "V" if sub_pfc else "",
                                 "sf6Label": "V" if sub_sf6 else "",
                                 "nf3Label": "V" if sub_nf3 else "",
-                                "activityDataType": final_ADT,
-                                "activityTrustedDataType": final_ATDT,
-                                "emissionFactorType": final_EFT,
-                                "activityData": sub_activityData,
+                                "activityDataType": sub_final_ADT,
+                                "activityTrustedDataType": sub_final_ATDT,
+                                "emissionFactorType": sub_final_EFT,
+                                "activityData": sub_activityDataCalculate,
                                 "unit": sub_unit
                             }
                         if ef.get(current_index-1) and sub_scopeName in ("Upstream T&D", "Downstream T&D"):
@@ -1601,7 +1633,7 @@ if __name__ == "__main__":
                                     "serialNumber": current_index_upstream,
                                     "companyName": subName, 
                                     "assetName": sub_assetName,
-                                    "activityData1": "",        # 海運/空運 的活動數據
+                                    "activityData1": 0,        # 海運/空運 的活動數據
                                     "unit1": "",                # 海運/空運 的單位
                                     "ghg1": "",                 # 海運/空運 的GHG
                                     "emissionFactor1": "",      # 海運/空運 的排放因子
@@ -1609,7 +1641,7 @@ if __name__ == "__main__":
                                     "emission1": f"""=IF(D{current_index_upstream+3}="", "", D{current_index_upstream+3}*G{current_index_upstream+3})""",            # 海運/空運 的排放量
                                     "GWP1": "",                  # 海運/空運 的GWP
                                     "totalemission1": f"""=IF(D{current_index_upstream+3}="", "", I{current_index_upstream+3}*J{current_index_upstream+3})""",        # 海運/空運 的總排放量   
-                                    "activityData2": "",        # 陸運 的活動數據
+                                    "activityData2": 0,        # 陸運 的活動數據
                                     "unit2": "",                # 陸運 的單位emissionFactorValue
                                     "ghg2": "",                 # 陸運 的GHG
                                     "emissionFactor2": "",      # 陸運 的排放因子
@@ -1619,40 +1651,22 @@ if __name__ == "__main__":
                                     "totalemission2": f"""=IF(L{current_index_upstream+3}="", "", Q{current_index_upstream+3}*R{current_index_upstream+3})""",        # 陸運 的總排放量
                                 }
                                 current_index_upstream += 1
-                            asset_datas = db.assetdatas.find({"company": ObjectId(_id), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
-                            activityData = 0
-                            unit = ""
-                            for asset_data in asset_datas:    
-                                consumption_datas = asset_data["consumption_data"]                                
-                                for consumption_data in consumption_datas:
-                                    consumption_yearly_data = consumption_data["consumption_yearly_data"]
-                                    for yearly_data in consumption_yearly_data:
-                                        if yearly_data["assetId"] == sub_asset["_id"]:
-                                            consumptionValues = yearly_data["consumptionValue"]
-                                            for consumptionValue in consumptionValues:
-                                                activityData += consumptionValue["consumptionValue"]
-                                                unit = consumptionValue["unit"]
-                                                ghg = "CO₂"
-                                                emissionFactorValue = consumptionValue["emissionFactorValue"] 
-                                                GWP = 1
-                                                emissionUnit = sub_asset["emissionUnit"]
-
-                                                if sub_fuelType in ModeOfTransport[0]:
-                                                    upstream_info[subName+sub_assetName]["activityData1"] = activityData
-                                                    upstream_info[subName+sub_assetName]["unit1"] = unit
-                                                    upstream_info[subName+sub_assetName]["ghg1"] = ghg
-                                                    upstream_info[subName+sub_assetName]["emissionFactor1"] = emissionFactorValue
-                                                    upstream_info[subName+sub_assetName]["emissionUnit1"] = emissionUnit
-                                                    upstream_info[subName+sub_assetName]["GWP1"] = GWP
-                                                elif sub_fuelType in ModeOfTransport[1]:
-                                                    upstream_info[subName+sub_assetName]["activityData2"] = activityData
-                                                    upstream_info[subName+sub_assetName]["unit2"] = unit
-                                                    upstream_info[subName+sub_assetName]["ghg2"] = ghg
-                                                    upstream_info[subName+sub_assetName]["emissionFactor2"] = emissionFactorValue
-                                                    upstream_info[subName+sub_assetName]["emissionUnit2"] = emissionUnit
-                                                    upstream_info[subName+sub_assetName]["GWP2"] = GWP
-                                                else:
-                                                    logger.error(f"Error fuelType: {sub_fuelType}")
+                            if sub_fuelType in ModeOfTransport[0]:
+                                upstream_info[subName+sub_assetName]["activityData1"] += sub_activityDataCalculate
+                                upstream_info[subName+sub_assetName]["unit1"] = sub_unit
+                                upstream_info[subName+sub_assetName]["ghg1"] = "CO₂"
+                                upstream_info[subName+sub_assetName]["emissionFactor1"]  = sub_co2
+                                upstream_info[subName+sub_assetName]["emissionUnit1"] = sub_co2Unit
+                                upstream_info[subName+sub_assetName]["GWP1"] = f"""='{sheet12}'!G3"""
+                            elif sub_fuelType in ModeOfTransport[1]:
+                                upstream_info[subName+sub_assetName]["activityData2"] += sub_activityDataCalculate
+                                upstream_info[subName+sub_assetName]["unit2"] = sub_unit
+                                upstream_info[subName+sub_assetName]["ghg2"] = "CO₂"
+                                upstream_info[subName+sub_assetName]["emissionFactor2"]  = sub_co2
+                                upstream_info[subName+sub_assetName]["emissionUnit2"] = sub_co2Unit
+                                upstream_info[subName+sub_assetName]["GWP2"] = f"""='{sheet12}'!G3"""
+                            else:
+                                logger.error(f"Error fuelType: {sub_fuelType}")
                 
                         if sub_scopeName == "Downstream T&D":
                             if subName+sub_assetName not in downstream_info:
@@ -1660,7 +1674,7 @@ if __name__ == "__main__":
                                     "serialNumber": current_index_downtream,
                                     "companyName": subName, 
                                     "assetName": sub_assetName,
-                                    "activityData1": "",        # 海運/空運 的活動數據
+                                    "activityData1": 0,        # 海運/空運 的活動數據
                                     "unit1": "",                # 海運/空運 的單位
                                     "ghg1": "",                 # 海運/空運 的GHG
                                     "emissionFactor1": "",      # 海運/空運 的排放因子
@@ -1668,7 +1682,7 @@ if __name__ == "__main__":
                                     "emission1": f"""=IF(D{current_index_downtream+3}="", "", D{current_index_downtream+3}*G{current_index_downtream+3})""",            # 海運/空運 的排放量
                                     "GWP1": "",                  # 海運/空運 的GWP
                                     "totalemission1": f"""=IF(D{current_index_downtream+3}="", "", I{current_index_downtream+3}*J{current_index_downtream+3})""",        # 海運/空運 的總排放量   
-                                    "activityData2": "",        # 陸運 的活動數據
+                                    "activityData2": 0,        # 陸運 的活動數據
                                     "unit2": "",                # 陸運 的單位emissionFactorValue
                                     "ghg2": "",                 # 陸運 的GHG
                                     "emissionFactor2": "",      # 陸運 的排放因子
@@ -1678,56 +1692,39 @@ if __name__ == "__main__":
                                     "totalemission2": f"""=IF(L{current_index_downtream+3}="", "", Q{current_index_downtream+3}*R{current_index_downtream+3})""",        # 陸運 的總排放量陸運
                                 }
                                 current_index_downtream += 1
-                            asset_datas = db.assetdatas.find({"company": ObjectId(_id), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1})
-                            for asset_data in asset_datas:
-                                activityData = 0
-                                consumption_datas = asset_data["consumption_data"]
-                                for consumption_data in consumption_datas:
-                                    consumption_yearly_data = consumption_data["consumption_yearly_data"]
-                                    for yearly_data in consumption_yearly_data:
-                                        if yearly_data["assetId"] == sub_asset["_id"]:
-                                            consumptionValues = yearly_data["consumptionValue"]
-                                            for consumptionValue in consumptionValues:
-                                                activityData += consumptionValue["consumptionValue"]
-                                                unit = consumptionValue["unit"]
-                                                ghg = "CO₂"
-                                                emissionFactorValue = consumptionValue["emissionFactorValue"]
-                                                GWP = 1
-                                                emissionUnit = sub_asset["emissionUnit"]
-
-                                                if sub_fuelType in ModeOfTransport[0]:
-                                                    downstream_info[subName+sub_assetName]["activityData1"] = activityData
-                                                    downstream_info[subName+sub_assetName]["unit1"] = unit
-                                                    downstream_info[subName+sub_assetName]["ghg1"] = ghg
-                                                    downstream_info[subName+sub_assetName]["emissionFactor1"] = emissionFactorValue
-                                                    downstream_info[subName+sub_assetName]["emissionUnit1"] = emissionUnit
-                                                    downstream_info[subName+sub_assetName]["GWP1"] = GWP
-                                                elif sub_fuelType in ModeOfTransport[1]:
-                                                    downstream_info[subName+sub_assetName]["activityData2"] = activityData
-                                                    downstream_info[subName+sub_assetName]["unit2"] = unit
-                                                    downstream_info[subName+sub_assetName]["ghg2"] = ghg
-                                                    downstream_info[subName+sub_assetName]["emissionFactor2"] = emissionFactorValue
-                                                    downstream_info[subName+sub_assetName]["emissionUnit2"] = emissionUnit
-                                                    downstream_info[subName+sub_assetName]["GWP2"] = GWP
-                                                else:
-                                                    logger.error(f"Error fuelType: {sub_fuelType}")
+                            if sub_fuelType in ModeOfTransport[0]:
+                                downstream_info[subName+sub_assetName]["activityData1"] += sub_activityDataCalculate
+                                downstream_info[subName+sub_assetName]["unit1"] = sub_unit
+                                downstream_info[subName+sub_assetName]["ghg1"] = "CO₂"
+                                downstream_info[subName+sub_assetName]["emissionFactor1"] = sub_co2
+                                downstream_info[subName+sub_assetName]["emissionUnit1"] = sub_co2Unit
+                                downstream_info[subName+sub_assetName]["GWP1"] = f"""='{sheet12}'!G3"""
+                            elif sub_fuelType in ModeOfTransport[1]:
+                                downstream_info[subName+sub_assetName]["activityData2"] += sub_activityDataCalculate
+                                downstream_info[subName+sub_assetName]["unit2"] = sub_unit
+                                downstream_info[subName+sub_assetName]["ghg2"] = "CO₂"
+                                downstream_info[subName+sub_assetName]["emissionFactor2"] = sub_co2
+                                downstream_info[subName+sub_assetName]["emissionUnit2"] = sub_co2Unit
+                                downstream_info[subName+sub_assetName]["GWP2"] = f"""='{sheet12}'!G3"""
+                            else:
+                                logger.error(f"Error fuelType: {sub_fuelType}")
         
-        index_process = []
-        skip_index = 0
+        index_process = []              
+        skip_index = 0                # 跳過已經處理過的資料
         for index, item in ef.items():
             if index == skip_index:
                 continue
-            asset_index = item.get("asset_index")
+            asset_index = item.get("asset_index")       # 只有上下遊且有 國際 & 國內 運輸才會有這個參數，其餘是沒有的
             if asset_index is None:
                 index_process.append(index)
             else:
                 index_process.append(index)
-                skip_index = index + 1
-        new_index = [i+1 for i in range(len(index_process))]
-        new_ef = {}
-        categories = {}
+                skip_index = index + 1                  # 下一筆可以跳過
+        new_index = [i+1 for i in range(len(index_process))]        # 重新排列 index 值，從 1 開始
+        new_ef = {}                                                 # 新的 ef 字典
+        categories = {}                                             # 用於排序類別1.1 - 6.1的記錄
         for i in range(len(index_process)):
-            if ef[index_process[i]].get("asset_index"):
+            if ef[index_process[i]].get("asset_index"):             # 上下遊的處理
                 current_ef = ef[index_process[i]]
                 next_ef = ef[index_process[i]+1]
 
@@ -1763,19 +1760,19 @@ if __name__ == "__main__":
                     "scopeName" : scopeName,
                     "stream_index": current_ef["stream_index"],
                 }
-                # categories[new_index[i]] = current_ef["category"]
+                
                 if current_ef["category"] not in categories:
-                    categories[current_ef["category"]] = [new_index[i]]
+                    categories[current_ef["category"]] = [new_index[i]]             # 若當下的類別沒有在 categories 字典中，則新增當下new_index[i]到類別，將其記錄到該類別
                 else:
-                    categories[current_ef["category"]].append(new_index[i])
-            else:
-                new_ef[new_index[i]] = ef[index_process[i]]
+                    categories[current_ef["category"]].append(new_index[i])         # 若當下的類別已經在 categories 字典中，則append當下new_index[i]到該類別，將其記錄到該類別
+            else:                                                   # 其他的直接複製
+                new_ef[new_index[i]] = ef[index_process[i]]        
                 if ef[index_process[i]]["category"] not in categories:
                     categories[ef[index_process[i]]["category"]] = [new_index[i]]
                 else:
                     categories[ef[index_process[i]]["category"]].append(new_index[i])
         ef = new_ef
-        ef_sort = {}
+        ef_sort = {}                                                                # 排序後的 ef 字典
         new_index = 1
         for category in category1_list:
             current_process_category = categories.get(category)
@@ -1826,7 +1823,7 @@ if __name__ == "__main__":
             else:
                 continue
 
-        ef = ef_sort
+        ef = ef_sort                     # 將排序後的 ef 字典更新到原本的 ef 字典中
 
         # 設定變數ef的個數、上游的個數以及下游的個數
         numOfEF = len(ef)
@@ -1912,7 +1909,7 @@ if __name__ == "__main__":
         else:
             logger.error(f"Language {language} is not supported")
 
-        # 邊界設定寫死 ["1.1 固定式燃燒源", "1.2 移動式燃燒源", "1.3 產業過程（工業製程）排放與移除", "1.4 人為系統逸散", "1.5 土地利用、土地利用及變更和林業排放與移除(不計算)", "2.1 輸入電力", "2.2 輸入能源（蒸汽、加熱、冷卻和壓縮空氣）", "3.1 貨物上游運輸與配送", "3.2 貨物下游運輸與配送", "3.3 員工通勤", "3.4 輸運客戶和訪客", "4.1 組織購買原料、商品", "4.2 資本財", "4.3 營運廢棄物處理", "4.4 上遊租賃資產", "4.5 使用其他服務", "5.1 產品使用階段", "5.2 下游租賃資產", "5.3 產品生命終期", "5.4 投資", "6.1 其他間接來源"]
+        # 邊界設定寫死 ["1.1 固定式燃燒源", "1.2 移動式燃燒源", "1.3 產業過程（工業製程）排放與移除", "1.4 人為系統逸散", "1.5 土地利用、土地利用及變更和林業排放與移除(不計算)", "2.1 輸入電力", "2.2 輸入能源（蒸汽、加熱、冷卻和壓縮空氣）", "3.1 貨物上游運輸與配送", "3.2 貨物下游運輸與配送", "3.3 員工通勤", "3.4 輸運客戶和訪客", "3.5 商務旅行", "4.1 組織購買原料、商品", "4.2 資本財", "4.3 營運廢棄物處理", "4.4 上遊租賃資產", "4.5 使用其他服務", "5.1 產品使用階段", "5.2 下游租賃資產", "5.3 產品生命終期", "5.4 投資", "6.1 其他間接來源"]
         if language.lower() == "tw":
             boundary_list = {"1.1": "固定式燃燒源", "1.2": "移動式燃燒源", "1.3": "產業過程（工業製程）排放與移除", "1.4": "人為系統逸散", "1.5": "土地利用、土地利用及變更和林業排放與移除(不計算)", "2.1": "輸入電力", "2.2": "輸入能源（蒸汽、加熱、冷卻和壓縮空氣）", "3.1": "貨物上游運輸與配送", "3.2": "貨物下游運輸與配送", "3.3": "員工通勤", "3.4": "輸運客戶和訪客", "3.5": "3.5 商務旅行", "4.1": "組織購買原料、商品", "4.2": "資本財", "4.3": "營運廢棄物處理", "4.4": "上遊租賃資產", "4.5": "使用其他服務", "5.1": "產品使用階段", "5.2": "下游租賃資產", "5.3": "產品生命終期", "5.4": "投資", "6.1": "其他間接來源"}
         elif language.lower() == "en":
@@ -1931,9 +1928,9 @@ if __name__ == "__main__":
             logger.error(f"Language {language} is not supported")
 
         # 完成邊界設定資料的儲存
-        threshold = 3
+        threshold = 3                                   # 起始閥值
         for OR in onboardingRating:
-            threshold = OR.get("threshold", 0)         # 重大間接溫室氣體排放源之評估門檻的閥值
+            threshold = OR.get("threshold", 0)        # 重大間接溫室氣體排放源之評估門檻的閥值
             rating = OR["rating"]               # 各個類別的rating
             # on_boarding_info["threshold"] = threshold
             for rate in rating:
@@ -1941,14 +1938,14 @@ if __name__ == "__main__":
                 category = findCategory["label"]
                 tw = translate.get(category, category)
 
-                rating1 = rate.get("rating1")       # 數據可信度
-                rating2 = rate.get("rating2")       # 排放因子來源
-                rating3 = rate.get("rating3")       # 減量措施推行可信度
-                rating4 = rate.get("rating4")       # 發生頻率
-                rating5 = rate.get("rating5")       # 排放量
+                rating1 = rate.get("rating1", 0)       # 數據可信度
+                rating2 = rate.get("rating2", 0)       # 排放因子來源
+                rating3 = rate.get("rating3", 0)       # 減量措施推行可信度
+                rating4 = rate.get("rating4", 0)       # 發生頻率
+                rating5 = rate.get("rating5", 0)       # 排放量
 
                 # 如果存在rating1，表示客戶在報告邊界的法律或客戶的要求選擇否，反之則選擇是
-                if rating1:
+                if rating1 and rating2 and rating3 and rating4 and rating5:
                     yesORno = "否"
                     total = rating1 + rating2 + rating3 + rating4 + rating5
                     if total >= threshold:      # 大於設定的閥值
@@ -1960,51 +1957,323 @@ if __name__ == "__main__":
                     total = ""
                     disclosure_req = "V"
                 # 設定各個類別的description（NXMap-邊界設定-報告邊界的各個類別的說明）
-                if "1.1" in tw:
-                    desc = "固定式設備之燃料燃燒，如鍋爐、加熱爐、緊急發電機等設備。"
-                elif "1.2" in tw:
-                    desc = "組織範圍內之交通(移動)運輸設備之燃料燃燒所產生的溫室氣體排放，如車輛(柴油、汽油)、堆高機(柴油)等。"
-                elif "1.3" in tw:
-                    desc = "工業產品製造過程所釋放的溫室氣體排放，包含水泥製程、半導體/LCD/PV製程、電焊(焊條)、乙炔(金屬切割器)等。"
-                elif "1.4" in tw:
-                    desc = "人為系統所釋放的溫室氣體產生的直接逸散性排放，包含化糞池(CH₄)、滅火器(CO₂)、氣體斷路器(SF₆)、噴霧劑與冷媒等逸散(HFCs)。"
-                elif "1.5" in tw:
-                    desc = "涵蓋由活生質體至土壤內有機物質之所有溫室氣體。"
-                elif "2.1" in tw:
-                    desc = "輸入能源產生之間接溫室氣體排放，如外購電力。"
-                elif "2.2" in tw:
-                    desc = "來自於熱、蒸氣或其他化石燃料衍生能源，間接產生之溫室氣體排放，如蒸氣、熱能、冷能和高壓空氣(CDA)。"
-                elif "3.1" in tw:
-                    desc = "組織購買之原物料運輸與配送產生的排放。供應商使用車輛或設施，運送原物料至組織產生的溫室氣體排放，交通運具非組織所有。"
-                elif "3.2" in tw:
-                    desc = "組織售出產品運輸至零售商或倉儲產生的排放。運輸、物流與零售業者運輸產品過程產生的溫室氣體排放，交通運具非組織所有。"
-                elif "3.3" in tw:
-                    desc = "組織員工從家裡至辦公場址的通勤排放。員工通勤使用交通運具，包含搭乘大眾交通、汽車、機車等工具，交通運具非組織所有。"
-                elif "3.4" in tw:
-                    desc = "客戶與訪客至組織辦公場所產生之運輸排放。"
-                elif "3.5" in tw:
-                    desc = "組織員工的公務差旅運輸排放。員工公務差旅使用交通運具(汽車、機車等)、搭乘大眾交通工具過程產生的溫室氣體排放。"
-                elif "4.1" in tw:
-                    desc = "組織購買商品、原物料進行製造與加工過程所產生溫室氣體排放。供應商之產品、燃料、能源或服務之碳足跡。"
-                elif "4.2" in tw:
-                    desc = "組織購買資本物品(資本財) 製造與加工過程所產生溫室氣體排放。如設備、機械、建築物、交通。"
-                elif "4.3" in tw:
-                    desc = "組織營運衍生的廢棄物處理排放。"
-                elif "4.4" in tw:
-                    desc = "組織（承租者）租賃使用之溫室氣體排放。資產的排放（未列入類別一、類別二），由承租者報告。"
-                elif "4.5" in tw:
-                    desc = "組織使用服務如：顧問諮詢、清潔、維護、郵件投遞、銀行等造成之排放。"
-                elif "5.1" in tw:
-                    desc = "使用組織售出產品產生的溫室氣體排放。"
-                elif "5.2" in tw:
-                    desc = "組織（出租者）出租資產的排放（未列入類別一、類別二），由出租者報告。"
-                elif "5.3" in tw:
-                    desc = "組織售出產品的廢棄處理排放。"
-                elif "5.4" in tw:
-                    desc = "報告期間投資（股權、債務、融資）產生的排放（未列入類別一、類別二）。"
-                elif "6.1" in tw:
-                    desc = "其他類別（即類別一～五）中，無法報告的組織排放量。"
-
+                if language.lower() == "tw":
+                    if "1.1" in tw:
+                        desc = "固定式設備之燃料燃燒，如鍋爐、加熱爐、緊急發電機等設備。"
+                    elif "1.2" in tw:
+                        desc = "組織範圍內之交通(移動)運輸設備之燃料燃燒所產生的溫室氣體排放，如車輛(柴油、汽油)、堆高機(柴油)等。"
+                    elif "1.3" in tw:
+                        desc = "工業產品製造過程所釋放的溫室氣體排放，包含水泥製程、半導體/LCD/PV製程、電焊(焊條)、乙炔(金屬切割器)等。"
+                    elif "1.4" in tw:
+                        desc = "人為系統所釋放的溫室氣體產生的直接逸散性排放，包含化糞池(CH₄)、滅火器(CO₂)、氣體斷路器(SF₆)、噴霧劑與冷媒等逸散(HFCs)。"
+                    elif "1.5" in tw:
+                        desc = "涵蓋由活生質體至土壤內有機物質之所有溫室氣體。"
+                    elif "2.1" in tw:
+                        desc = "輸入能源產生之間接溫室氣體排放，如外購電力。"
+                    elif "2.2" in tw:
+                        desc = "來自於熱、蒸氣或其他化石燃料衍生能源，間接產生之溫室氣體排放，如蒸氣、熱能、冷能和高壓空氣(CDA)。"
+                    elif "3.1" in tw:
+                        desc = "組織購買之原物料運輸與配送產生的排放。供應商使用車輛或設施，運送原物料至組織產生的溫室氣體排放，交通運具非組織所有。"
+                    elif "3.2" in tw:
+                        desc = "組織售出產品運輸至零售商或倉儲產生的排放。運輸、物流與零售業者運輸產品過程產生的溫室氣體排放，交通運具非組織所有。"
+                    elif "3.3" in tw:
+                        desc = "組織員工從家裡至辦公場址的通勤排放。員工通勤使用交通運具，包含搭乘大眾交通、汽車、機車等工具，交通運具非組織所有。"
+                    elif "3.4" in tw:
+                        desc = "客戶與訪客至組織辦公場所產生之運輸排放。"
+                    elif "3.5" in tw:
+                        desc = "組織員工的公務差旅運輸排放。員工公務差旅使用交通運具(汽車、機車等)、搭乘大眾交通工具過程產生的溫室氣體排放。"
+                    elif "4.1" in tw:
+                        desc = "組織購買商品、原物料進行製造與加工過程所產生溫室氣體排放。供應商之產品、燃料、能源或服務之碳足跡。"
+                    elif "4.2" in tw:
+                        desc = "組織購買資本物品(資本財) 製造與加工過程所產生溫室氣體排放。如設備、機械、建築物、交通。"
+                    elif "4.3" in tw:
+                        desc = "組織營運衍生的廢棄物處理排放。"
+                    elif "4.4" in tw:
+                        desc = "組織（承租者）租賃使用之溫室氣體排放。資產的排放（未列入類別一、類別二），由承租者報告。"
+                    elif "4.5" in tw:
+                        desc = "組織使用服務如：顧問諮詢、清潔、維護、郵件投遞、銀行等造成之排放。"
+                    elif "5.1" in tw:
+                        desc = "使用組織售出產品產生的溫室氣體排放。"
+                    elif "5.2" in tw:
+                        desc = "組織（出租者）出租資產的排放（未列入類別一、類別二），由出租者報告。"
+                    elif "5.3" in tw:
+                        desc = "組織售出產品的廢棄處理排放。"
+                    elif "5.4" in tw:
+                        desc = "報告期間投資（股權、債務、融資）產生的排放（未列入類別一、類別二）。"
+                    elif "6.1" in tw:
+                        desc = "其他類別（即類別一～五）中，無法報告的組織排放量。"
+                elif language.lower() == "en":
+                    if "1.1" in tw:
+                        desc = "Emissions from fuel combustion of stationary equipment such as boilers, furnaces, emergency generators, etc."
+                    elif "1.2" in tw:
+                        desc = "Emissions from the fuel combustion of transportation (mobile) equipment within the organization's scope, such as vehicles (diesel, gasoline), forklifts (diesel), etc."
+                    elif "1.3" in tw:
+                        desc = "Greenhouse gas emissions released during the production of industrial products, including cement production processes, semiconductor/LCD/PV processes, welding (welding rods), acetylene (metal cutting equipment), etc."
+                    elif "1.4" in tw:
+                        desc = "Direct fugitive emissions of greenhouse gases released by artificial systems, including septic tanks (CH₄), fire extinguishers (CO₂), gas circuit breakers (SF₆), aerosols and refrigerants (HFCs)."
+                    elif "1.5" in tw:
+                        desc = "Encompasses all greenhouse gases from living biomass to organic matter in the soil."
+                    elif "2.1" in tw:
+                        desc = "Indirect greenhouse gas emissions generated from the input of energy, such as purchased electricity."
+                    elif "2.2" in tw:
+                        desc = "Emissions derived from heat, steam, or other energy sources from fossil fuels, indirectly generated greenhouse gas emissions such as steam, heat, refrigeration, and compressed air (CDA)."
+                    elif "3.1" in tw:
+                        desc = "Emissions generated from the transportation and distribution of raw materials purchased by the organization. Suppliers use vehicles or facilities to transport raw materials to the organization, resulting in greenhouse gas emissions where the transportation vehicles are not owned by the organization."
+                    elif "3.2" in tw:
+                        desc = "Emissions generated from the transportation of products sold by the organization to retailers or warehouses. Transportation, logistics, and retail industry operators generate greenhouse gas emissions during the transportation process, where the transportation vehicles are not owned by the organization."
+                    elif "3.3" in tw:
+                        desc = "Emissions from the commuting of organization employees from home to the office. Employee commuting uses transportation vehicles, including public transportation, cars, motorcycles, and other means of transportation, where the transportation vehicles are not owned by the organization."
+                    elif "3.4" in tw:
+                        desc = "Emissions from the transportation of customers and visitors to the organization's office premises."
+                    elif "3.5" in tw:
+                        desc = "Emissions from business travel transportation by organization employees. Employee business travel generates greenhouse gas emissions during the use of transportation vehicles (cars, motorcycles, etc.) and public transportation."
+                    elif "4.1" in tw:
+                        desc = "Greenhouse gas emissions generated from the purchase of goods and raw materials for manufacturing and processing by the organization. The carbon footprint of suppliers' products, fuels, energy, or services."
+                    elif "4.2" in tw:
+                        desc = "Greenhouse gas emissions generated from the purchase of capital goods (capital) for manufacturing and processing by the organization, such as equipment, machinery, buildings, and transportation."
+                    elif "4.3" in tw:
+                        desc = "Emissions from the waste disposal processes derived from the organization's operations."
+                    elif "4.4" in tw:
+                        desc = "Emissions from assets leased and used by the organization (lessee). Emissions from assets (not included in categories one and two) are reported by the lessee."
+                    elif "4.5" in tw:
+                        desc = "Emissions caused by the use of services such as consulting, cleaning, maintenance, mail delivery, and banking by the organization."
+                    elif "5.1" in tw:
+                        desc = "Emissions generated from the use of products sold by the organization."
+                    elif "5.2" in tw:
+                        desc = "Emissions from assets leased by the organization (lessor). Emissions from assets (not included in categories one and two) are reported by the lessor."
+                    elif "5.3" in tw:
+                        desc = "Emissions from the disposal of products sold by the organization."
+                    elif "5.4" in tw:
+                        desc = "Emissions generated from investments (equity, debt, financing) during the reporting period (not included in categories one and two)."
+                    elif "6.1" in tw:
+                        desc = "Organizational emissions that cannot be reported in categories one to five."
+                elif language.lower() == "de":
+                    if "1.1" in tw:
+                        desc = "Emissionen aus der Verbrennung von Brennstoffen in stationären Anlagen wie Kesseln, Öfen, Notstromaggregaten, usw."
+                    elif "1.2" in tw:
+                        desc = "Emissionen aus der Brennstoffverbrennung von Transport- (mobilen) Geräten innerhalb des Organisationsbereichs, wie Fahrzeuge (Diesel, Benzin), Gabelstapler (Diesel), etc."
+                    elif "1.3" in tw:
+                        desc = "Treibhausgasemissionen, die bei der Herstellung industrieller Produkte freigesetzt werden, einschließlich Produktionsprozesse für Zement, Halbleiter/LCD/PV, Schweißen (Schweißstäbe), Acetylen (Metallschneidemaschinen) usw."
+                    elif "1.4" in tw:
+                        desc = "Direkte flüchtige Emissionen von Treibhausgasen durch vom Menschen geschaffene Systeme, einschließlich Klärgruben (CH₄), Feuerlöschern (CO₂), Gas-Schaltanlagen (SF₆), Aerosole und Kältemittel (HFCs)."
+                    elif "1.5" in tw:
+                        desc = "Umfasst alle Treibhausgase von lebender Biomasse bis zu organischem Material im Boden."
+                    elif "2.1" in tw:
+                        desc = "Indirekte Treibhausgasemissionen, die durch die Energieeinspeisung entstehen, wie z.B. gekaufter Strom."
+                    elif "2.2" in tw:
+                        desc = "Emissionen, die sich aus der Wärme, dem Dampf oder anderen Energieträgern aus fossilen Brennstoffen ableiten, indirekt entstandene Treibhausgasemissionen wie Dampf, Wärme, Kälte und Druckluft (CDA)."
+                    elif "3.1" in tw:
+                        desc = "Emissionen, die durch den Transport und die Distribution von von der Organisation gekauften Rohstoffen entstehen. Lieferanten verwenden Fahrzeuge oder Einrichtungen, um Rohstoffe zur Organisation zu transportieren, was zu Treibhausgasemissionen führt, wobei die Transportfahrzeuge nicht im Besitz der Organisation sind."
+                    elif "3.2" in tw:
+                        desc = "Emissionen, die durch den Transport der von der Organisation an Einzelhändler oder Lagerhäuser verkauften Produkte entstehen. Transport-, Logistik- und Einzelhandelsbetreiber erzeugen Treibhausgasemissionen während des Transportprozesses, wobei die Transportfahrzeuge nicht im Besitz der Organisation sind."
+                    elif "3.3" in tw:
+                        desc = "Emissionen durch den Arbeitsweg der Organisation Mitarbeiter von zu Hause ins Büro. Der Arbeitsweg der Mitarbeiter erfolgt mit Verkehrsmitteln wie dem öffentlichen Nahverkehr, Autos, Motorrädern und anderen Verkehrsmitteln, wobei die Verkehrsmittel nicht im Besitz der Organisation sind."
+                    elif "3.4" in tw:
+                        desc = "Emissionen durch den Transport von Kunden und Besuchern zu den Bürostandorten der Organisation."
+                    elif "3.5" in tw:
+                        desc = "Emissionen aus Dienstreisen der Mitarbeiter der Organisation. Dienstreisen der Mitarbeiter verursachen Treibhausgasemissionen durch die Verwendung von Verkehrsmitteln (Autos, Motorräder usw.) und öffentlichen Verkehrsmitteln."
+                    elif "4.1" in tw:
+                        desc = "Treibhausgasemissionen, die durch den Kauf von Waren und Rohstoffen für die Herstellung und Verarbeitung durch die Organisation entstehen. Der CO₂-Fußabdruck von Lieferantenprodukten, Brennstoffen, Energie oder Dienstleistungen."
+                    elif "4.2" in tw:
+                        desc = "Treibhausgasemissionen, die durch den Kauf von Investitionsgütern (Kapital) für die Herstellung und Verarbeitung durch die Organisation entstehen, wie z.B. Ausrüstung, Maschinen, Gebäude und Transportmittel."
+                    elif "4.3" in tw:
+                        desc = "Emissionen aus den Abfallentsorgungsprozessen, die aus den Betriebsaktivitäten der Organisation hervorgehen."
+                    elif "4.4" in tw:
+                        desc = "Emissionen aus Vermögenswerten, die von der Organisation geleast und genutzt werden (Leasingnehmer). Emissionen aus Vermögenswerten (nicht in Kategorie eins und zwei enthalten) werden vom Leasingnehmer gemeldet."
+                    elif "4.5" in tw:
+                        desc = "Emissionen, die durch die Nutzung von Dienstleistungen wie Beratung, Reinigung, Wartung, Postzustellung und Bankwesen durch die Organisation entstehen."
+                    elif "5.1" in tw:
+                        desc = "Emissionen, die durch die Verwendung von Produkten entstehen, die von der Organisation verkauft werden."
+                    elif "5.2" in tw:
+                        desc = "Emissionen aus Vermögenswerten, die von der Organisation vermietet werden (Verpächter). Emissionen aus Vermögenswerten (nicht in Kategorie eins und zwei enthalten) werden vom Verpächter gemeldet."
+                    elif "5.3" in tw:
+                        desc = "Emissionen aus der Entsorgung von Produkten, die von der Organisation verkauft werden."
+                    elif "5.4" in tw:
+                        desc = "Emissionen, die aus Investitionen (Eigenkapital, Schulden, Finanzierungen) während des Berichtszeitraums entstehen (nicht in Kategorie eins und zwei enthalten)."
+                    elif "6.1" in tw:
+                        desc = "Organisationale Emissionen, die nicht in den Kategorien eins bis fünf gemeldet werden können."
+                elif language.lower() == "jp":
+                    if "1.1" in tw:
+                        desc = "固定設備の燃料燃焼による排出物、例：ボイラー、炉、非常用発電機など"
+                    elif "1.2" in tw:
+                        desc = "組織内の交通（移動）設備の燃料燃焼による温室効果ガス排出物、例：車両（ディーゼル、ガソリン）、フォークリフト（ディーゼル）など"
+                    elif "1.3" in tw:
+                        desc = "産業製品製造プロセスからの温室効果ガス排出物、セメント製造プロセス、半導体/LCD/PV製造プロセス、溶接（溶接棒）、アセチレン（金属切断機）などを含む"
+                    elif "1.4" in tw:
+                        desc = "人為的なシステムからの直接的な擬態放出による温室効果ガス、例：浄化槽（CH₄）、消火器（CO₂）、ガス遮断器（SF₆）、エアゾールおよび冷媒（HFCs）など"
+                    elif "1.5" in tw:
+                        desc = "生物質から土壌中の有機物までのすべての温室効果ガスを含む"
+                    elif "2.1" in tw:
+                        desc = "エネルギーの間接的な温室効果ガス排出物、例：購入電力"
+                    elif "2.2" in tw:
+                        desc = "熱、蒸気、または化石燃料由来のエネルギーからの間接的な温室効果ガス排出物、蒸気、熱、冷却および圧縮空気（CDA）など"
+                    elif "3.1" in tw:
+                        desc = "組織が購入した原料の輸送および配送からの排出物、サプライヤーは組織への原料輸送に車両や設備を使用し、輸送車両は組織所有ではないため、温室効果ガスが発生"
+                    elif "3.2" in tw:
+                        desc = "組織が販売した製品の小売業者や倉庫への輸送からの排出物、輸送、物流、小売業者は輸送プロセスで温室効果ガスを発生させ、輸送車両は組織所有ではない"
+                    elif "3.3" in tw:
+                        desc = "組織の従業員が自宅から職場までの通勤による排出物、従業員の通勤には公共交通機関、自動車、オートバイなどの交通機関を使用し、これらの輸送機は組織所有ではない"
+                    elif "3.4" in tw:
+                        desc = "顧客や訪問者の組織オフィスへの輸送からの排出物"
+                    elif "3.5" in tw:
+                        desc = "組織の従業員による出張の輸送からの排出物、従業員の出張には交通機関（自動車、オートバイなど）や公共交通機関を利用し、これらの輸送機は組織所有ではない"
+                    elif "4.1" in tw:
+                        desc = "組織の製造および加工用に購入した商品や原料からの温室効果ガス排出物、サプライヤーの製品、燃料、エネルギー、またはサービスの炭素フットプリント"
+                    elif "4.2" in tw:
+                        desc = "組織が購入した資本財（キャピタル）からの温室効果ガス排出物、設備、機械、建物、輸送など"
+                    elif "4.3" in tw:
+                        desc = "組織の運営から生じる廃棄物処理からの排出物"
+                    elif "4.4" in tw:
+                        desc = "組織がリースし使用する資産（利用者）からの排出物、カテゴリ一、二に含まれない資産の排出物はリース契約者から報告される"
+                    elif "4.5" in tw:
+                        desc = "組織が利用するコンサルティング、清掃、保守、郵便配達、銀行などのサービスによる排出物"
+                    elif "5.1" in tw:
+                        desc = "組織が販売した製品の使用からの温室効果ガス排出物"
+                    elif "5.2" in tw:
+                        desc = "組織（貸主）が貸し出す資産からの排出物、カテゴリ一、二に含まれない資産の排出物は貸し主から報告される"
+                    elif "5.3" in tw:
+                        desc = "組織が販売した製品の廃棄物処理からの排出物"
+                    elif "5.4" in tw:
+                        desc = "投資（株式、債券、融資）からの排出物、報告期間中の投資はカテゴリ一、二に含まれない"
+                    elif "6.1" in tw:
+                        desc = "カテゴリ一から五に報告できない組織の排出量"
+                elif language.lower() == "it":
+                    if "1.1" in tw:
+                        desc = "Emissioni da combustione di carburante di attrezzature fisse come caldaie, forni, generatori di emergenza, ecc."
+                    elif "1.2" in tw:
+                        desc = "Emissioni dalla combustione del carburante di attrezzature di trasporto (mobile) all'interno dello scopo dell'organizzazione, come veicoli (diesel, benzina), carrelli elevatori (diesel), ecc."
+                    elif "1.3" in tw:
+                        desc = "Emissioni di gas serra rilasciate durante la produzione di prodotti industriali, inclusi processi di produzione di cemento, semiconduttori/LCD/PV, saldature (elettrodi per saldatura), acetilene (attrezzature per taglio del metallo), ecc."
+                    elif "1.4" in tw:
+                        desc = "Emissioni di gas serra dirette e sfuggenti rilasciate da sistemi artificiali, inclusi pozzi neri (CH₄), estintori (CO₂), interruttori di sicurezza a gas (SF₆), aerosol e refrigeranti (HFCs)."
+                    elif "1.5" in tw:
+                        desc = "Comprende tutti i gas serra, dalla biomassa vivente alla materia organica nel suolo."
+                    elif "2.1" in tw:
+                        desc = "Emissioni indirette di gas serra generate dall'input di energia, come l'acquisto di elettricità."
+                    elif "2.2" in tw:
+                        desc = "Emissioni derivate da calore, vapore o altre fonti energetiche fossili, come emissioni indirette di gas serra come vapore, calore, refrigerazione e aria compressa (CDA)."
+                    elif "3.1" in tw:
+                        desc = "Emissioni generate dal trasporto e dalla distribuzione di materie prime acquistate dall'organizzazione. I fornitori utilizzano veicoli o strutture per trasportare le materie prime all'organizzazione, generando emissioni di gas serra con veicoli non di proprietà dell'organizzazione."
+                    elif "3.2" in tw:
+                        desc = "Emissioni generate dal trasporto dei prodotti venduti dall'organizzazione ai rivenditori o magazzini. Gli operatori del settore dei trasporti, della logistica e della vendita al dettaglio generano emissioni di gas serra durante il processo di trasporto, con veicoli non di proprietà dell'organizzazione."
+                    elif "3.3" in tw:
+                        desc = "Emissioni dagli spostamenti casa-lavoro dei dipendenti dell'organizzazione. Gli spostamenti dei dipendenti utilizzano veicoli, compresi i mezzi pubblici, le auto, le motociclette e altri mezzi di trasporto, che non sono di proprietà dell'organizzazione."
+                    elif "3.4" in tw:
+                        desc = "Emissioni dal trasporto di clienti e visitatori presso gli uffici dell'organizzazione."
+                    elif "3.5" in tw:
+                        desc = "Emissioni dai viaggi di lavoro dei dipendenti dell'organizzazione. I viaggi di lavoro dei dipendenti generano emissioni di gas serra durante l'uso di veicoli (auto, motociclette, ecc.) e mezzi di trasporto pubblico."
+                    elif "4.1" in tw:
+                        desc = "Emissioni di gas serra generate dall'acquisto di beni e materie prime per la produzione e lavorazione da parte dell'organizzazione. L'impronta di carbonio dei prodotti, dei carburanti, dell'energia o dei servizi dei fornitori."
+                    elif "4.2" in tw:
+                        desc = "Emissioni di gas serra generate dall'acquisto di beni strumentali (capitale) per la produzione e la lavorazione da parte dell'organizzazione, come attrezzature, macchinari, edifici e mezzi di trasporto."
+                    elif "4.3" in tw:
+                        desc = "Emissioni dalla gestione dei rifiuti derivanti dalle operazioni dell'organizzazione."
+                    elif "4.4" in tw:
+                        desc = "Emissioni dagli asset in leasing e utilizzati dall'organizzazione (l'utente). Le emissioni dagli asset (non incluse nelle categorie uno e due) vengono segnalate dall'utente in leasing."
+                    elif "4.5" in tw:
+                        desc = "Emissioni derivanti dall'uso di servizi come consulenza, pulizia, manutenzione, consegna della posta e servizi bancari da parte dell'organizzazione."
+                    elif "5.1" in tw:
+                        desc = "Emissioni generate dall'uso di prodotti venduti dall'organizzazione."
+                    elif "5.2" in tw:
+                        desc = "Emissioni dagli asset in leasing dall'organizzazione (il locatore). Le emissioni dagli asset (non incluse nelle categorie uno e due) vengono segnalate dal locatore."
+                    elif "5.3" in tw:
+                        desc = "Emissioni dalla gestione dei rifiuti dei prodotti venduti dall'organizzazione."
+                    elif "5.4" in tw:
+                        desc = "Emissioni derivanti dagli investimenti (azioni, obbligazioni, finanziamenti) durante il periodo di report (non inclusi nelle categorie uno e due)."
+                    elif "6.1" in tw:
+                        desc = "Emissioni organizzative che non possono essere segnalate nelle categorie da uno a cinque."
+                elif language.lower() == "th":
+                    if "1.1" in tw:
+                        desc = "การเผาไหม้เชื้อเพลิงของอุปกรณ์ที่ติดตั้งอย่างมีเหตุผล เช่น หม้อไอน้ำ พื้นที่ทำอาหาร เครื่องกำเนิดไฟฉุกเฉิน ฯลฯ"
+                    elif "1.2" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการเผาไหม้เชื้อเพลิงของยานพาหนะ (ดีเซล, น้ำมันเบนซิน), รถยก (ดีเซล), ฯลฯ ในขอบเขตขององค์กร"
+                    elif "1.3" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากกระบวนการผลิตผลิตภัณฑ์อุตสาหกรรม เช่น กระบวนการผลิตซีเมนต์, รางวัล/แผงแสง LCD/PV, กระบวนการเชื่อม (ถ่านเชื่อม), การตัดโลหะ (อะคีติลีน)"
+                    elif "1.4" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกโดยระบบที่มนุษย์สร้างขึ้นโดยตรง เช่น บ่อเก็บของเสีย (เมทเทน), เครื่องดับเพลิง (คาร์บอนไดออกไซด์), กลไกตัดสัญญาณแก๊ส (เอสเอฟ6), สเปรย์และสารทำความเย็น (เอชเอฟซี)"
+                    elif "1.5" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากวัสดุอินทรีย์ที่มีชีวิตถึงดิน"
+                    elif "2.1" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกที่มีชั้นผ่านทางการใช้พลังงานซึ่งเป็นผลมาจากแหล่งที่มาภายนอก เช่น พลังงานไฟฟ้าจากภายนอก"
+                    elif "2.2" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกที่มีชั้นมาจากการใช้พลังงานที่ได้มาจากความร้อน, ไอน้ำ หรือพลังงานที่เกิดจากเชื้อเพลิงในรูปแบบอื่น เช่น ไอน้ำ, พลังความร้อน, น้ำแข็งและอากาศร้อนสูง (CDA)"
+                    elif "3.1" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการขนส่งและจัดส่งวัสดุเข้าสู่องค์กร การขนส่งและจัดส่งวัสดุโดยทางซัพพลายเออร์โดยใช้ยานพาหนะหรือสถานที่ การขนส่งทางท่าอากาศไม่ใช่ขององค์กร"
+                    elif "3.2" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการขนส่งสินค้าที่ขายออกไปยังผู้ค้าปลีกหรือคลังสินค้า การขนส่ง, การจัดส่งและการขนส่งสินค้าโดยธุรกิจขนส่งและโลจิสติกส์ทำให้เกิดก๊าซเรือนกระจก ยานพาหนะไม่ใช่ขององค์กร"
+                    elif "3.3" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการเดินทางของพนักงานจากบ้านไปยังสถานที่ทำงาน การเดินทางของพนักงานโดยใช้ยานพาหนะ เช่น การขนส่งสาธารณะ, รถยนต์, รถจักรยานยนต์และอุปกรณ์อื่น ๆ ยานพาหนะไม่ใช่ขององค์กร"
+                    elif "3.4" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการขนส่งของลูกค้าและผู้มาเยือนไปยังสถานที่ทำงานขององค์กร"
+                    elif "3.5" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการเดินทางปฏิบัติงานของพนักงาน การเดินทางปฏิบัติงานของพนักงานโดยใช้ยานพาหนะ (รถยนต์, รถจักรยานยนต์, ฯลฯ) และการใช้บริการขนส่งสาธารณะที่เกิดก๊าซเรือนกระจก"
+                    elif "4.1" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการผลิตและกระบวนการผลิตวัสดุและสินค้าขององค์กร รองรับการผลิต, พลังงานหรือบริการของซัพพลายเออร์"
+                    elif "4.2" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการซื้อขายสินทรัพย์หลักขององค์กร (สินค้าหนังสือ, เครื่องจักร, สิ่งก่อสร้าง, การขนส่ง)"
+                    elif "4.3" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกที่เกิดจากการจัดการของของเสียที่เกิดจากการดำเนินงานขององค์กร"
+                    elif "4.4" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกที่องค์กร (ผู้เช่า) ใช้งาน (ไม่รวมอยู่ในหมวดหมู่ 1, 2), รายงานโดยผู้เช่า"
+                    elif "4.5" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการใช้บริการ เช่น การให้คำปรึกษาที่เกี่ยวข้อง, ความสะอาด, การบำรุงรักษา, การส่งจดหมาย, ธนาคาร"
+                    elif "5.1" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการใช้สินค้าที่ขายโดยองค์กร"
+                    elif "5.2" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการใช้สินทรัพย์ที่องค์กรเป็นเจ้าของ (ไม่รวมอยู่ในหมวดหมู่ 1, 2), รายงานโดยเจ้าของ"
+                    elif "5.3" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกจากการจัดการของขยะที่เกิดจากการใช้งานสินค้าขององค์กร"
+                    elif "5.4" in tw:
+                        desc = "การปล่อยก๊าซเรือนกระจกที่เกิดจากการลงทุน (หุ้น, หนี้, การจัดเงินทุน) ในช่วงรายงาน (ไม่รวมอยู่ในหมวดหมู่ 1, 2)"
+                    elif "6.1" in tw:
+                        desc = "ปริมาณการปล่อยก๊าซเรือนกระจกขององค์กรที่ไม่สามารถรายงานได้ในหมวดหมู่อื่น (หมวด 1-5)"
+                elif language.lower() == "zh":  
+                    if "1.1" in tw:
+                        desc = "固定设备燃料燃烧，如锅炉、加热炉、紧急发电机等设备。"
+                    elif "1.2" in tw:
+                        desc = "组织范围内交通(移动)运输设备燃料燃烧产生的温室气体排放，如车辆(柴油、汽油)、堆高机(柴油)等。"
+                    elif "1.3" in tw:
+                        desc = "工业产品制造过程释放的温室气体排放，包括水泥制程、半导体/LCD/PV制程、电焊(焊条)、乙炔(金属切割器)等。"
+                    elif "1.4" in tw:
+                        desc = "人为系统释放的温室气体产生的直接逸散性排放，包括化粪池(CH₄)、灭火器(CO₂)、气体断路器(SF₆)、喷雾剂与冷媒等逸散(HFCs)。"
+                    elif "1.5" in tw:
+                        desc = "涵盖由活性质至土壤内有机物质的所有温室气体。"
+                    elif "2.1" in tw:
+                        desc = "输入能源产生的间接温室气体排放，如外购电力。"
+                    elif "2.2" in tw:
+                        desc = "来自于热、蒸汽或其他化石燃料衍生能源，间接产生的温室气体排放，如蒸汽、热能、冷能和高压空气(CDA)。"
+                    elif "3.1" in tw:
+                        desc = "组织购买的原物料运输与配送产生的排放。供应商使用车辆或设施，运送原物料至组织产生的温室气体排放，交通运具非组织所有。"
+                    elif "3.2" in tw:
+                        desc = "组织销售产品运输至零售商或仓储产生的排放。运输、物流与零售业者运输产品过程产生的温室气体排放，交通运具非组织所有。"
+                    elif "3.3" in tw:
+                        desc = "组织员工从家到办公场所的通勤排放。员工通勤使用交通运具，包含乘坐公共交通、汽车、摩托车等工具，交通运具非组织所有。"
+                    elif "3.4" in tw:
+                        desc = "客户与访客至组织办公场所产生的运输排放。"
+                    elif "3.5" in tw:
+                        desc = "组织员工的公务差旅运输排放。员工公务差旅使用交通运具(汽车、摩托车等)、乘坐公共交通工具过程产生的温室气体排放。"
+                    elif "4.1" in tw:
+                        desc = "组织购买商品、原物料进行制造与加工过程所产生温室气体排放。供应商之产品、燃料、能源或服务之碳足迹。"
+                    elif "4.2" in tw:
+                        desc = "组织购买资本物品(资本财)制造与加工过程所产生温室气体排放。如设备、机械、建筑物、交通。"
+                    elif "4.3" in tw:
+                        desc = "组织经营衍生的废物处理排放。"
+                    elif "4.4" in tw:
+                        desc = "组织（承租者）租赁使用之温室气体排放。资产的排放（未列入类别一、类别二），由承租者报告。"
+                    elif "4.5" in tw:
+                        desc = "组织使用服务如：顾问咨询、清洁、维护、邮件投递、银行等造成之排放。"
+                    elif "5.1" in tw:
+                        desc = "使用组织售出产品产生的温室气体排放。"
+                    elif "5.2" in tw:
+                        desc = "组织（出租者）出租资产的排放（未列入类别一、类别二），由出租者报告。"
+                    elif "5.3" in tw:
+                        desc = "组织售出产品的废弃处理排放。"
+                    elif "5.4" in tw:
+                        desc = "报告期间投资（股权、债务、融资）产生的排放（未列入类别一、类别二）。"
+                    elif "6.1" in tw:
+                        desc = "其他类别（即类别一～五）中，无法报告的组织排放量。"
+                else:
+                    logger.error(f"Language {language} is not supported")
                 cat = tw[:3]
                 if cat == "การ":
                     cat = "6.1"
@@ -2191,17 +2460,138 @@ V: 排放量
                 "佔總排放量的3％以上",
                 "佔總排放量的0.5％至3％",
                 "佔總排放量的0.5％",
-                "不考慮此項"]
+                "不考慮此項"
+            ]
         elif language.lower() == "en":
-            process_list = ["Third-party evidence", "Internal financial or material records", "Internal approval records for related operations", "Internal approval records for related operations", "Internal calibration factor", "Manufacturer's calibration factor", "Regional emission factor", "National emission factor", "International emission factor", "No emission factor", "1-year reduction measures can be implemented", "2-3 years reduction measures can be implemented", "3-5 years reduction measures can be implemented", "6-year or more reduction measures can be implemented", "No reduction measures can be implemented", "At least once per month", "At least once per quarter", "At least once per year", "Not considered", "3% or more of total emissions", "0.5% to 3% of total emissions", "0.5% of total emissions", "Not considered"]
+            process_list = [
+                "Supported by third-party evidence",                                  # "有第三方提供之佐證"
+                "Supported by internal financial or material system reports",         # "有內部財務或物料系統報表"
+                "Supported by internally approved relevant operational records",      # "有內部已簽核之相關操作記錄"
+                "Supported by internally approved relevant operational records",      # "有內部已簽核之相關操作記錄"
+                "Internal measurement factors",                                       # "內部測量係數"
+                "Coefficient provided by equipment manufacturer",                     # "設備製造商提供的係數"
+                "Regional emission factors",                                          # "區域排放係數"
+                "National emission factors",                                          # "國家排放因素"
+                "International emission factors",                                     # "國際排放因素"
+                "No emission factors available",                                      # "沒有排放因素"
+                "Reduction measures feasible within 1 year",                          # "1年內可進行減量措施"
+                "Reduction measures feasible within 1-2 years",                       # "1~2年內可進行減量措施"
+                "Reduction measures feasible within 3-5 years",                       # "3~5年內可進行減量措施"
+                "Reduction measures feasible in over 6 years",                        # "6年以上可進行減量措施"
+                "No feasible reduction measures",                                     # "無法採取減量措施"
+                "At least monthly",                                                   # "至少每月一次"
+                "At least quarterly",                                                 # "至少每季度一次"
+                "At least annually",                                                  # "至少每年一次"
+                "Not applicable",                                                     # "不考慮此項"
+                "Accounts for over 3% of total emissions",                            # "佔總排放量的3％以上"
+                "Accounts for 0.5% to 3% of total emissions",                         # "佔總排放量的0.5％至3％"
+                "Accounts for 0.5% of total emissions",                               # "佔總排放量的0.5％"
+                "Not applicable"                                                      # "不考慮此項"
+            ]
         elif language.lower() == "de":
-            process_list = ["Dritte Beweise", "Interne Finanz- oder Materialberichte", "Interne Genehmigungs- oder Betriebsprotokolle für betroffene Vorgänge", "Interne Genehmigungs- oder Betriebsprotokolle für betroffene Vorgänge", "Interne Kalibrierfaktor", "Hersteller-Kalibrierfaktor", "Regionale Emissionsfaktor", "Nationale Emissionsfaktor", "Internationale Emissionsfaktor", "Kein Emissionsfaktor", "1-Jahres-Reduktionsmöglichkeiten können umgesetzt werden", "2-3-Jahres-Reduktionsmöglichkeiten können umgesetzt werden", "3-5-Jahres-Reduktionsmöglichkeiten können umgesetzt werden", "6-Jahres- oder mehr Reduktionsmöglichkeiten können umgesetzt werden", "Keine Reduktionsmöglichkeiten können umgesetzt werden", "Mindestens einmal pro Monat", "Mindestens einmal pro Quartal", "Mindestens einmal pro Jahr", "Nicht berücksichtigt", "3% oder mehr der Gesamtemissionen", "0,5% bis 3% der Gesamtemissionen", "0,5% der Gesamtemissionen", "Nicht berücksichtigt"]
+            process_list = [
+                "Unterstützt durch externe Beweise",                                   # "有第三方提供之佐證"
+                "Unterstützt durch interne Finanz- oder Materialsystemberichte",       # "有內部財務或物料系統報表"
+                "Unterstützt durch intern genehmigte relevante Betriebsaufzeichnungen",# "有內部已簽核之相關操作記錄"
+                "Unterstützt durch intern genehmigte relevante Betriebsaufzeichnungen",# "有內部已簽核之相關操作記錄"
+                "Interne Messfaktoren",                                                # "內部測量係數"
+                "Vom Gerätehersteller bereitgestellter Koeffizient",                   # "設備製造商提供的係數"
+                "Regionale Emissionsfaktoren",                                         # "區域排放係數"
+                "Nationale Emissionsfaktoren",                                         # "國家排放因素"
+                "Internationale Emissionsfaktoren",                                    # "國際排放因素"
+                "Keine Emissionsfaktoren verfügbar",                                   # "沒有排放因素"
+                "Reduktionsmaßnahmen innerhalb von 1 Jahr möglich",                    # "1年內可進行減量措施"
+                "Reduktionsmaßnahmen innerhalb von 1-2 Jahren möglich",                # "1~2年內可進行減量措施"
+                "Reduktionsmaßnahmen innerhalb von 3-5 Jahren möglich",                # "3~5年內可進行減量措施"
+                "Reduktionsmaßnahmen über 6 Jahre möglich",                            # "6年以上可進行減量措施"
+                "Keine praktikablen Reduktionsmaßnahmen",                              # "無法採取減量措施"
+                "Mindestens monatlich",                                                # "至少每月一次"
+                "Mindestens quartalsweise",                                            # "至少每季度一次"
+                "Mindestens jährlich",                                                 # "至少每年一次"
+                "Nicht zutreffend",                                                    # "不考慮此項"
+                "Entspricht über 3% der Gesamtemissionen",                             # "佔總排放量的3％以上"
+                "Entspricht 0,5% bis 3% der Gesamtemissionen",                         # "佔總排放量的0.5％至3％"
+                "Entspricht 0,5% der Gesamtemissionen",                                # "佔總排放量的0.5％"
+                "Nicht zutreffend"                                                     # "不考慮此項"
+            ]
         elif language.lower() == "jp":
-            process_list = ["第三者から提供された証拠がある", "内部財務または重要なシステム報告書がある", "内部承認された関連業務記録がある", "内部承認された関連業務記録がある", "内部測定係数」", "機器メーカー提供係数", "地域排出係数", "国内排出係数", "国際排出係数", "排出係数なし", "1年以内に削減措置を実施可能", "1年以内に実施可能」 「～2年以内の削減措置", "3～5年以内の削減措置が可能", "6年間にわたる削減措置の実施が可能", "削減措置の実施はできない", "月に1回以上", "少なくとも四半期に 1 回", "少なくとも 1 年に 1 回", "この項目は考慮しない", "総排出量の 3% 以上を占める", "総排出量の 0.5% ～ 3% を占める", "考慮する」総排出量の 0.5% に対して", "この項目は考慮しないでください"]
+            process_list = [
+                "第三者の証拠によって支持されています",                                     # "有第三方提供之佐證"
+                "内部の財務または物料システムのレポートによって支持されています",               # "有內部財務或物料系統報表"
+                "内部で承認された関連する運用記録によって支持されています",                     # "有內部已簽核之相關操作記錄"
+                "内部で承認された関連する運用記録によって支持されています",                     # "有內部已簽核之相關操作記錄"
+                "内部測定係数",                                                             # "內部測量係數"
+                "機器メーカーが提供した係数",                                               # "設備製造商提供的係數"
+                "地域別排出係数",                                                           # "區域排放係數" 
+                "国別排出係数",                                                             # "國家排放因素"
+                "国際的な排出係数",                                                         # "國際排放因素"
+                "排出係数はありません",                                                     # "沒有排放因素"
+                "1年以内に削減対策が可能",                                                  # "1年內可進行減量措施"
+                "1〜2年以内に削減対策が可能",                                               # "1~2年內可進行減量措施"
+                "3〜5年以内に削減対策が可能",                                               # "3~5年內可進行減量措施"
+                "6年以上で削減対策が可能",                                                  # "6年以上可進行減量措施"
+                "実行可能な削減対策はありません",                                           # "無法採取減量措施"
+                "少なくとも月に1回",                                                        # "至少每月一次"
+                "少なくとも四半期に1回",                                                    # "至少每季度一次"
+                "少なくとも年に1回",                                                        # "至少每年一次"
+                "この項目は考慮されません",                                                 # "不考慮此項"
+                "総排出量の3%以上を占めます",                                               # "佔總排放量的3％以上"
+                "総排出量の0.5%から3%を占めます",                                           # "佔總排放量的0.5％至3％"
+                "総排出量の0.5%を占めます",                                                 # "佔總排放量的0.5％"
+                "この項目は考慮されません"                                                  # "不考慮此項"
+            ]
         elif language.lower() == "it":
-            process_list = ["Evidenza di terzi", "Record finanziario o materiali interni", "Record di approvazione interni per operazioni correlate", "Record di approvazione interni per operazioni correlate", "Fattore di calibrazione interno", "Fattore di calibrazione fornito dal produttore", "Fattore di emissione regionale", "Fattore di emissione nazionale", "Fattore di emissione internazionale", "Nessun fattore di emissione", "È possibile implementare misure di riduzione per un anno", "È possibile implementare misure di riduzione per 2-3 anni", "È possibile implementare misure di riduzione per 3-5 anni", "È possibile implementare misure di riduzione per 6 anni o più", "Non è possibile implementare misure di riduzione", "Almeno una volta al mese", "Almeno una volta al trimestre", "Almeno una volta all'anno", "Non considerato", "3% o più delle emissioni totali", "0.5% a 3% delle emissioni totali", "0.5% delle emissioni totali", "Non considerato"]
+            process_list = [
+                "Supportato da prove di terze parti",                                       # "有第三方提供之佐證"
+                "Supportato da rapporti interni finanziari o di sistema materiali",         # "有內部財務或物料系統報表"
+                "Supportato da registrazioni operative rilevanti approvate internamente",   # "有內部已簽核之相關操作記錄"
+                "Supportato da registrazioni operative rilevanti approvate internamente",   # "有內部已簽核之相關操作記錄"
+                "Fattori di misurazione interni",                                           # "內部測量係數"
+                "Coefficiente fornito dal produttore di apparecchiature",                   # "設備製造商提供的係數"
+                "Fattori di emissione regionali",                                           # "區域排放係數"
+                "Fattori di emissione nazionali",                                           # "國家排放因素"
+                "Fattori di emissione internazionali",                                      # "國際排放因素"
+                "Nessun fattore di emissione disponibile",                                  # "沒有排放因素"
+                "Misure di riduzione fattibili entro 1 anno",                               # "1年內可進行減量措施"
+                "Misure di riduzione fattibili entro 1-2 anni",                             # "1~2年內可進行減量措施"
+                "Misure di riduzione fattibili entro 3-5 anni",                             # "3~5年內可進行減量措施"
+                "Misure di riduzione fattibili oltre 6 anni",                               # "6年以上可進行減量措施"
+                "Nessuna misura di riduzione fattibile",                                    # "無法採取減量措施"
+                "Almeno mensilmente",                                                       # "至少每月一次"
+                "Almeno trimestralmente",                                                   # "至少每季度一次"
+                "Almeno annualmente",                                                       # "至少每年一次"
+                "Non applicabile",                                                          #  "不考慮此項"
+                "Rappresenta oltre il 3% delle emissioni totali",                           # "佔總排放量的3％以上"
+                "Rappresenta dallo 0.5% al 3% delle emissioni totali",                      # "佔總排放量的0.5％至3％"
+                "Rappresenta lo 0.5% delle emissioni totali",                               # "佔總排放量的0.5％"
+                "Non applicabile"                                                           # "不考慮此項"
+            ]
         elif language.lower() == "th":
-            process_list = ["หลักฐานจากบุคคลที่สาม", "บันทึกทางการเงินหรือวัสดุภายใน", "บันทึกการอนุมัติภายในสำหรับการดำเนินงานที่เกี่ยวข้อง", "บันทึกการอนุมัติภายในสำหรับการดำเนินงานที่เกี่ยวข้อง", "ปัจจัยการสอบเทียบภายใน", "ปัจจัยการสอบเทียบของผู้ผลิต", "ปัจจัยการปล่อยก๊าซในระดับภูมิภาค ", "ปัจจัยการปล่อยก๊าซแห่งชาติ", "ปัจจัยการปล่อยก๊าซระหว่างประเทศ", "ไม่มีปัจจัยการปล่อยก๊าซ", "มาตรการลด 1 ปีสามารถดำเนินการได้", "สามารถใช้มาตรการลด 2-3 ปีได้", "การลด 3-5 ปี สามารถดำเนินการตามมาตรการได้", "สามารถใช้มาตรการลดระยะเวลา 6 ปีขึ้นไปได้", "ไม่สามารถดำเนินการมาตรการลดหย่อนได้", "อย่างน้อยเดือนละครั้ง", "อย่างน้อยไตรมาสละครั้ง", "อย่างน้อยปีละครั้ง " , "ไม่พิจารณา", "3% หรือมากกว่าของการปล่อยก๊าซทั้งหมด", "0.5% ถึง 3% ของการปล่อยก๊าซทั้งหมด", "0.5% ของการปล่อยก๊าซทั้งหมด", "ไม่พิจารณา"]
+            process_list = [
+                "รองรับด้วยหลักฐานจากบุคคลที่สาม",                                                # "有第三方提供之佐證"
+                "รองรับด้วยรายงานการเงินภายในหรือระบบวัสดุ",                                      # "有內部財務或物料系統報表"
+                "รองรับด้วยบันทึกการดำเนินงานที่เกี่ยวข้องภายในที่ได้รับการอนุมัติ",                          # "有內部已簽核之相關操作記錄"
+                "รองรับด้วยบันทึกการดำเนินงานที่เกี่ยวข้องภายในที่ได้รับการอนุมัติ",                          # "有內部已簽核之相關操作記錄"
+                "ปัจจัยการวัดภายใน",                                                           # "內部測量係數"
+                "ค่าสัมประสิทธิ์ที่ผู้ผลิตอุปกรณ์提供",                                                 # "設備製造商提供的係數"
+                "ปัจจัยการปล่อยมลพิษในภูมิภาค",                                                   # "區域排放係數"
+                "ปัจจัยการปล่อยมลพิษในระดับประเทศ",                                              # "國家排放因素"
+                "ปัจจัยการปล่อยมลพิษระดับนานาชาติ",                                               # "國際排放因素"
+                "ไม่มีปัจจัยการปล่อยมลพิษที่ใช้ได้",                                                 # "沒有排放因素"
+                "มีมาตรการลดที่เป็นไปได้ภายใน 1 ปี",                                              # "1年內可進行減量措施"
+                "มีมาตรการลดที่เป็นไปได้ภายใน 1-2 ปี",                                            # "1~2年內可進行減量措施"
+                "มีมาตรการลดที่เป็นไปได้ภายใน 3-5 ปี",                                            # "3~5年內可進行減量措施"
+                "มีมาตรการลดที่เป็นไปได้มากกว่า 6 ปี",                                             # "6年以上可進行減量措施"
+                "ไม่มีมาตรการลดที่เป็นไปได้",                                                     # "無法採取減量措施"
+                "อย่างน้อยเดือนละครั้ง",                                                         # "至少每月一次"
+                "อย่างน้อยไตรมาสละครั้ง",                                                       # "至少每季度一次"
+                "อย่างน้อยปีละครั้ง",                                                            # "至少每年一次"
+                "ไม่เกี่ยวข้อง",                                                                # "不考慮此項"
+                "มีอย่างน้อย 3% ของปริมาณการปล่อยทั้งหมด",                                         # "佔總排放量的3％以上"
+                "มีอย่างน้อย 0.5% ถึง 3% ของปริมาณการปล่อยทั้งหมด",                                 # "佔總排放量的0.5％至3％"
+                "มีอย่างน้อย 0.5% ของปริมาณการปล่อยทั้งหมด",                                       # "佔總排放量的0.5％"
+                "ไม่เกี่ยวข้อง"                                                                  # "不考慮此項"
+            ]
         elif language.lower() == "zh":
             process_list = ["有第三方提供之佐证","有内部财务或物料系统报表","有内部已签核之相关操作记录","有内部已签核之相关操作记录","内部测量系数", "设备制造商提供的系数","区域排放系数","国家排放因素","国际排放因素","没有排放因素","1年内可进行减量措施","1~2年内可 进行减量措施","3~5年内可进行减量措施","6年以上可进行减量措施","无法采取减量措施","至少每月一次","至少每季度一次","至少 每年一次","不考虑此项","占总排放量的3％以上","占总排放量的0.5％至3％","占总排放量的0.5％","不考虑此项 "]
         else:
@@ -2262,7 +2652,7 @@ V: 排放量
             worksheet.set_row(i, process_list[i])
 
         # 設定寬度
-        process_list = [14.68359375, 13.0, 20.20703125, 14.68359375, 13.0, 13.0, 21.68359375, 21.68359375, 14.68359375, 16.89453125, 14.68359375, 13.0, 13.0, 8.7890625, 8.7890625, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 15.0]
+        process_list = [14.68359375, 13.0, 20.20703125, 14.68359375, 13.0, 13.0, 21.68359375, 21.68359375, 14.68359375, 16.89453125, 14.68359375, 13.0, 13.0, 8.7890625, 8.7890625, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 15.0, 17]
         for i in range(len(process_list)):
             worksheet.set_column(f"{chr_ord[i+1]}:{chr_ord[i+1]}", process_list[i] + 7)
         
@@ -2376,7 +2766,6 @@ V: 排放量
         # 資料寫入，大部分都是套公式
         for i in range(3, len(ef) + 3):
             ef_info = ef[i-2]
-            logger.info(ef_info)
             category_type1 = ef_info["category1_type"]# current_list[i-3][6]
             fuelType = ef_info.get("fuelType", "")
             scopeName = ef[i-2].get("scopeName")
@@ -2426,10 +2815,14 @@ V: 排放量
             worksheet.write(f"K{i}", f"""='{sheet5}'!F{i}""", cf26)
             worksheet.write(f"L{i}", f"""='{sheet5}'!G{i}""", cf8)
             worksheet.write(f"M{i}", f"""=IF(J{i}="","",H{i}*K{i})""", cf27)
-            if category_type1 == "F,逸散" and "化糞池" not in fuelType:
+            if category_type1 == "F,逸散" and ("化糞池" not in fuelType and "septic tank" not in fuelType.lower()):
                 worksheet.write(f"N{i}", HFC_info["hfc"], cf8)
                 worksheet.write(f"Q{i}", "", cf26)
                 worksheet.write(f"Z{i}", "", cf8)
+            elif category_type1 == "F,逸散" and ("化糞池" in fuelType or "septic tank" in fuelType.lower()):
+                worksheet.write(f"N{i}", f"""='{sheet12}'!G4""", cf8)
+                worksheet.write(f"Q{i}", f"""=IF('{sheet5}'!J{i}="", "", '{sheet5}'!J{i})""", cf26)
+                worksheet.write(f"Z{i}", f"""=IF(Y{i}="", "", '{sheet12}'!G5)""", cf8)
             else:
                 worksheet.write(f"N{i}", f"""='{sheet12}'!G3""", cf8)
                 worksheet.write(f"Q{i}", f"""=IF('{sheet5}'!J{i}="", "", '{sheet5}'!J{i})""", cf26)
@@ -2617,27 +3010,31 @@ V: 排放量
             PFC_info = ef_info["PFC"]
             SF6_info = ef_info["SF6"]
             NF3_info = ef_info["NF3"]
+
+            co2Unit = CO2_info["Unit"]
+            ch4Unit = CH4_info["Unit"]
+            n2oUnit = N2O_info["Unit"]
             
-            if category_type1 == "F,逸散" and "化糞池" not in fuelType:
+            if category_type1 == "F,逸散" and ("化糞池" not in fuelType and "septic tank" not in fuelType.lower()):
                 worksheet.write(f"F{i}", 1, cf26)
                 worksheet.write(f"J{i}", "", cf26)
                 worksheet.write(f"N{i}", "", cf26)
 
-                worksheet.write(f"G{i}", CO2_info["Unit"], cf17)
+                worksheet.write(f"G{i}", co2Unit, cf17)
                 worksheet.write(f"H{i}", ef_info["activityTrustedDataType"], cf17)
                 worksheet.write(f"I{i}", CO2_info["source"], cf17)
                 
-                worksheet.write(f"K{i}", CH4_info["Unit"], cf17)
+                worksheet.write(f"K{i}", ch4Unit, cf17)
                 worksheet.write(f"L{i}", "", cf17)
                 worksheet.write(f"M{i}", CH4_info["source"], cf17)
                 
-                worksheet.write(f"O{i}", N2O_info["Unit"], cf17)
+                worksheet.write(f"O{i}", n2oUnit, cf17)
                 worksheet.write(f"P{i}", "", cf17)
                 worksheet.write(f"Q{i}", N2O_info["source"], cf17)
-            elif category_type1 == "F,逸散" and "化糞池" in fuelType:
+            elif category_type1 == "F,逸散" and ("化糞池" in fuelType or "septic tank" in fuelType.lower()):
                 worksheet.write(f"F{i}", CH4_info["ch4"], cf26)
 
-                worksheet.write(f"G{i}", CH4_info["Unit"], cf17)
+                worksheet.write(f"G{i}", ch4Unit, cf17)
                 worksheet.write(f"H{i}", ef_info["activityTrustedDataType"], cf17)
                 worksheet.write(f"I{i}", CH4_info["source"], cf17)
 
@@ -2660,17 +3057,17 @@ V: 排放量
                 else:
                     worksheet.write(f"N{i}", "", cf26)
 
-                worksheet.write(f"G{i}", CO2_info["Unit"], cf17)
+                worksheet.write(f"G{i}", co2Unit, cf17)
                 worksheet.write(f"H{i}", ef_info["activityTrustedDataType"], cf17)
                 worksheet.write(f"I{i}", CO2_info["source"], cf17)
                 
-                worksheet.write(f"K{i}", f"""=IF(H{i}="", "", "{CH4_info["Unit"]}")""", cf17)
-                worksheet.write(f"L{i}", f"""=IF(H{i}="", "", "{ef_info["activityTrustedDataType"]}")""", cf17)
-                worksheet.write(f"M{i}", f"""=IF(H{i}="", "", "{CH4_info["source"]}")""", cf17)
+                worksheet.write(f"K{i}", f"""=IF(J{i}="", "", "{ch4Unit}")""", cf17)
+                worksheet.write(f"L{i}", f"""=IF(J{i}="", "", "{ef_info["activityTrustedDataType"]}")""", cf17)
+                worksheet.write(f"M{i}", f"""=IF(J{i}="", "", "{CH4_info["source"]}")""", cf17)
                 
-                worksheet.write(f"O{i}", f"""=IF(L{i}="", "", "{N2O_info["Unit"]}")""", cf17)
-                worksheet.write(f"P{i}", f"""=IF(L{i}="", "", "{ef_info["activityTrustedDataType"]}")""", cf17)
-                worksheet.write(f"Q{i}", f"""=IF(L{i}="", "", "{N2O_info["source"]}")""", cf17)
+                worksheet.write(f"O{i}", f"""=IF(N{i}="", "", "{n2oUnit}")""", cf17)
+                worksheet.write(f"P{i}", f"""=IF(N{i}="", "", "{ef_info["activityTrustedDataType"]}")""", cf17)
+                worksheet.write(f"Q{i}", f"""=IF(N{i}="", "", "{N2O_info["source"]}")""", cf17)
 
             worksheet.write(f"R{i}", "", cf17)
             worksheet.write(f"S{i}", "", cf17)
@@ -3384,7 +3781,7 @@ V: 排放量
         worksheet.conditional_format(f"E5:G{numOfEF+5}", {"type": "formula", "criteria": "TRUE", "format":cf17})
         worksheet.conditional_format(f"J5:L{numOfEF+5}", {"type": "formula", "criteria": "TRUE", "format":cf17})
         worksheet.conditional_format(f"Q5:S{numOfEF+5}", {"type": "formula", "criteria": "TRUE", "format":cf17})
-        worksheet.conditional_format(f"X5:Z{numOfEF+5}", {"type": "formula", "criteria": "TRUE", "format":cf17})
+        worksheet.conditional_format(f"W5:Z{numOfEF+5}", {"type": "formula", "criteria": "TRUE", "format":cf17})
         
         # 資料寫入
         for i in range(1, numOfEF+1):
@@ -4061,31 +4458,31 @@ V: 排放量
             worksheet.write(f"{chr_ord[i+2]}2", process_list[i], cf20)
 
         if language.lower() == "tw":
-            process_list = [["180014", "CO2二氧化碳", "1", "1", "1", "1", "1", "", "", "", ""], ["180177", "CH4甲烷", "21", "23", "25", "28", "28", "", "", "", ""], ["GG1802", "N2O氧化亞氮", "310", "296", "298", "265", "273", "", "", "", ""]]
+            process_list = [["180014", "CO2二氧化碳", "1", "1", "1", "1", "1", "", "", "", ""], ["180177", "CH4甲烷", "21", "23", "25", "28", "27.9", "", "", "", ""], ["GG1802", "N2O氧化亞氮", "310", "296", "298", "265", "273", "", "", "", ""]]
             worksheet.merge_range("A6:H6", "Chlorofluorocarbons, 氟氯碳化物", cf21)
             worksheet.merge_range("A13:H13", "Hydrofluorocarbons, HFCs, 氫氟碳化物", cf21)
         elif language.lower() == "en":
-            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "28", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
+            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "27.9", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
             worksheet.merge_range("A6:H6", "Chlorofluorocarbons, Chlorofluorocarbons", cf21)
             worksheet.merge_range("A13:H13", "Hydrofluorocarbons, Hydrofluorocarbons", cf21)
         elif language.lower() == "de":
-            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "28", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
+            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "27.9", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
             worksheet.merge_range("A6:H6", "Chlorofluorocarbons, Chlorofluorocarbons", cf21)
             worksheet.merge_range("A13:H13", "Hydrofluorocarbons, Hydrofluorocarbons", cf21)
         elif language.lower() == "jp":
-            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "28", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
+            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "27.9", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
             worksheet.merge_range("A6:H6", "クロロフラウオーヘクタン, 水素化クロロフラウオーヘクタン", cf21)
             worksheet.merge_range("A13:H13", "ハイドロフラウオーヘクタン, 水素化ハイドロフラウオーヘクタン", cf21)
         elif language.lower() == "it":
-            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "28", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
+            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "27.9", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
             worksheet.merge_range("A6:H6", "Clorofluorocarboli, Clorofluorocarboli", cf21)
             worksheet.merge_range("A13:H13", "Idrofluorocarboli, Idrofluorocarboli", cf21)
         elif language.lower() == "th":
-            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "28", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
+            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "27.9", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
             worksheet.merge_range("A6:H6", "คลอร์โฟลว์ฟอร์โวรัโซ", cf21)
             worksheet.merge_range("A13:H13", "ไดโอเฟอร์โวรัโซ, ไดโอเฟอร์โวรัโซ", cf21)
         elif language.lower() == "zh":
-            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "28", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
+            process_list = [["180014", "CO2", "1", "", "", "", ""], ["180177", "CH4", "21", "23", "25", "28", "27.9", "", "", "", ""], ["GG1802", "N2O", "310", "296", "298", "265", "273", "", "", "", ""]]
             worksheet.merge_range("A6:H6", "氯化氮气体, 氯化氮气体", cf21)
             worksheet.merge_range("A13:H13", "氫气体, 氫气体", cf21)
         else:
@@ -4814,4 +5211,4 @@ V: 排放量
     # workbook.save(filename)
 
     endRunTime = time.time()
-    logger.info(f"Time used for generating GHG report: {util.convert_sec(endRunTime - startRunTime)}.")
+    logger.info(f"Time used for generating {companyName}'s GHG inventory report: {util.convert_sec(endRunTime - startRunTime)}.")

@@ -1,0 +1,863 @@
+2024-05-10 11:20:40.326896 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-10 11:20:40.327744 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663d9288b3d04b75d2ee193b, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663d9288b3d04b75d2ee193b"}, "remainingTimeMS": 29}
+2024-05-10 11:20:57.519845 root [INFO] 63d0ac0a22d4cdf11191097e tw 執行成功！
+2024-05-10 11:21:16.175682 root [INFO] 63d0ac0a22d4cdf11191097e en 執行成功！
+2024-05-10 11:21:33.280238 root [INFO] 63d0ac0a22d4cdf11191097e de 執行成功！
+2024-05-10 11:24:04.429824 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-10 11:24:04.430779 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663d935442eb0f5e5a8985d5, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663d935442eb0f5e5a8985d5"}, "remainingTimeMS": 29}
+2024-05-10 11:24:18.992490 root [ERROR] 63d0ac0a22d4cdf11191097e: Carbon Company 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '63d0ac0a22d4cdf11191097e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:24:24.983463 root [INFO] 63f2e77a820fc55ba97aa0e3 tw 執行成功！
+2024-05-10 11:24:27.162726 root [ERROR] 63f5852f6323f3aea35ee57f: Test Organization 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '63f5852f6323f3aea35ee57f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:24:29.235559 root [ERROR] 63fda3b2b78b622cbe263b0e: Client A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '63fda3b2b78b622cbe263b0e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:24:34.868840 root [INFO] 6406cf7b97497045dcc31a7f tw 執行成功！
+2024-05-10 11:24:41.316870 root [ERROR] 64081e2be6fbaa54e48e8602: ITRI Org 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64081e2be6fbaa54e48e8602', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:24:50.706272 root [INFO] 64081e4ee6fbaa54e48e86f0 tw 執行成功！
+2024-05-10 11:24:54.890246 root [INFO] 64099a7975ddf5b7848a2fae tw 執行成功！
+2024-05-10 11:24:57.116173 root [ERROR] 64128b7c77b26a59f180d4ee: Evercomm Singapore Pte Ltd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64128b7c77b26a59f180d4ee', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:25:00.119048 root [ERROR] 6417d49127f1dca842986428: All 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6417d49127f1dca842986428', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:25:05.139948 root [INFO] 6421838f54872812763ac9e2 tw 執行成功！
+2024-05-10 11:26:00.352349 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-10 11:26:00.353444 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663d93c87f3ff5b2d6e68af7, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663d93c87f3ff5b2d6e68af7"}, "remainingTimeMS": 29}
+2024-05-10 11:26:17.415034 root [INFO] 63d0ac0a22d4cdf11191097e tw 執行成功！
+2024-05-10 11:26:23.085180 root [INFO] 63f2e77a820fc55ba97aa0e3 tw 執行成功！
+2024-05-10 11:26:25.275217 root [ERROR] 63f5852f6323f3aea35ee57f: Test Organization 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '63f5852f6323f3aea35ee57f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:26:27.931206 root [ERROR] 63fda3b2b78b622cbe263b0e: Client A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '63fda3b2b78b622cbe263b0e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:26:34.178535 root [INFO] 6406cf7b97497045dcc31a7f tw 執行成功！
+2024-05-10 11:26:40.560916 root [ERROR] 64081e2be6fbaa54e48e8602: ITRI Org 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64081e2be6fbaa54e48e8602', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:26:47.129884 root [INFO] 64081e4ee6fbaa54e48e86f0 tw 執行成功！
+2024-05-10 11:26:50.935802 root [INFO] 64099a7975ddf5b7848a2fae tw 執行成功！
+2024-05-10 11:26:53.328820 root [ERROR] 64128b7c77b26a59f180d4ee: Evercomm Singapore Pte Ltd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64128b7c77b26a59f180d4ee', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:26:55.896827 root [ERROR] 6417d49127f1dca842986428: All 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6417d49127f1dca842986428', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:27:00.090092 root [INFO] 6421838f54872812763ac9e2 tw 執行成功！
+2024-05-10 11:27:18.062058 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-10 11:27:18.063177 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 663d9416691d6c0292f69d64, topology_type: Unknown, servers: [<ServerDescription ('20.6.34.160', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "663d9416691d6c0292f69d64"}, "remainingTimeMS": 29}
+2024-05-10 11:27:35.197707 root [INFO] 63d0ac0a22d4cdf11191097e tw 執行成功！
+2024-05-10 11:27:41.314300 root [INFO] 63f2e77a820fc55ba97aa0e3 tw 執行成功！
+2024-05-10 11:27:44.105247 root [ERROR] 63f5852f6323f3aea35ee57f: Test Organization 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '63f5852f6323f3aea35ee57f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:27:47.127020 root [ERROR] 63fda3b2b78b622cbe263b0e: Client A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '63fda3b2b78b622cbe263b0e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:27:54.088369 root [INFO] 6406cf7b97497045dcc31a7f tw 執行成功！
+2024-05-10 11:28:02.871157 root [INFO] 64081e2be6fbaa54e48e8602 tw 執行成功！
+2024-05-10 11:28:13.484345 root [INFO] 64081e4ee6fbaa54e48e86f0 tw 執行成功！
+2024-05-10 11:28:18.700968 root [INFO] 64099a7975ddf5b7848a2fae tw 執行成功！
+2024-05-10 11:28:22.060184 root [ERROR] 64128b7c77b26a59f180d4ee: Evercomm Singapore Pte Ltd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64128b7c77b26a59f180d4ee', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:28:25.553542 root [ERROR] 6417d49127f1dca842986428: All 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6417d49127f1dca842986428', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:28:30.989906 root [INFO] 6421838f54872812763ac9e2 tw 執行成功！
+2024-05-10 11:28:34.673350 root [INFO] 64465e2d5bc945fa9131536b tw 執行成功！
+2024-05-10 11:28:37.136048 root [ERROR] 64465e515bc945fa91315374: Test Organization 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64465e515bc945fa91315374', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:28:41.297799 root [INFO] 64465e755bc945fa9131537d tw 執行成功！
+2024-05-10 11:28:43.864026 root [ERROR] 64465e985bc945fa91315386: Test Organization 4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64465e985bc945fa91315386', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:28:47.830652 root [INFO] 644b860cdc53787660d26134 tw 執行成功！
+2024-05-10 11:28:50.357392 root [ERROR] 64586b95a61c4ef4d0a849a7: Web Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64586b95a61c4ef4d0a849a7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:28:54.983453 root [INFO] 6458741ea61c4ef4d0a855a7 tw 執行成功！
+2024-05-10 11:28:58.912445 root [INFO] 645b80e1116766c4eb96b969 tw 執行成功！
+2024-05-10 11:29:04.108239 root [INFO] 645b8197fed7dd0a27f82456 tw 執行成功！
+2024-05-10 11:29:08.305256 root [INFO] 645b81c43ad7b9d32361ba5e tw 執行成功！
+2024-05-10 11:29:10.924002 root [INFO] 645dfc563ad7b9d32362484e tw 執行成功！
+2024-05-10 11:29:16.625316 root [INFO] 645f509010edc3fa159792b2 tw 執行成功！
+2024-05-10 11:29:23.181904 root [INFO] 6464396e879dd0f5f816d9ef tw 執行成功！
+2024-05-10 11:29:26.742052 root [INFO] 647ec421434c8e31ec2abdb0 tw 執行成功！
+2024-05-10 11:29:30.602197 root [ERROR] 647ec45d434c8e31ec2abdbe: Org B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '647ec45d434c8e31ec2abdbe', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:29:32.912618 root [ERROR] 647ec4b2434c8e31ec2abdcc: Org C 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '647ec4b2434c8e31ec2abdcc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:29:35.304579 root [ERROR] 647ec4d3434c8e31ec2abdd5: Org D 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '647ec4d3434c8e31ec2abdd5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:29:37.734738 root [ERROR] 647ec4f9434c8e31ec2abdde: Org E 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '647ec4f9434c8e31ec2abdde', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:29:42.498583 root [INFO] 647ec52d434c8e31ec2abdec tw 執行成功！
+2024-05-10 11:29:46.598594 root [INFO] 647ec55c434c8e31ec2abdf5 tw 執行成功！
+2024-05-10 11:29:50.770560 root [INFO] 64814c6a2bf9323ee80ed1e1 tw 執行成功！
+2024-05-10 11:29:54.822311 root [INFO] 64814d302bf9323ee80ed1ea tw 執行成功！
+2024-05-10 11:29:58.864350 root [INFO] 64814d4d2bf9323ee80ed1f3 tw 執行成功！
+2024-05-10 11:30:03.077482 root [INFO] 64814d6a2bf9323ee80ed1fc tw 執行成功！
+2024-05-10 11:30:07.469263 root [INFO] 64814d862bf9323ee80ed205 tw 執行成功！
+2024-05-10 11:30:11.163119 root [INFO] 64814d9e2bf9323ee80ed20e tw 執行成功！
+2024-05-10 11:30:16.333960 root [INFO] 64814db92bf9323ee80ed217 tw 執行成功！
+2024-05-10 11:30:20.466956 root [INFO] 64814de92bf9323ee80ed220 tw 執行成功！
+2024-05-10 11:30:23.172459 root [INFO] 64814e102bf9323ee80ed34a tw 執行成功！
+2024-05-10 11:30:27.367450 root [INFO] 64814e292bf9323ee80ed372 tw 執行成功！
+2024-05-10 11:30:32.056461 root [INFO] 648ac348977810af2770c97b tw 執行成功！
+2024-05-10 11:30:42.063105 root [INFO] 64900b50456dfcf30d24e94a tw 執行成功！
+2024-05-10 11:30:46.305309 root [INFO] 6492886ee6018761566b8351 tw 執行成功！
+2024-05-10 11:30:49.351584 root [INFO] 6499385d8d7f6d34ba1db249 tw 執行成功！
+2024-05-10 11:30:53.072649 root [INFO] 649940d98d7f6d34ba1dca86 tw 執行成功！
+2024-05-10 11:30:57.240233 root [INFO] 6499411a8d7f6d34ba1dca8f tw 執行成功！
+2024-05-10 11:31:01.791673 root [INFO] 649941558d7f6d34ba1dcc1d tw 執行成功！
+2024-05-10 11:31:06.504427 root [INFO] 649941758d7f6d34ba1dcc26 tw 執行成功！
+2024-05-10 11:31:10.782822 root [INFO] 649942128d7f6d34ba1dce19 tw 執行成功！
+2024-05-10 11:31:15.200446 root [INFO] 649942408d7f6d34ba1dce51 tw 執行成功！
+2024-05-10 11:31:19.468630 root [INFO] 64996b00bdec17f0035d3cc5 tw 執行成功！
+2024-05-10 11:31:24.064887 root [INFO] 64996b36bdec17f0035d3cce tw 執行成功！
+2024-05-10 11:31:26.888307 root [INFO] 64996c8dbdec17f0035d3cd7 tw 執行成功！
+2024-05-10 11:31:31.193851 root [INFO] 64996cd9bdec17f0035d3ce0 tw 執行成功！
+2024-05-10 11:31:36.563725 root [INFO] 649a5381bdec17f0035d5cd4 tw 執行成功！
+2024-05-10 11:31:41.598635 root [INFO] 649a57f2bdec17f0035d6422 tw 執行成功！
+2024-05-10 11:31:45.521319 root [INFO] 649a9b8bbdec17f0035e09ee tw 執行成功！
+2024-05-10 11:31:48.974710 root [ERROR] 649be2419daca649a7dd4928: ADE 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '649be2419daca649a7dd4928', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:31:52.169567 root [INFO] 649bf281103d7f61e39009ae tw 執行成功！
+2024-05-10 11:31:58.149521 root [INFO] 649e4a7f103d7f61e39023f4 tw 執行成功！
+2024-05-10 11:32:05.423871 root [INFO] 64a39d240db2a9a8f4a50893 tw 執行成功！
+2024-05-10 11:32:11.274426 root [INFO] 64a3e3fd0db2a9a8f4a5dd50 tw 執行成功！
+2024-05-10 11:32:14.068040 root [INFO] 64a51ea66ea37db45a38e6a8 tw 執行成功！
+2024-05-10 11:32:19.254640 root [INFO] 64ae66d7f18eaaf7c2b46c4a tw 執行成功！
+2024-05-10 11:32:22.020399 root [ERROR] 64af7162f18eaaf7c2b493e8: MEDS: RMA Fiventures Org 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64af7162f18eaaf7c2b493e8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:32:27.559562 root [INFO] 64afa68acbcd5f89971909e9 tw 執行成功！
+2024-05-10 11:32:30.302254 root [INFO] 64afa6d0cbcd5f8997190aa5 tw 執行成功！
+2024-05-10 11:32:34.985490 root [INFO] 64b20fc9bfb46de6376dfe10 tw 執行成功！
+2024-05-10 11:32:39.918950 root [INFO] 64b21018bfb46de6376dfe31 tw 執行成功！
+2024-05-10 11:32:42.632134 root [ERROR] 64b21052bfb46de6376dfe52: ITRI In OrgAdmin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64b21052bfb46de6376dfe52', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:32:46.491184 root [INFO] 64b4f5c9e9255a03d68c00b3 tw 執行成功！
+2024-05-10 11:32:50.571011 root [INFO] 64b4fa8be9255a03d68c02bc tw 執行成功！
+2024-05-10 11:32:55.409344 root [INFO] 64b4fb61e9255a03d68c02e0 tw 執行成功！
+2024-05-10 11:33:00.360711 root [INFO] 64b4fc10e9255a03d68c0304 tw 執行成功！
+2024-05-10 11:33:05.895911 root [INFO] 64b4fc79e9255a03d68c0328 tw 執行成功！
+2024-05-10 11:33:10.003308 root [INFO] 64b610751e392d1a4660584e tw 執行成功！
+2024-05-10 11:33:14.072732 root [INFO] 64b610fe1e392d1a466058bf tw 執行成功！
+2024-05-10 11:33:18.627768 root [INFO] 64b611411e392d1a466058fa tw 執行成功！
+2024-05-10 11:33:22.014425 root [INFO] 64bd340acf1ac5cbd2fc91de tw 執行成功！
+2024-05-10 11:33:24.733452 root [ERROR] 64bd3455cf1ac5cbd2fc91ec: First Organization 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64bd3455cf1ac5cbd2fc91ec', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:33:28.239810 root [INFO] 64be273b56d251933956302f tw 執行成功！
+2024-05-10 11:33:31.200083 root [INFO] 64bf7f4458a62a37df287070 tw 執行成功！
+2024-05-10 11:33:35.824059 root [INFO] 64bfa58b58a62a37df294952 tw 執行成功！
+2024-05-10 11:33:38.318402 root [ERROR] 64bfe35258a62a37df298b21: NADC-VH 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64bfe35258a62a37df298b21', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:33:40.846262 root [ERROR] 64bfe35258a62a37df298b24: NADC-MTV 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64bfe35258a62a37df298b24', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:33:44.602908 root [INFO] 64c0d3df58a62a37df2a7422 tw 執行成功！
+2024-05-10 11:33:47.738457 root [ERROR] 64c0d7cd58a62a37df2aa471: testing account 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64c0d7cd58a62a37df2aa471', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:33:50.577638 root [ERROR] 64cb2f25dda7568d9fc70274: Advanced Energy Plus Co., Ltd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64cb2f25dda7568d9fc70274', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:33:53.911409 root [INFO] 64ccbbb55cd1c73c7468d48d tw 執行成功！
+2024-05-10 11:33:59.176770 root [INFO] 64ccd4f21cec0bb758022da9 tw 執行成功！
+2024-05-10 11:34:01.882336 root [ERROR] 64d05c821cec0bb75803e209: Demo Company ABC - SG 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64d05c821cec0bb75803e209', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:34:12.257361 root [INFO] 64d33b581751a272432a9b6f tw 執行成功！
+2024-05-10 11:34:17.633539 root [INFO] 64d3664d1751a272432b5245 tw 執行成功！
+2024-05-10 11:34:21.609363 root [INFO] 64d3666c1751a272432b525c tw 執行成功！
+2024-05-10 11:34:25.608209 root [INFO] 64d366891751a272432b5273 tw 執行成功！
+2024-05-10 11:34:28.372950 root [ERROR] 64d5bc72aa51b95e6195bd7b: Child Company 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64d5bc72aa51b95e6195bd7b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:34:31.378486 root [ERROR] 64d5bc72aa51b95e6195bd7e: Child Company 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64d5bc72aa51b95e6195bd7e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:34:34.010272 root [ERROR] 64d9be736598b22e6007c0b9: zasun1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64d9be736598b22e6007c0b9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:34:36.544600 root [ERROR] 64d9be736598b22e6007c0bc: zasun2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64d9be736598b22e6007c0bc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:34:38.775125 root [ERROR] 64d9be736598b22e6007c0bf: zasun3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64d9be736598b22e6007c0bf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:34:45.118885 root [INFO] 64d9d7826598b22e6008852b tw 執行成功！
+2024-05-10 11:34:48.624484 root [INFO] 64d9d8d66598b22e60089f91 tw 執行成功！
+2024-05-10 11:34:52.393106 root [INFO] 64d9d8e76598b22e60089f9e tw 執行成功！
+2024-05-10 11:34:55.169657 root [INFO] 64d9d8fc6598b22e60089fab tw 執行成功！
+2024-05-10 11:34:57.919674 root [INFO] 64d9d9d56598b22e6008ad21 tw 執行成功！
+2024-05-10 11:35:00.795325 root [INFO] 64d9da5b6598b22e6008b613 tw 執行成功！
+2024-05-10 11:35:05.039708 root [INFO] 64e2c2b7cdc4042568a8db64 tw 執行成功！
+2024-05-10 11:35:08.773602 root [INFO] 64e2c2dccdc4042568a8ddf1 tw 執行成功！
+2024-05-10 11:35:12.518471 root [INFO] 64e41ec6cdc4042568ab8c5b tw 執行成功！
+2024-05-10 11:35:18.941075 root [INFO] 64e2e44288562cefaefe4608 tw 執行成功！
+2024-05-10 11:35:22.128529 root [ERROR] 64e2e4d988562cefaefe4631: Admin 1 Company 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64e2e4d988562cefaefe4631', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:24.869659 root [ERROR] 64e444c455711ca0377ea16c: Admin 2 Subsidiary 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64e444c455711ca0377ea16c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:30.329459 root [INFO] 64f00f200db30c074f963e68 tw 執行成功！
+2024-05-10 11:35:33.620124 root [INFO] 64f00ff50db30c074f96439c tw 執行成功！
+2024-05-10 11:35:36.581437 root [ERROR] 64f04b8e0db30c074f96bbc5: Mitsubishi Electric Sales Malaysia Sdn. Bhd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f04b8e0db30c074f96bbc5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:39.178626 root [ERROR] 64f04b8e0db30c074f96bbc8: Mitsubishi Electric Factory Automation (Thailand) Co. Ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f04b8e0db30c074f96bbc8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:42.078777 root [ERROR] 64f04b8e0db30c074f96bbcf: MELCO Factory Automation Philippines Inc. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f04b8e0db30c074f96bbcf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:44.796938 root [ERROR] 64f550610db30c074f986eb2: Mitsubishi Electric Vietnam Co. Ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f550610db30c074f986eb2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:47.880770 root [ERROR] 64f550840db30c074f986ec0: PT. Mitsubishi Electric Indonesia 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f550840db30c074f986ec0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:51.175197 root [INFO] 64f6ae028873e0c6c36d14b0 tw 執行成功！
+2024-05-10 11:35:54.508477 root [ERROR] 64f6ae268873e0c6c36d14be: All Saints Home 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f6ae268873e0c6c36d14be', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:35:57.098033 root [ERROR] 64f6ae458873e0c6c36d14cc: Institute of Mental Health 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f6ae458873e0c6c36d14cc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:01.168149 root [INFO] 64f84b238873e0c6c36f453f tw 執行成功！
+2024-05-10 11:36:04.187642 root [ERROR] 64f84b7d8873e0c6c36f4552: SLEB D 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f84b7d8873e0c6c36f4552', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:07.111514 root [ERROR] 64f84bb18873e0c6c36f456f: SLEB S 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f84bb18873e0c6c36f456f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:09.456654 root [ERROR] 64f84bfc8873e0c6c36f4591: SLEB Z 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f84bfc8873e0c6c36f4591', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:12.240758 root [ERROR] 64f84e678873e0c6c36f6d46: Greenwillow 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f84e678873e0c6c36f6d46', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:15.261385 root [ERROR] 64f9495d8873e0c6c37087a0: NH Hougang 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f9495d8873e0c6c37087a0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:17.906242 root [ERROR] 64f9495d8873e0c6c37087a5: NH Tampines 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f9495d8873e0c6c37087a5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:20.518154 root [ERROR] 64f9495d8873e0c6c37087aa: NH Yishun 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f9495d8873e0c6c37087aa', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:23.386368 root [ERROR] 64f9495d8873e0c6c37087af: NH Jurong East 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f9495d8873e0c6c37087af', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:26.228098 root [ERROR] 64f9495d8873e0c6c37087b4: DC Yishun Polyclinic 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f9495d8873e0c6c37087b4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:28.827893 root [ERROR] 64f9495d8873e0c6c37087b9: DC Yishun Blk 674 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64f9495d8873e0c6c37087b9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:34.646687 root [INFO] 64f952678873e0c6c370c8b6 tw 執行成功！
+2024-05-10 11:36:37.363409 root [ERROR] 64fe95db65b7412769d14e5a: MetaChain 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '64fe95db65b7412769d14e5a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:41.156226 root [INFO] 65000f5f65b7412769d58938 tw 執行成功！
+2024-05-10 11:36:44.538487 root [ERROR] 650906fda1bc4a9160460e4a: KTIS 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650906fda1bc4a9160460e4a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:47.383841 root [ERROR] 650906fda1bc4a9160460e4f: KTBS 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650906fda1bc4a9160460e4f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:51.363348 root [ERROR] 6509145fa1bc4a9160464599: KTBP 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6509145fa1bc4a9160464599', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:53.845158 root [ERROR] 6509145fa1bc4a916046459e: EPPCO 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6509145fa1bc4a916046459e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:36:56.482013 root [ERROR] 6509145fa1bc4a91604645a3: KTBE 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6509145fa1bc4a91604645a3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:01.716418 root [INFO] 650d0c7263dd94256fef2272 tw 執行成功！
+2024-05-10 11:37:04.482445 root [ERROR] 650d0cf363dd94256fef2532: Training Student 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d0cf363dd94256fef2532', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:07.518599 root [ERROR] 650d0e2f63dd94256fef2e6f: Training Student2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d0e2f63dd94256fef2e6f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:10.043188 root [ERROR] 650d113a63dd94256fef2e8a: Training Student3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d113a63dd94256fef2e8a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:12.524335 root [ERROR] 650d117c63dd94256fef2ea5: Training Student4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d117c63dd94256fef2ea5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:15.133027 root [ERROR] 650d123863dd94256fef2ec0: Training Student5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d123863dd94256fef2ec0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:17.720083 root [ERROR] 650d13a763dd94256fef2edb: Training Student6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d13a763dd94256fef2edb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:20.071577 root [ERROR] 650d13d863dd94256fef2ef6: Training Student7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d13d863dd94256fef2ef6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:22.517253 root [ERROR] 650d140c63dd94256fef2f11: Training Student8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d140c63dd94256fef2f11', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:25.316640 root [ERROR] 650d143a63dd94256fef2f2c: Training Student9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d143a63dd94256fef2f2c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:27.661377 root [ERROR] 650d146a63dd94256fef2f47: Training Student10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d146a63dd94256fef2f47', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:30.227059 root [ERROR] 650d15e963dd94256fef2f62: Training Student11 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d15e963dd94256fef2f62', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:32.891146 root [ERROR] 650d161463dd94256fef2f7d: Training Student12 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d161463dd94256fef2f7d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:35.142123 root [ERROR] 650d164763dd94256fef2f98: Training Student13 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d164763dd94256fef2f98', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:37.643688 root [ERROR] 650d167c63dd94256fef2fb3: Training Student14 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d167c63dd94256fef2fb3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:40.231346 root [ERROR] 650d16a763dd94256fef2fce: Training Student15 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d16a763dd94256fef2fce', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:42.817941 root [ERROR] 650d16d063dd94256fef2fe9: Training Student16 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d16d063dd94256fef2fe9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:45.188381 root [ERROR] 650d16fc63dd94256fef3004: Training Student17 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d16fc63dd94256fef3004', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:47.580970 root [ERROR] 650d172c63dd94256fef301f: Training Student18 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d172c63dd94256fef301f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:50.381316 root [ERROR] 650d175d63dd94256fef303a: Training Student19 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d175d63dd94256fef303a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:52.926870 root [ERROR] 650d178663dd94256fef3055: Training Student20 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d178663dd94256fef3055', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:55.200532 root [ERROR] 650d17af63dd94256fef3070: Training Student21 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d17af63dd94256fef3070', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:37:57.935824 root [ERROR] 650d17d663dd94256fef308b: Training Student22 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d17d663dd94256fef308b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:00.461090 root [ERROR] 650d180063dd94256fef30a6: Training Student23 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d180063dd94256fef30a6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:03.223607 root [ERROR] 650d183363dd94256fef30c1: Training Student24 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d183363dd94256fef30c1', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:05.957031 root [ERROR] 650d185b63dd94256fef30dc: Training Student25 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d185b63dd94256fef30dc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:08.898631 root [ERROR] 650d188463dd94256fef30f7: Training Student26 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d188463dd94256fef30f7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:11.514914 root [ERROR] 650d18aa63dd94256fef3112: Training Student27 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d18aa63dd94256fef3112', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:14.200132 root [ERROR] 650d18d063dd94256fef312d: Training Student28 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d18d063dd94256fef312d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:16.335588 root [ERROR] 650d18f463dd94256fef3148: Training Student29 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d18f463dd94256fef3148', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:18.919578 root [ERROR] 650d192063dd94256fef3163: Training Student30 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650d192063dd94256fef3163', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:21.675520 root [ERROR] 650e49a68cc7c08484526f3b: tuv1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650e49a68cc7c08484526f3b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:24.563976 root [ERROR] 650e4a278cc7c08484526f5c: tuvtest2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650e4a278cc7c08484526f5c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:27.248689 root [ERROR] 650e53f78cc7c0848452a9ef: tuv2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '650e53f78cc7c0848452a9ef', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:31.565843 root [INFO] 651115b88cc7c0848453e991 tw 執行成功！
+2024-05-10 11:38:34.265337 root [ERROR] 651117408cc7c0848453f79e: Company A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651117408cc7c0848453f79e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:36.945352 root [ERROR] 651a6dc777e63a1d43ef9b16: company B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651a6dc777e63a1d43ef9b16', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:42.664470 root [INFO] 651d1c0a9e1be199c888423f tw 執行成功！
+2024-05-10 11:38:45.532444 root [ERROR] 651d20de9e1be199c8885a76: nexus02 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d20de9e1be199c8885a76', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:48.236920 root [ERROR] 651d21289e1be199c8885a82: nexus03 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d21289e1be199c8885a82', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:51.150867 root [ERROR] 651d21ec9e1be199c8885b09: nexus04 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d21ec9e1be199c8885b09', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:53.950546 root [ERROR] 651d22069e1be199c8885b15: nexus05 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d22069e1be199c8885b15', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:56.129538 root [ERROR] 651d22289e1be199c8885b21: nexus06 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d22289e1be199c8885b21', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:38:58.771461 root [ERROR] 651d223c9e1be199c8885b2d: nexus07 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d223c9e1be199c8885b2d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:01.251806 root [ERROR] 651d22779e1be199c8885b3a: nexus08 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d22779e1be199c8885b3a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:05.274931 root [INFO] 651d22959e1be199c8885b46 tw 執行成功！
+2024-05-10 11:39:08.100292 root [ERROR] 651d22b79e1be199c8885fe5: nexus10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d22b79e1be199c8885fe5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:10.596883 root [ERROR] 651d22db9e1be199c888601d: nexus11 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651d22db9e1be199c888601d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:13.718152 root [INFO] 651f53089e1be199c888b667 tw 執行成功！
+2024-05-10 11:39:17.405056 root [INFO] 651f53f39e1be199c888b673 tw 執行成功！
+2024-05-10 11:39:20.256797 root [ERROR] 651f57ed9e1be199c888b67f: nexus14 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651f57ed9e1be199c888b67f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:22.952649 root [ERROR] 651f58069e1be199c888b68b: nexus15 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651f58069e1be199c888b68b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:27.657052 root [INFO] 651f581e9e1be199c888b697 tw 執行成功！
+2024-05-10 11:39:30.194564 root [ERROR] 651f58319e1be199c888b6a3: nexus17 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651f58319e1be199c888b6a3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:32.696887 root [ERROR] 651f58449e1be199c888b6af: nexus18 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651f58449e1be199c888b6af', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:38.228292 root [INFO] 651f585b9e1be199c888b6bb tw 執行成功！
+2024-05-10 11:39:40.587357 root [ERROR] 651f58869e1be199c888b6c7: nexus20 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '651f58869e1be199c888b6c7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:50.488532 root [INFO] 6527a11be76f185628de6026 tw 執行成功！
+2024-05-10 11:39:55.698435 root [ERROR] 6527a15fe76f185628de6037: Com 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527a15fe76f185628de6037', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:39:58.116081 root [ERROR] 6527b3d6e76f185628de9199: nexus21 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b3d6e76f185628de9199', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:02.248466 root [INFO] 6527b3ebe76f185628de91a6 tw 執行成功！
+2024-05-10 11:40:05.209414 root [ERROR] 6527b3fee76f185628de91b3: nexus23 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b3fee76f185628de91b3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:07.885452 root [ERROR] 6527b40fe76f185628de91c0: nexus24 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b40fe76f185628de91c0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:10.354661 root [ERROR] 6527b41fe76f185628de91cd: nexus25 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b41fe76f185628de91cd', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:12.902578 root [ERROR] 6527b430e76f185628de91da: nexus26 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b430e76f185628de91da', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:15.541251 root [ERROR] 6527b441e76f185628de91e7: nexus27 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b441e76f185628de91e7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:17.800586 root [ERROR] 6527b451e76f185628de91f4: nexus28 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b451e76f185628de91f4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:20.387122 root [ERROR] 6527b461e76f185628de9201: nexus29 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b461e76f185628de9201', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:22.593256 root [ERROR] 6527b474e76f185628de920e: nexus30 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6527b474e76f185628de920e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:29.338616 root [INFO] 652cba44e76f185628e359fc tw 執行成功！
+2024-05-10 11:40:31.502909 root [ERROR] 652cc6cbe76f185628e38e96: 台北 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '652cc6cbe76f185628e38e96', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:33.599205 root [ERROR] 652cdae8e76f185628e3ea96: 甲乙丙 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '652cdae8e76f185628e3ea96', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:37.712671 root [INFO] 652cdfd6e76f185628e400c6 tw 執行成功！
+2024-05-10 11:40:41.178566 root [INFO] 652ce6cbe76f185628e439e3 tw 執行成功！
+2024-05-10 11:40:43.930163 root [ERROR] 652ce9c8e76f185628e44f91: Dawei sub 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '652ce9c8e76f185628e44f91', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:50.029244 root [ERROR] 652cf86ce76f185628e48d9e: Taiwan Eric 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '652cf86ce76f185628e48d9e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:40:55.986750 root [INFO] 652cf88de76f185628e48dab tw 執行成功！
+2024-05-10 11:41:01.619916 root [INFO] 652cf8aae76f185628e48db8 tw 執行成功！
+2024-05-10 11:41:04.642089 root [ERROR] 652cfecae76f185628e4b4c4: Blk 1A & 1A Chiller Plant 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '652cfecae76f185628e4b4c4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:07.309448 root [ERROR] 652f3802e76f185628e6f5e2: Eric Co. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '652f3802e76f185628e6f5e2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:12.583742 root [INFO] 652f8051e76f185628e963b7 tw 執行成功！
+2024-05-10 11:41:15.174181 root [ERROR] 652f80b1e76f185628e96e74: Shernie 子公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '652f80b1e76f185628e96e74', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:17.604295 root [ERROR] 6535f2cb504792e901acf9a2: Containers Printers 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6535f2cb504792e901acf9a2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:20.007714 root [ERROR] 6535f444504792e901acfa32: Mitsubishi Electric Singapore 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6535f444504792e901acfa32', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:22.489373 root [ERROR] 6535f7d8504792e901acfa38: Banpu Public Company Limited 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6535f7d8504792e901acfa38', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:25.068939 root [ERROR] 6536a13ea47c876fc9e41d42: Becky高雄 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6536a13ea47c876fc9e41d42', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:28.052888 root [ERROR] 6536a13ea47c876fc9e41d47: Becky新竹 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6536a13ea47c876fc9e41d47', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:32.677229 root [INFO] 65371f2ba47c876fc9e615d8 tw 執行成功！
+2024-05-10 11:41:35.459716 root [ERROR] 653722cca47c876fc9e65a74: Evercomm 台中分公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653722cca47c876fc9e65a74', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:37.722785 root [ERROR] 65372533a47c876fc9e6895e: 美商聯合材料股份公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65372533a47c876fc9e6895e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:40.277048 root [ERROR] 65372533a47c876fc9e68963: 美商聯合管理諮詢股份有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65372533a47c876fc9e68963', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:42.861774 root [ERROR] 65372533a47c876fc9e68968: 昱騰股份有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65372533a47c876fc9e68968', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:45.829462 root [ERROR] 653a5043d82f682350c2aa81: Evercomm 高雄分公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653a5043d82f682350c2aa81', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:48.139102 root [ERROR] 653a6e2dd82f682350c2f0ac: 全敏尖端科技公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653a6e2dd82f682350c2f0ac', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:41:51.372886 root [INFO] 653a7a68d82f682350c32270 tw 執行成功！
+2024-05-10 11:41:55.144764 root [INFO] 653a7a83d82f682350c322ee tw 執行成功！
+2024-05-10 11:41:58.901570 root [INFO] 653a7b04d82f682350c3236c tw 執行成功！
+2024-05-10 11:42:03.035096 root [INFO] 653a7bd2d82f682350c3243c tw 執行成功！
+2024-05-10 11:42:06.867567 root [INFO] 653a7bf4d82f682350c324ba tw 執行成功！
+2024-05-10 11:42:10.979845 root [INFO] 653a7c17d82f682350c32538 tw 執行成功！
+2024-05-10 11:42:14.824445 root [INFO] 653a7c40d82f682350c325b6 tw 執行成功！
+2024-05-10 11:42:18.624722 root [INFO] 653a7c54d82f682350c32634 tw 執行成功！
+2024-05-10 11:42:22.843145 root [INFO] 653a7c6ed82f682350c326b2 tw 執行成功！
+2024-05-10 11:42:26.781759 root [INFO] 653a7c8ad82f682350c32730 tw 執行成功！
+2024-05-10 11:42:30.799385 root [INFO] 653a7cb7d82f682350c327ae tw 執行成功！
+2024-05-10 11:42:34.600267 root [INFO] 653a7cd7d82f682350c3282c tw 執行成功！
+2024-05-10 11:42:38.810520 root [INFO] 653a7cf3d82f682350c328aa tw 執行成功！
+2024-05-10 11:42:42.609283 root [INFO] 653a7d08d82f682350c32928 tw 執行成功！
+2024-05-10 11:42:46.478985 root [INFO] 653a7d1fd82f682350c329a6 tw 執行成功！
+2024-05-10 11:42:50.622704 root [INFO] 653a7d37d82f682350c32a24 tw 執行成功！
+2024-05-10 11:42:54.495488 root [INFO] 653a7d4fd82f682350c32aa2 tw 執行成功！
+2024-05-10 11:42:58.793686 root [INFO] 653a7d66d82f682350c32b20 tw 執行成功！
+2024-05-10 11:43:02.766828 root [INFO] 653a7d7cd82f682350c32b9e tw 執行成功！
+2024-05-10 11:43:07.715873 root [INFO] 653a7d96d82f682350c32c1c tw 執行成功！
+2024-05-10 11:43:10.254341 root [ERROR] 653b6a5dd82f682350c502d3: A公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653b6a5dd82f682350c502d3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:15.780542 root [INFO] 653f73f7d82f682350c7de0f tw 執行成功！
+2024-05-10 11:43:19.446149 root [ERROR] 653f7482d82f682350c7de93: Raffles Medical Group (Singapore) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653f7482d82f682350c7de93', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:21.691506 root [ERROR] 653f7556d82f682350c7df22: Raffles Medical Group (China) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653f7556d82f682350c7df22', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:24.590448 root [ERROR] 653f8cd0d82f682350c7fd6a: Blk 1 to 8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653f8cd0d82f682350c7fd6a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:27.196110 root [ERROR] 653f8cd0d82f682350c7fd6f: Blk 9 Chiller Plant (Estimated) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653f8cd0d82f682350c7fd6f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:29.716391 root [ERROR] 653f8cd0d82f682350c7fd74: Blk 9 & 27 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653f8cd0d82f682350c7fd74', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:32.309746 root [ERROR] 653f8cd0d82f682350c7fd79: Blk 10 to 17 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653f8cd0d82f682350c7fd79', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:34.847568 root [ERROR] 653f9c58d82f682350c85618: Blk 18 to 25 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653f9c58d82f682350c85618', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:37.362115 root [ERROR] 653fa6cbd82f682350c89234: Blk 43 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fa6cbd82f682350c89234', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:40.628284 root [ERROR] 653fa720d82f682350c89244: Blk 30A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fa720d82f682350c89244', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:43.507819 root [ERROR] 653fa73bd82f682350c89254: Blk 42 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fa73bd82f682350c89254', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:46.401172 root [ERROR] 653fa761d82f682350c89507: Blk 41 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fa761d82f682350c89507', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:49.083984 root [ERROR] 653faba9d82f682350c89a6c: Blk 45 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653faba9d82f682350c89a6c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:51.660758 root [ERROR] 653fabbed82f682350c89a7c: Blk 29A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fabbed82f682350c89a7c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:54.371400 root [ERROR] 653fabd3d82f682350c89a8c: Blk 26A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fabd3d82f682350c89a8c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:56.928454 root [ERROR] 653fabe6d82f682350c89a9c: Blk 28A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fabe6d82f682350c89a9c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:43:59.339566 root [ERROR] 653fac15d82f682350c89aac: Blk 8A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fac15d82f682350c89aac', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:02.120591 root [ERROR] 653fac26d82f682350c89abc: Blk 30 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fac26d82f682350c89abc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:05.037030 root [ERROR] 653fac39d82f682350c89acc: Blk 30B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fac39d82f682350c89acc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:07.816853 root [ERROR] 653fac4bd82f682350c89adc: Blk 26B Chiller Plant 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fac4bd82f682350c89adc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:10.261277 root [ERROR] 653fac5cd82f682350c89aec: Blk 29 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fac5cd82f682350c89aec', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:14.363061 root [ERROR] 653fac6cd82f682350c89afc: Blk 26B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653fac6cd82f682350c89afc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:16.906153 root [ERROR] 653faca6d82f682350c89b0c: Blk 25A & 25A Chiller Plant 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653faca6d82f682350c89b0c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:20.570856 root [ERROR] 653facbbd82f682350c89b1c: Blk 26 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653facbbd82f682350c89b1c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:23.336744 root [ERROR] 653facccd82f682350c89b2c: Blk 28 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653facccd82f682350c89b2c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:26.131149 root [ERROR] 653facdcd82f682350c89b3c: Blk 32 to 34 & 32 Chiller Plant 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653facdcd82f682350c89b3c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:28.802852 root [ERROR] 653facefd82f682350c89b4c: Blk 31 & 31A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '653facefd82f682350c89b4c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:32.914929 root [INFO] 6540b4e3d82f682350cad943 tw 執行成功！
+2024-05-10 11:44:37.351418 root [ERROR] 6541cb22f3c80885b50cbedc: Demo Company XYZ - Overseas Thailand 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6541cb22f3c80885b50cbedc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:40.056257 root [INFO] 65434f38f3c80885b50fc7ab tw 執行成功！
+2024-05-10 11:44:42.508541 root [ERROR] 6543502af3c80885b50fc84b: Raffles Medical Group (Singapore) - Demo 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6543502af3c80885b50fc84b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:45.191331 root [ERROR] 654350aff3c80885b50fc8f6: Raffles Medical Group (China) - Demo 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '654350aff3c80885b50fc8f6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:48.477205 root [INFO] 6544a886f3c80885b510d537 tw 執行成功！
+2024-05-10 11:44:50.886777 root [ERROR] 6545bb02ab6068068b41a586: Demo Organization 4 - new 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6545bb02ab6068068b41a586', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:44:56.854506 root [INFO] 654b034f8c30e5fabfae33b6 tw 執行成功！
+2024-05-10 11:45:02.503359 root [INFO] 654b0af38c30e5fabfae4cc2 tw 執行成功！
+2024-05-10 11:45:05.906568 root [ERROR] 654b48388c30e5fabfb03855: Singapore FinTech Festival - Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '654b48388c30e5fabfb03855', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:08.785004 root [ERROR] 654b4a8f8c30e5fabfb04a64: NXMAP Demo - Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '654b4a8f8c30e5fabfb04a64', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:11.282237 root [ERROR] 654c81173bbaa4f35af1470a: Company C 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '654c81173bbaa4f35af1470a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:13.891134 root [ERROR] 655999f33bbaa4f35af8f392: ESG新手村事業有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655999f33bbaa4f35af8f392', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:16.639278 root [INFO] 655d7f0b3bbaa4f35afec60f tw 執行成功！
+2024-05-10 11:45:19.249580 root [ERROR] 655d7fc43bbaa4f35afed024: Mitsubishi Electric Asia Pacific Subsidiary 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655d7fc43bbaa4f35afed024', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:21.769402 root [ERROR] 655f16ba3bbaa4f35a014b2d: testing 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655f16ba3bbaa4f35a014b2d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:24.595565 root [ERROR] 655f1962fb85aa5dc4d552a8: testddd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655f1962fb85aa5dc4d552a8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:27.516447 root [INFO] 655f19ca3bbaa4f35a018f93 tw 執行成功！
+2024-05-10 11:45:30.095503 root [ERROR] 655f1a9c3bbaa4f35a01b9d5: one 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655f1a9c3bbaa4f35a01b9d5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:32.370237 root [ERROR] 655f1ad43bbaa4f35a01c726: two 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655f1ad43bbaa4f35a01c726', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:34.889776 root [ERROR] 655f28bc42210a3c65ce7ec9: Test Test Test 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655f28bc42210a3c65ce7ec9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:37.175624 root [ERROR] 655f296342210a3c65ce8432: com 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655f296342210a3c65ce8432', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:39.382811 root [ERROR] 655f29ad42210a3c65ce8999: 1  Org Admin Companyddd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '655f29ad42210a3c65ce8999', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:42.626810 root [ERROR] 6560115d42210a3c65cf526c: ITdddd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6560115d42210a3c65cf526c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:45.474188 root [ERROR] 65601eb542210a3c65cfa8ac: ITdd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65601eb542210a3c65cfa8ac', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:48.794951 root [INFO] 6560496142210a3c65d068b4 tw 執行成功！
+2024-05-10 11:45:51.074492 root [ERROR] 656049cb42210a3c65d06bae: Fukuyama Works Training Admin 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '656049cb42210a3c65d06bae', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:53.633941 root [ERROR] 65604aca42210a3c65d07985: Fukuyama Works Training Admin 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604aca42210a3c65d07985', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:56.305527 root [ERROR] 65604d5642210a3c65d09a6c: Fukuyama Works Training Admin 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604d5642210a3c65d09a6c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:45:58.660394 root [ERROR] 65604da042210a3c65d09d54: Fukuyama Works Training Admin 4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604da042210a3c65d09d54', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:01.227130 root [ERROR] 65604dee42210a3c65d0a0d2: Fukuyama Works Training Admin 5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604dee42210a3c65d0a0d2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:04.049276 root [ERROR] 65604e3d42210a3c65d0a433: Fukuyama Works Training Admin 6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604e3d42210a3c65d0a433', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:06.619941 root [ERROR] 65604ec142210a3c65d0a50a: Fukuyama Works Training Admin 7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604ec142210a3c65d0a50a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:09.657273 root [ERROR] 65604f2f42210a3c65d0a810: Fukuyama Works Training Admin 8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604f2f42210a3c65d0a810', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:12.354836 root [ERROR] 65604f7342210a3c65d0a8c4: Fukuyama Works Training Admin 9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604f7342210a3c65d0a8c4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:14.963135 root [ERROR] 65604fc242210a3c65d0a9b5: Fukuyama Works Training Admin 10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65604fc242210a3c65d0a9b5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:17.830104 root [INFO] 6566b63342210a3c65d24fde tw 執行成功！
+2024-05-10 11:46:20.361016 root [ERROR] 6566b67a42210a3c65d2508a: Eightfold  Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6566b67a42210a3c65d2508a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:25.175873 root [INFO] 6566eaf842210a3c65d2c7b7 tw 執行成功！
+2024-05-10 11:46:29.606692 root [INFO] 6566f4dd42210a3c65d2dc9c tw 執行成功！
+2024-05-10 11:46:32.862590 root [ERROR] 656856b449e8d6dd678046ca: Mitsubishi Electric India Factory Automation 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '656856b449e8d6dd678046ca', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:35.763994 root [INFO] 656856e049e8d6dd67804773 tw 執行成功！
+2024-05-10 11:46:37.991470 root [ERROR] 6568570749e8d6dd6780481c: Guardian Independent Certification Pte Ltd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6568570749e8d6dd6780481c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:40.473792 root [ERROR] 656e7bfd6d0cf45824994f3d: 子公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '656e7bfd6d0cf45824994f3d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:44.014395 root [INFO] 657403bb6e3842a527228abd tw 執行成功！
+2024-05-10 11:46:47.170114 root [INFO] 65769f756e3842a527236bbd tw 執行成功！
+2024-05-10 11:46:52.118024 root [INFO] 657a6b2b6e3842a527286cd2 tw 執行成功！
+2024-05-10 11:46:54.671887 root [ERROR] 657eab696e3842a5272b04d3: Operations 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '657eab696e3842a5272b04d3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:46:57.664561 root [ERROR] 657eab696e3842a5272b04d8: EPL Celebration 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '657eab696e3842a5272b04d8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:05.732037 root [INFO] 6583edea6e3842a527329127 tw 執行成功！
+2024-05-10 11:47:08.433440 root [ERROR] 6583ee576e3842a5273292c8: ESCATEC Switzerland (ECH) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6583ee576e3842a5273292c8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:11.279389 root [ERROR] 6583eed16e3842a527329390: ESCATEC Johor (J1, EMM) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6583eed16e3842a527329390', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:13.420622 root [ERROR] 6583ef5b6e3842a52732944c: ESCATEC UK (EUK) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6583ef5b6e3842a52732944c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:16.056238 root [ERROR] 658403f06e3842a527331df6: ESCATEC Czech Republic (ECZ) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '658403f06e3842a527331df6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:18.464047 root [ERROR] 6584044b6e3842a527332849: ESCATEC Bulgaria (EBG) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6584044b6e3842a527332849', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:21.212492 root [INFO] 658500566e3842a52733d938 tw 執行成功！
+2024-05-10 11:47:25.726373 root [INFO] 658547b76e3842a527349ee1 tw 執行成功！
+2024-05-10 11:47:28.430471 root [ERROR] 658b97dd6e3842a527363c9d: Dr.Thanapong Duangmanee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '658b97dd6e3842a527363c9d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:30.908129 root [ERROR] 658b9a1e6e3842a527364700: Mr.Thanit Hlek Kongkeaw 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '658b9a1e6e3842a527364700', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:33.441833 root [INFO] 658b9b776e3842a527364d23 tw 執行成功！
+2024-05-10 11:47:35.907095 root [ERROR] 658b9c916e3842a52736530f: Pipat opasthaveesup 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '658b9c916e3842a52736530f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:47:40.505267 root [INFO] 658c29626e3842a52738a4cc tw 執行成功！
+2024-05-10 11:47:44.230042 root [INFO] 658c29806e3842a52738a585 tw 執行成功！
+2024-05-10 11:47:50.109641 root [INFO] 658c29976e3842a52738a63e tw 執行成功！
+2024-05-10 11:47:54.170314 root [INFO] 658c29bc6e3842a52738a6f7 tw 執行成功！
+2024-05-10 11:47:57.896548 root [INFO] 658c29d36e3842a52738a7b0 tw 執行成功！
+2024-05-10 11:48:02.115589 root [INFO] 658c29ea6e3842a52738a869 tw 執行成功！
+2024-05-10 11:48:05.812110 root [INFO] 658c2a076e3842a52738a922 tw 執行成功！
+2024-05-10 11:48:10.013813 root [INFO] 658c2a706e3842a52738a9db tw 執行成功！
+2024-05-10 11:48:14.259315 root [INFO] 658c2a8b6e3842a52738aa94 tw 執行成功！
+2024-05-10 11:48:17.953563 root [INFO] 658c2a9f6e3842a52738ab4d tw 執行成功！
+2024-05-10 11:48:22.174699 root [INFO] 658c2ab86e3842a52738ac06 tw 執行成功！
+2024-05-10 11:48:25.944410 root [INFO] 658c2acd6e3842a52738acbf tw 執行成功！
+2024-05-10 11:48:29.835009 root [INFO] 658c2ae56e3842a52738ad78 tw 執行成功！
+2024-05-10 11:48:34.044810 root [INFO] 658c2af56e3842a52738ae31 tw 執行成功！
+2024-05-10 11:48:38.249830 root [INFO] 658c2b086e3842a52738aeea tw 執行成功！
+2024-05-10 11:48:41.941070 root [INFO] 658c2b1d6e3842a52738afa3 tw 執行成功！
+2024-05-10 11:48:45.752183 root [INFO] 658c2b2e6e3842a52738b05c tw 執行成功！
+2024-05-10 11:48:49.666199 root [INFO] 658c2b3e6e3842a52738b115 tw 執行成功！
+2024-05-10 11:48:54.061488 root [INFO] 658c2b526e3842a52738b1ce tw 執行成功！
+2024-05-10 11:48:57.846005 root [INFO] 658c2b656e3842a52738b287 tw 執行成功！
+2024-05-10 11:49:00.760797 root [ERROR] 658c5a886e3842a52738e534: Alcom 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '658c5a886e3842a52738e534', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:03.381107 root [ERROR] 658c5ad66e3842a52738e5ed: PCB MY 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '658c5ad66e3842a52738e5ed', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:07.424668 root [INFO] 658d7ab46e3842a5273a3c2c tw 執行成功！
+2024-05-10 11:49:09.917997 root [ERROR] 6593ad78d08dcdf3b8d62ca6: 帆宣台南分公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6593ad78d08dcdf3b8d62ca6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:12.687654 root [ERROR] 6593ad78d08dcdf3b8d62cab: 帆宣台中分公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6593ad78d08dcdf3b8d62cab', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:17.970137 root [ERROR] 659ceb4ad08dcdf3b8e044f0: sub company A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '659ceb4ad08dcdf3b8e044f0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:20.108336 root [ERROR] 659ceb4ad08dcdf3b8e044f5: sub company B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '659ceb4ad08dcdf3b8e044f5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:22.277739 root [ERROR] 659ceb4ad08dcdf3b8e044fa: sub company C 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '659ceb4ad08dcdf3b8e044fa', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:24.950253 root [ERROR] 659cf8b2d08dcdf3b8e0c415: Block A, B & E 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '659cf8b2d08dcdf3b8e0c415', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:28.002296 root [ERROR] 659cf8b2d08dcdf3b8e0c41a: Block C 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '659cf8b2d08dcdf3b8e0c41a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:30.747705 root [ERROR] 659cf8b2d08dcdf3b8e0c41f: Block D 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '659cf8b2d08dcdf3b8e0c41f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:33.110517 root [ERROR] 65a53d95bb6e24a1bc9ef9b2: AA 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65a53d95bb6e24a1bc9ef9b2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:49:38.835884 root [INFO] 65a62718bb6e24a1bca1e6fc tw 執行成功！
+2024-05-10 11:50:01.505145 root [INFO] 65a8ad11e578c4b6b6fffc4e tw 執行成功！
+2024-05-10 11:50:04.511865 root [INFO] 65af3a4ce578c4b6b60327e3 tw 執行成功！
+2024-05-10 11:50:07.181746 root [ERROR] 65af3fabe578c4b6b60332ce: ChengChunAsia - Demo 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af3fabe578c4b6b60332ce', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:09.781729 root [INFO] 65af4064e578c4b6b60333b7 tw 執行成功！
+2024-05-10 11:50:12.334862 root [ERROR] 65af40d3e578c4b6b6033499: Mitr Kasetr Industrial [Sugar Mill] - Demo 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af40d3e578c4b6b6033499', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:15.061738 root [ERROR] 65af414ee578c4b6b6033583: Teo Hong Silom - Demo 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af414ee578c4b6b6033583', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:17.566196 root [ERROR] 65af41bee578c4b6b6033662: Teo Hong Silom - Demo 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af41bee578c4b6b6033662', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:20.020158 root [ERROR] 65af421ee578c4b6b6033741: Teo Hong Silom - Demo 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af421ee578c4b6b6033741', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:22.590885 root [ERROR] 65af42c2e578c4b6b6033826: Teo Hong Silom - Demo 4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af42c2e578c4b6b6033826', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:25.565214 root [ERROR] 65af44b5e578c4b6b6033905: Teo Hong Silom - Demo 5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af44b5e578c4b6b6033905', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:28.844291 root [ERROR] 65af4540e578c4b6b60339f1: Teo Hong Silom - Demo 6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af4540e578c4b6b60339f1', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:32.839926 root [INFO] 65af45b2e578c4b6b6033ad0 tw 執行成功！
+2024-05-10 11:50:35.289867 root [ERROR] 65af4612e578c4b6b6033baf: Teo Hong Silom - Demo 8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af4612e578c4b6b6033baf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:37.879278 root [ERROR] 65af46a9e578c4b6b6033c8e: Teo Hong Silom - Demo 9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af46a9e578c4b6b6033c8e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:41.957315 root [INFO] 65af4707e578c4b6b6033d6d tw 執行成功！
+2024-05-10 11:50:46.634618 root [INFO] 65af47a5e578c4b6b6033e35 tw 執行成功！
+2024-05-10 11:50:49.279306 root [INFO] 65af8832e578c4b6b6045e6b tw 執行成功！
+2024-05-10 11:50:51.709901 root [ERROR] 65af88c2e578c4b6b6046337: Paramount Property Berhad - 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af88c2e578c4b6b6046337', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:54.170269 root [ERROR] 65af8a67e578c4b6b6046748: syscom2023 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65af8a67e578c4b6b6046748', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:50:57.122053 root [INFO] 65b784d93bb61226a5b6ff64 tw 執行成功！
+2024-05-10 11:51:01.439904 root [ERROR] 65b9b22e3bb61226a5bc5d4c: 永續股份有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9b22e3bb61226a5bc5d4c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:10.507594 root [INFO] 65b9d36f3bb61226a5bd800e tw 執行成功！
+2024-05-10 11:51:14.312072 root [ERROR] 65b9d3a63bb61226a5bd80d6: Rotary Engineering (Indonesia) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d3a63bb61226a5bd80d6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:16.631175 root [ERROR] 65b9d3db3bb61226a5bd81a9: Rotary Engineering (Malaysia) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d3db3bb61226a5bd81a9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:18.898790 root [ERROR] 65b9d41e3bb61226a5bd827d: Rotary Engineering (United Arab Emirates) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d41e3bb61226a5bd827d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:21.457609 root [ERROR] 65b9d4523bb61226a5bd8352: Rotary Engineering (Saudi Arabia) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d4523bb61226a5bd8352', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:24.375690 root [ERROR] 65b9d50e3bb61226a5bd8443: Rotary Engineering (India) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d50e3bb61226a5bd8443', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:26.815593 root [ERROR] 65b9d5793bb61226a5bd851a: Rotary Engineering (Myanmar) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d5793bb61226a5bd851a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:29.132697 root [ERROR] 65b9d5ba3bb61226a5bd8a85: Rotary Engineering (Vietnam) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d5ba3bb61226a5bd8a85', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:31.318069 root [ERROR] 65b9d5fd3bb61226a5bd8bcb: Rotary Engineering (Qatar) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d5fd3bb61226a5bd8bcb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:33.542573 root [ERROR] 65b9d6cc3bb61226a5bd8cd8: Rotary Engineering (Slovenia) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d6cc3bb61226a5bd8cd8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:35.739652 root [ERROR] 65b9d7143bb61226a5bd8db3: Rotary Engineering (Oman) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d7143bb61226a5bd8db3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:38.290876 root [ERROR] 65b9d76a3bb61226a5bd8e8f: Rotary Engineering (People's Republic of China) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d76a3bb61226a5bd8e8f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:40.765573 root [ERROR] 65b9d7a83bb61226a5bd922e: Rotary Engineering (Thailand) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9d7a83bb61226a5bd922e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:45.853903 root [INFO] 65b9e3c03bb61226a5bdd1b1 tw 執行成功！
+2024-05-10 11:51:49.988976 root [INFO] 65b9ec2d3bb61226a5bdfae7 tw 執行成功！
+2024-05-10 11:51:52.586325 root [ERROR] 65b9ecc53bb61226a5bdfbdb: Siam Cement Group - Demo 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9ecc53bb61226a5bdfbdb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:54.734137 root [ERROR] 65b9ed3d3bb61226a5bdfda2: Siam Cement Group - Demo 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9ed3d3bb61226a5bdfda2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:56.851436 root [ERROR] 65b9edc33bb61226a5be00f7: Siam Cement Group - Demo 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65b9edc33bb61226a5be00f7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:51:59.377948 root [ERROR] 65bb2b41ca84cf8f083c0bff: test logo 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65bb2b41ca84cf8f083c0bff', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:02.094686 root [INFO] 65bca5bdca84cf8f083edc2e tw 執行成功！
+2024-05-10 11:52:04.684932 root [ERROR] 65bca5f2ca84cf8f083edd05: SEAS - 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65bca5f2ca84cf8f083edd05', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:07.491580 root [ERROR] 65bca6d9ca84cf8f083ee2ab: SEAS - 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65bca6d9ca84cf8f083ee2ab', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:11.242743 root [INFO] 65c0ddc8331c6bca0b57680f tw 執行成功！
+2024-05-10 11:52:13.687724 root [ERROR] 65c0dfeb331c6bca0b577562: Training Demo Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c0dfeb331c6bca0b577562', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:16.247925 root [ERROR] 65c2c53b737c80a7019eb4a7: Training Demo User1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c53b737c80a7019eb4a7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:19.003872 root [ERROR] 65c2c5cc737c80a7019eb581: Training Demo User2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c5cc737c80a7019eb581', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:21.759252 root [ERROR] 65c2c604737c80a7019eb659: Training Demo User3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c604737c80a7019eb659', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:24.561250 root [ERROR] 65c2c634737c80a7019ec06b: Training Demo User4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c634737c80a7019ec06b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:27.300580 root [ERROR] 65c2c668737c80a7019ec4c6: Training Demo User5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c668737c80a7019ec4c6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:30.196797 root [ERROR] 65c2c69d737c80a7019ecd87: Training Demo User6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c69d737c80a7019ecd87', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:32.749138 root [ERROR] 65c2c6df737c80a7019ed11c: Training Demo User7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c6df737c80a7019ed11c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:35.342065 root [ERROR] 65c2c70c737c80a7019ed1f2: Training Demo User8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c70c737c80a7019ed1f2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:37.833942 root [ERROR] 65c2c74e737c80a7019ed2c8: Training Demo User9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c74e737c80a7019ed2c8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:40.277382 root [ERROR] 65c2c776737c80a7019ed39e: Training Demo User10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c2c776737c80a7019ed39e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:47.521523 root [INFO] 65c305ff737c80a7019fb7fe tw 執行成功！
+2024-05-10 11:52:50.232556 root [ERROR] 65c332be737c80a701a0acbf: 永續A公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c332be737c80a701a0acbf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:52.912106 root [INFO] 65c452f2737c80a701a1eab5 tw 執行成功！
+2024-05-10 11:52:55.523431 root [ERROR] 65c45709737c80a701a20d9e: GovTech - sub 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c45709737c80a701a20d9e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:52:59.378442 root [INFO] 65c482f3737c80a701a26ea1 tw 執行成功！
+2024-05-10 11:53:06.847783 root [INFO] 65c7046b737c80a701a3ca11 tw 執行成功！
+2024-05-10 11:53:10.966391 root [ERROR] 65c704bb737c80a701a3ced6: KEM1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c704bb737c80a701a3ced6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:14.060311 root [ERROR] 65c704f7737c80a701a3cfbd: KEM2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c704f7737c80a701a3cfbd', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:16.303442 root [ERROR] 65c7056f737c80a701a3d0a5: KEM3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c7056f737c80a701a3d0a5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:19.034554 root [ERROR] 65c7059f737c80a701a3d18e: KDM 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65c7059f737c80a701a3d18e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:22.687163 root [INFO] 65cadccf737c80a701a43b54 tw 執行成功！
+2024-05-10 11:53:25.724462 root [ERROR] 65cadcfc737c80a701a43c34: Temasek Poly Training -1  語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cadcfc737c80a701a43c34', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:28.673724 root [ERROR] 65cade45737c80a701a43f10: Temasek Poly Training -2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cade45737c80a701a43f10', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:31.775992 root [ERROR] 65cadeaa737c80a701a4401a: Temasek Poly Training -3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cadeaa737c80a701a4401a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:34.644907 root [ERROR] 65cadf0b737c80a701a44108: Temasek Poly Training -4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cadf0b737c80a701a44108', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:37.453849 root [ERROR] 65cadf82737c80a701a44212: Temasek Poly Training -5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cadf82737c80a701a44212', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:40.185595 root [ERROR] 65cae01f737c80a701a44302: Temasek Poly Training -6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae01f737c80a701a44302', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:42.480409 root [ERROR] 65cae0dc737c80a701a4440e: Temasek Poly Training -7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae0dc737c80a701a4440e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:45.139260 root [ERROR] 65cae13b737c80a701a44500: Temasek Poly Training -8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae13b737c80a701a44500', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:48.389048 root [ERROR] 65cae193737c80a701a44afc: Temasek Poly Training -9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae193737c80a701a44afc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:51.388076 root [ERROR] 65cae1eb737c80a701a44bf0: Temasek Poly Training -10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae1eb737c80a701a44bf0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:53.701209 root [ERROR] 65cae257737c80a701a44ce5: Temasek Poly Training -11 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae257737c80a701a44ce5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:56.107829 root [ERROR] 65cae32a737c80a701a44e54: Temasek Poly Training -12 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae32a737c80a701a44e54', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:53:58.352338 root [ERROR] 65cae3af737c80a701a450a3: Temasek Poly Training -13 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae3af737c80a701a450a3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:02.091176 root [ERROR] 65cae40b737c80a701a4519b: Temasek Poly Training -14 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae40b737c80a701a4519b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:04.880060 root [ERROR] 65cae461737c80a701a45294: Temasek Poly Training -15 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae461737c80a701a45294', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:07.783636 root [ERROR] 65cae4bf737c80a701a453ba: Temasek Poly Training -16 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae4bf737c80a701a453ba', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:10.072639 root [ERROR] 65cae51a737c80a701a459c0: Temasek Poly Training -17 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae51a737c80a701a459c0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:12.754885 root [ERROR] 65cae619737c80a701a46e81: Temasek Poly Training -18 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae619737c80a701a46e81', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:15.274906 root [ERROR] 65cae727737c80a701a4846f: Temasek Poly Training Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cae727737c80a701a4846f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:18.205232 root [INFO] 65cb0e9b737c80a701a4f339 tw 執行成功！
+2024-05-10 11:54:22.325959 root [INFO] 65cb0f89737c80a701a4ff6d tw 執行成功！
+2024-05-10 11:54:25.103022 root [ERROR] 65cec901737c80a701a8a829: dwyang 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cec901737c80a701a8a829', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:27.723526 root [ERROR] 65cf32e0737c80a701ab0271: Org Test New 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cf32e0737c80a701ab0271', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:30.495181 root [INFO] 65cf5a0b737c80a701abecd5 tw 執行成功！
+2024-05-10 11:54:33.048691 root [ERROR] 65cf5a8e737c80a701abedc9: TestingCompany 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cf5a8e737c80a701abedc9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:35.929756 root [ERROR] 65cf5ac4737c80a701abeec8: TestingCompany 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cf5ac4737c80a701abeec8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:38.814504 root [ERROR] 65cf5f52737c80a701ac02b0: Testing Demo 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65cf5f52737c80a701ac02b0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:54:42.452348 root [INFO] 65d4161c64d697156d07a6a9 tw 執行成功！
+2024-05-10 11:54:46.071822 root [INFO] 65d4173464d697156d07bee3 tw 執行成功！
+2024-05-10 11:54:49.057472 root [ERROR] 65d4565064d697156d088647: itri001 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d4565064d697156d088647', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:15.601893 root [INFO] 65d4849764d697156d0950f3 tw 執行成功！
+2024-05-10 11:55:19.646862 root [INFO] 65d58e9c64d697156d0a8afc tw 執行成功！
+2024-05-10 11:55:21.774733 root [ERROR] 65d6e83964d697156d11e5c3: 哈哈 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d6e83964d697156d11e5c3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:24.325507 root [ERROR] 65d6e8d864d697156d12430c: 拉拉 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d6e8d864d697156d12430c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:26.854556 root [ERROR] 65d6f43064d697156d14fbc2: ABC 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d6f43064d697156d14fbc2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:29.449153 root [ERROR] 65d8037364d697156d174e12: Subsidiary 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8037364d697156d174e12', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:31.633864 root [ERROR] 65d8037364d697156d174e17: Joint-Venture 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8037364d697156d174e17', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:34.172733 root [ERROR] 65d8037364d697156d174e1c: Subsidiary 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8037364d697156d174e1c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:36.369693 root [ERROR] 65d8037364d697156d174e21: Subsidiary 4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8037364d697156d174e21', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:38.824925 root [ERROR] 65d8419a64d697156d19c4fa: TP Training Company 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8419a64d697156d19c4fa', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:41.375803 root [ERROR] 65d8421e64d697156d19f581: TP Training Company 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8421e64d697156d19f581', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:44.223501 root [ERROR] 65d8425f64d697156d1a05d3: TP Training Company 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8425f64d697156d1a05d3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:47.064964 root [ERROR] 65d84ec664d697156d1b249f: Refrig System Co.,Ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d84ec664d697156d1b249f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:49.403958 root [ERROR] 65d84ef864d697156d1b3010: TPBI 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d84ef864d697156d1b3010', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:51.876889 root [ERROR] 65d84f7364d697156d1b4448: Sustric co.,ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d84f7364d697156d1b4448', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:54.427696 root [ERROR] 65d84ffe64d697156d1b50bb: TP Training Company 4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d84ffe64d697156d1b50bb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:56.662960 root [ERROR] 65d8519164d697156d1b6812: TP Training Company 5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8519164d697156d1b6812', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:55:59.206769 root [ERROR] 65d851f664d697156d1b7761: TP Training Company 6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d851f664d697156d1b7761', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:01.527974 root [ERROR] 65d8524564d697156d1b78dd: TP Training Company 7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8524564d697156d1b78dd', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:03.818980 root [ERROR] 65d852dd64d697156d1b7f9e: TP Training Company 8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d852dd64d697156d1b7f9e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:06.493189 root [ERROR] 65d8551d64d697156d1ba4e2: TP Training Company 9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8551d64d697156d1ba4e2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:09.247068 root [ERROR] 65d8558164d697156d1ba82c: TP Training Company 10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8558164d697156d1ba82c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:11.678250 root [ERROR] 65d855c164d697156d1ba922: TP Training Company 11 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d855c164d697156d1ba922', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:14.335121 root [ERROR] 65d8561f64d697156d1bb1cb: TP Training Company 12 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8561f64d697156d1bb1cb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:16.841964 root [ERROR] 65d8567464d697156d1bbcc6: TP Training Company 13 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8567464d697156d1bbcc6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:19.089811 root [ERROR] 65d856b464d697156d1bbdbc: TP Training Company 14 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d856b464d697156d1bbdbc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:21.823519 root [ERROR] 65d8571564d697156d1bbeb2: TP Training Company 15 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8571564d697156d1bbeb2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:24.763553 root [ERROR] 65d857f264d697156d1bc4eb: TP Training Company 16 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d857f264d697156d1bc4eb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:27.415055 root [ERROR] 65d8583d64d697156d1bc64e: TP Training Company 17 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8583d64d697156d1bc64e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:29.612245 root [ERROR] 65d8588564d697156d1bc744: TP Training Company 18 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65d8588564d697156d1bc744', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:33.324652 root [INFO] 65dc1bb7d6a24a9c72880668 tw 執行成功！
+2024-05-10 11:56:35.833773 root [ERROR] 65dc2771d6a24a9c72884375: Manthana 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dc2771d6a24a9c72884375', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:38.300685 root [ERROR] 65dc2771d6a24a9c7288437a: Tessabarn 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dc2771d6a24a9c7288437a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:41.009809 root [ERROR] 65dc2771d6a24a9c7288437f: Lerneo 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dc2771d6a24a9c7288437f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:45.215534 root [INFO] 65dc3b89d6a24a9c72889fd7 tw 執行成功！
+2024-05-10 11:56:49.741991 root [INFO] 65dc48b8d6a24a9c72891313 tw 執行成功！
+2024-05-10 11:56:52.339641 root [ERROR] 65dd423bd6a24a9c728a0e45: hjc 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dd423bd6a24a9c728a0e45', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:54.872778 root [ERROR] 65dd4278d6a24a9c728a0f59: Govtech - sub 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dd4278d6a24a9c728a0f59', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:57.358548 root [ERROR] 65dda37ed6a24a9c728bb52f: B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dda37ed6a24a9c728bb52f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:56:59.491071 root [ERROR] 65dda37ed6a24a9c728bb534: c 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dda37ed6a24a9c728bb534', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:01.693870 root [ERROR] 65dda37ed6a24a9c728bb539: d 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dda37ed6a24a9c728bb539', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:03.949544 root [ERROR] 65dda37ed6a24a9c728bb53e: e 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dda37ed6a24a9c728bb53e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:06.221549 root [ERROR] 65dda37ed6a24a9c728bb543: f 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dda37ed6a24a9c728bb543', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:09.002664 root [ERROR] 65dda37ed6a24a9c728bb548: g 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dda37ed6a24a9c728bb548', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:11.720263 root [ERROR] 65dda37ed6a24a9c728bb54d: h 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dda37ed6a24a9c728bb54d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:14.206303 root [ERROR] 65deb1aec559c8315959f4f0: daweiyang7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65deb1aec559c8315959f4f0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:16.727218 root [ERROR] 65dfe657c559c831595c3b23: a 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe657c559c831595c3b23', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:19.170262 root [ERROR] 65dfe657c559c831595c3b28: b 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe657c559c831595c3b28', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:21.424282 root [ERROR] 65dfe657c559c831595c3b33: i 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe657c559c831595c3b33', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:24.194718 root [ERROR] 65dfe657c559c831595c3b38: j 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe657c559c831595c3b38', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:26.908193 root [ERROR] 65dfe669c559c831595c3b42: aa 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b42', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:29.545888 root [ERROR] 65dfe669c559c831595c3b47: bb 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b47', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:32.705752 root [ERROR] 65dfe669c559c831595c3b4c: cc 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b4c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:35.024784 root [ERROR] 65dfe669c559c831595c3b51: dd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b51', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:37.307757 root [ERROR] 65dfe669c559c831595c3b56: ee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b56', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:39.843114 root [ERROR] 65dfe669c559c831595c3b5b: ff 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b5b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:42.115370 root [ERROR] 65dfe669c559c831595c3b60: gg 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b60', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:44.704797 root [ERROR] 65dfe669c559c831595c3b65: hh 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b65', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:47.673590 root [ERROR] 65dfe669c559c831595c3b6a: ii 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b6a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:50.363432 root [ERROR] 65dfe669c559c831595c3b6f: jj 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe669c559c831595c3b6f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:53.261260 root [ERROR] 65dfe6bcc559c831595c4177: ggg 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65dfe6bcc559c831595c4177', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:56.096530 root [ERROR] 65e17ae7c559c831595e04fc: 分公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e17ae7c559c831595e04fc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:57:58.992010 root [INFO] 65e57dd1c559c831595fb229 tw 執行成功！
+2024-05-10 11:58:01.582404 root [ERROR] 65e825fbc559c8315964b374: w 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e825fbc559c8315964b374', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:03.742971 root [ERROR] 65e82c5fc559c83159651efd: Temasek Poly (Diploma in Integrated Facility Management) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e82c5fc559c83159651efd', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:06.981767 root [INFO] 65e92b87c559c83159661721 tw 執行成功！
+2024-05-10 11:58:09.634006 root [ERROR] 65e92c22c559c83159662138: BJC - Admin1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e92c22c559c83159662138', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:12.185635 root [ERROR] 65e92c70c559c83159662259: BJC- Admin2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e92c70c559c83159662259', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:14.871767 root [ERROR] 65e92d45c559c83159662378: Krungsri Bank - 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e92d45c559c83159662378', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:17.065281 root [ERROR] 65e92d8ac559c83159662924: Krungsri Bank - 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e92d8ac559c83159662924', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:19.635278 root [ERROR] 65e92db5c559c83159662a38: Krungsri Bank - 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e92db5c559c83159662a38', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:22.425207 root [ERROR] 65e997aac559c8315968a860: ESCATEC Johor (J2, EMM) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e997aac559c8315968a860', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:24.849632 root [ERROR] 65e99886c559c8315968bfab: ESCATEC Penang (PHQ, EEM/EDM) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65e99886c559c8315968bfab', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:27.667127 root [ERROR] 65efd484c2b3f70e9b0f97ed: NYP Demo 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65efd484c2b3f70e9b0f97ed', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:32.344231 root [INFO] 65efd4b8c2b3f70e9b0f9903 tw 執行成功！
+2024-05-10 11:58:34.748875 root [ERROR] 65efd4e4c2b3f70e9b0f9a19: BJC2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65efd4e4c2b3f70e9b0f9a19', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:37.274038 root [ERROR] 65efd506c2b3f70e9b0f9b2f: BJC3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65efd506c2b3f70e9b0f9b2f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:41.578973 root [INFO] 65efd532c2b3f70e9b0f9c69 tw 執行成功！
+2024-05-10 11:58:47.232185 root [INFO] 65efd5bec2b3f70e9b0fa135 tw 執行成功！
+2024-05-10 11:58:50.176003 root [ERROR] 65efd5f6c2b3f70e9b0fa258: Airport of Thailand1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65efd5f6c2b3f70e9b0fa258', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:52.715157 root [ERROR] 65efd615c2b3f70e9b0fa36e: Airport of Thailand2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65efd615c2b3f70e9b0fa36e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:55.485462 root [ERROR] 65f014e4c2b3f70e9b10b7af: 東門辦公室 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f014e4c2b3f70e9b10b7af', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:58:58.265218 root [ERROR] 65f014e4c2b3f70e9b10b7b4: 仁德工廠 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f014e4c2b3f70e9b10b7b4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:00.771252 root [ERROR] 65f0fd984b86a08ea2a12bc8: 台中廠區 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f0fd984b86a08ea2a12bc8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:03.194344 root [ERROR] 65f106bc4b86a08ea2a159d5: 永續B公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f106bc4b86a08ea2a159d5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:05.742467 root [ERROR] 65f11dc34b86a08ea2a1d271: Plant 1A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f11dc34b86a08ea2a1d271', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:08.028982 root [ERROR] 65f11de14b86a08ea2a1d345: Plant 1B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f11de14b86a08ea2a1d345', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:10.581490 root [ERROR] 65f11df94b86a08ea2a1d37f: Plant 1C 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f11df94b86a08ea2a1d37f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:13.098617 root [ERROR] 65f11e0a4b86a08ea2a1d39b: Plant 2B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f11e0a4b86a08ea2a1d39b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:15.557110 root [ERROR] 65f11e1a4b86a08ea2a1d3ac: Plant 5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f11e1a4b86a08ea2a1d3ac', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:17.886806 root [ERROR] 65f122724b86a08ea2a1eed9: Plant 6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f122724b86a08ea2a1eed9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:20.436012 root [ERROR] 65f124614b86a08ea2a203b5: Plant 7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f124614b86a08ea2a203b5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:23.213963 root [ERROR] 65f1269f4b86a08ea2a2102b: Plant 9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f1269f4b86a08ea2a2102b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:25.906174 root [ERROR] 65f126b74b86a08ea2a21033: Plant P8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f126b74b86a08ea2a21033', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:28.493364 root [ERROR] 65f126c94b86a08ea2a2103b: Plant P2R 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f126c94b86a08ea2a2103b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:31.022480 root [ERROR] 65f126de4b86a08ea2a21043: Plant Create 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f126de4b86a08ea2a21043', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:33.457434 root [ERROR] 65f126f84b86a08ea2a2104b: Plant Invent 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f126f84b86a08ea2a2104b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:35.863897 root [ERROR] 65f1270d4b86a08ea2a21053: Plant Create 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f1270d4b86a08ea2a21053', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:38.596236 root [ERROR] 65f127204b86a08ea2a2105b: Plant Ubi 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f127204b86a08ea2a2105b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:41.093267 root [ERROR] 65f1273c4b86a08ea2a21063: Plant Invent 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f1273c4b86a08ea2a21063', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:43.890627 root [ERROR] 65f127bd4b86a08ea2a211a0: Plant Invent 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f127bd4b86a08ea2a211a0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:46.583891 root [ERROR] 65f12d3c4b86a08ea2a221c4: Plant 2R 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f12d3c4b86a08ea2a221c4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:49.474511 root [ERROR] 65f12e274b86a08ea2a227e4: EPPCO Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f12e274b86a08ea2a227e4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:52.488419 root [ERROR] 65f12e354b86a08ea2a227ec: KTIS Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f12e354b86a08ea2a227ec', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:55.373230 root [ERROR] 65f12e744b86a08ea2a22884: KTBP Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f12e744b86a08ea2a22884', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 11:59:58.559184 root [ERROR] 65f12e884b86a08ea2a22934: KTBE Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f12e884b86a08ea2a22934', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:01.614699 root [ERROR] 65f130104b86a08ea2a22c1e: KTBF Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f130104b86a08ea2a22c1e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:04.988545 root [ERROR] 65f15aa54b86a08ea2a303a6: 帆宣南港總部 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f15aa54b86a08ea2a303a6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:08.940827 root [ERROR] 65f15be54b86a08ea2a30676: 湖口廠 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f15be54b86a08ea2a30676', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:14.131444 root [ERROR] 65f15e2d4b86a08ea2a319a1: 新竹辦公室 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f15e2d4b86a08ea2a319a1', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:18.537035 root [ERROR] 65f15ef24b86a08ea2a319cf: 頭份廠 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f15ef24b86a08ea2a319cf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:23.260900 root [ERROR] 65f15f424b86a08ea2a319e8: 南科一廠 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f15f424b86a08ea2a319e8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:27.409415 root [ERROR] 65f15f584b86a08ea2a319f0: 南科三廠 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f15f584b86a08ea2a319f0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:32.446196 root [ERROR] 65f15fae4b86a08ea2a31ab7: 南科五廠、善化倉庫 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f15fae4b86a08ea2a31ab7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:35.240791 root [INFO] 65f26a7b12467278d7cd76ce tw 執行成功！
+2024-05-10 12:00:37.763016 root [ERROR] 65f26aef12467278d7cd7a29: WaveBCG-Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f26aef12467278d7cd7a29', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:39.881650 root [ERROR] 65f2c2ba12467278d7ce237e: Mitsubishi Electric Asia Pacific Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2c2ba12467278d7ce237e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:42.627871 root [ERROR] 65f2cc2a12467278d7ce2baf: Mitsubishi Electric Asia Building 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2cc2a12467278d7ce2baf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:45.089033 root [ERROR] 65f2cd9012467278d7ce2bbc: KEM1 Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2cd9012467278d7ce2bbc', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:47.586905 root [ERROR] 65f2cea912467278d7ce2fe0: KEM2 Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2cea912467278d7ce2fe0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:50.102700 root [ERROR] 65f2cebb12467278d7ce2fe8: KEM3 Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2cebb12467278d7ce2fe8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:52.985538 root [ERROR] 65f2d1a912467278d7ce375b: Rf-hospital 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2d1a912467278d7ce375b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:55.845460 root [ERROR] 65f2d1c012467278d7ce3763: Rf-hollandvillage 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2d1c012467278d7ce3763', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:00:58.376278 root [ERROR] 65f2e46c12467278d7ce385b: Rf-tannerylane 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2e46c12467278d7ce385b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:00.863917 root [ERROR] 65f2e48e12467278d7ce3863: Rf-beijing 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2e48e12467278d7ce3863', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:03.642109 root [ERROR] 65f2f93012467278d7ce40da: Rf-chongqing 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2f93012467278d7ce40da', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:07.160533 root [ERROR] 65f2f94412467278d7ce40e2: Rf-shanghai 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2f94412467278d7ce40e2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:10.482469 root [ERROR] 65f2fa5012467278d7ce40ea: 153A Gul Circle 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2fa5012467278d7ce40ea', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:12.956013 root [ERROR] 65f2fbea12467278d7ce465e: ESCATEC Penang (P3, EEM/EDM) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f2fbea12467278d7ce465e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:15.919584 root [ERROR] 65f3015712467278d7ce5177: PMOI Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f3015712467278d7ce5177', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:18.235207 root [ERROR] 65f3022912467278d7ce5635: KEM Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f3022912467278d7ce5635', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:20.736009 root [ERROR] 65f3025f12467278d7ce563d: GovTech Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f3025f12467278d7ce563d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:23.836375 root [ERROR] 65f3b89712467278d7ceffba: ME Fukuyama Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f3b89712467278d7ceffba', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:26.542516 root [ERROR] 65f3ee6b12467278d7cfc8e3: RMA Fiventures Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f3ee6b12467278d7cfc8e3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:28.785057 root [ERROR] 65f3eeea12467278d7cfccba: Thai Wah Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f3eeea12467278d7cfccba', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:31.397817 root [ERROR] 65f406c012467278d7d02a87: 中國信託 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f406c012467278d7d02a87', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:33.830749 root [ERROR] 65f518bb12467278d7d123b0: Facility in philippines 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f518bb12467278d7d123b0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:36.689473 root [ERROR] 65f695e412467278d7d14182: 台北廠區 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f695e412467278d7d14182', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:39.471529 root [ERROR] 65f6960f12467278d7d141ab: 南科永續廠 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f6960f12467278d7d141ab', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:42.095502 root [ERROR] 65f9094f12467278d7d3c153: XXX 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65f9094f12467278d7d3c153', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:44.723127 root [ERROR] 65fa9bb4c2f0901b5df5315a: RP Demo1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9bb4c2f0901b5df5315a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:47.055561 root [ERROR] 65fa9c06c2f0901b5df53289: RP Demo2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9c06c2f0901b5df53289', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:49.617283 root [ERROR] 65fa9c53c2f0901b5df533b8: RP Demo3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9c53c2f0901b5df533b8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:53.155022 root [INFO] 65fa9c8bc2f0901b5df534e7 tw 執行成功！
+2024-05-10 12:01:55.470029 root [ERROR] 65fa9cc0c2f0901b5df53616: RP Demo5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9cc0c2f0901b5df53616', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:01:57.586477 root [ERROR] 65fa9cfac2f0901b5df53745: RP Demo6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9cfac2f0901b5df53745', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:00.076665 root [ERROR] 65fa9d38c2f0901b5df53874: RP Demo7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9d38c2f0901b5df53874', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:04.735899 root [INFO] 65fa9d69c2f0901b5df539a3 tw 執行成功！
+2024-05-10 12:02:07.165609 root [ERROR] 65fa9d9bc2f0901b5df53ad2: RP Demo9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9d9bc2f0901b5df53ad2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:09.602984 root [ERROR] 65fa9dcdc2f0901b5df53c01: RP Demo10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9dcdc2f0901b5df53c01', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:12.244238 root [ERROR] 65fa9e04c2f0901b5df53d30: RP Demo11 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fa9e04c2f0901b5df53d30', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:16.610212 root [INFO] 65fa9e34c2f0901b5df53e5f tw 執行成功！
+2024-05-10 12:02:19.911651 root [INFO] 65fa9e61c2f0901b5df53f92 tw 執行成功！
+2024-05-10 12:02:22.452326 root [ERROR] 65faaedfc2f0901b5df57c0c: DEF Semicon 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65faaedfc2f0901b5df57c0c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:25.075282 root [ERROR] 65fbacfec2f0901b5df60504: Eric Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbacfec2f0901b5df60504', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:29.227156 root [INFO] 65fbc004c2f0901b5df6875a tw 執行成功！
+2024-05-10 12:02:31.739304 root [ERROR] 65fbc077c2f0901b5df68c2c: Alpha Switch Gear Manufacturer 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbc077c2f0901b5df68c2c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:34.679790 root [ERROR] 65fbc0fcc2f0901b5df68dc6: Demo Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbc0fcc2f0901b5df68dc6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:36.983649 root [ERROR] 65fbcf7ac2f0901b5df6ae7e: Alpha Components 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbcf7ac2f0901b5df6ae7e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:39.298588 root [ERROR] 65fbcf7ac2f0901b5df6ae83: Alpha Services 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbcf7ac2f0901b5df6ae83', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:41.819631 root [ERROR] 65fbcf7ac2f0901b5df6ae88: Alpha - Beta Joint Venture 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbcf7ac2f0901b5df6ae88', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:44.605293 root [ERROR] 65fbed50c2f0901b5df6fa7b: Facility 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbed50c2f0901b5df6fa7b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:47.539162 root [ERROR] 65fbed67c2f0901b5df6fb59: Facility 2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbed67c2f0901b5df6fb59', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:51.809187 root [ERROR] 65fbed77c2f0901b5df6fb61: Facility 3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbed77c2f0901b5df6fb61', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:02:55.682094 root [ERROR] 65fbed83c2f0901b5df6fbb9: Facility 4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbed83c2f0901b5df6fbb9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:07.054973 root [ERROR] 65fbed8fc2f0901b5df6fbc5: Facility 5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbed8fc2f0901b5df6fbc5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:09.257959 root [ERROR] 65fbed9ac2f0901b5df6fbcd: Facility 6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbed9ac2f0901b5df6fbcd', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:12.154320 root [ERROR] 65fbedaac2f0901b5df6fbd5: Facility 7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbedaac2f0901b5df6fbd5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:15.065821 root [ERROR] 65fbedb6c2f0901b5df6fc8a: Facility 8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbedb6c2f0901b5df6fc8a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:17.550647 root [ERROR] 65fbedc4c2f0901b5df6fc92: Facility 9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbedc4c2f0901b5df6fc92', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:20.319636 root [ERROR] 65fbedcfc2f0901b5df6fd4c: Facility 10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbedcfc2f0901b5df6fd4c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:22.928416 root [ERROR] 65fbeddbc2f0901b5df6fd54: Facility 11 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbeddbc2f0901b5df6fd54', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:25.724266 root [ERROR] 65fbede6c2f0901b5df6fdba: Facility 12 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbede6c2f0901b5df6fdba', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:28.309210 root [ERROR] 65fbedf2c2f0901b5df6fe20: Facility 13 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbedf2c2f0901b5df6fe20', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:30.802769 root [ERROR] 65fbedfdc2f0901b5df6fe28: Facility 14 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbedfdc2f0901b5df6fe28', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:33.684317 root [ERROR] 65fbee06c2f0901b5df6fe30: Facility 15 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbee06c2f0901b5df6fe30', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:36.665994 root [ERROR] 65fbee10c2f0901b5df6fe38: Facility 16 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbee10c2f0901b5df6fe38', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:39.328640 root [ERROR] 65fbee1bc2f0901b5df6fe40: Facility 17 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbee1bc2f0901b5df6fe40', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:41.485565 root [ERROR] 65fbee25c2f0901b5df6fe48: Facility 18 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbee25c2f0901b5df6fe48', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:43.983291 root [ERROR] 65fbee31c2f0901b5df6fe50: Facility 19 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbee31c2f0901b5df6fe50', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:47.147042 root [ERROR] 65fbee3bc2f0901b5df6fe58: Facility 20 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '65fbee3bc2f0901b5df6fe58', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:49.731098 root [ERROR] 6600ea0cc2f0901b5df81777: Marketech Integrated Pte. Ltd.  語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600ea0cc2f0901b5df81777', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:53.153272 root [ERROR] 6600f2dac2f0901b5df834f2: MIC-Tech Global Corp. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f2dac2f0901b5df834f2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:55.443018 root [ERROR] 6600f2fac2f0901b5df83522: MIC-Tech Viet Nam Co., Ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f2fac2f0901b5df83522', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:03:58.364663 root [ERROR] 6600f381c2f0901b5df83583: 宜眾資訊股份有限公司(宜眾) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f381c2f0901b5df83583', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:01.045528 root [ERROR] 6600f390c2f0901b5df8358b: Marketech Co., Ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f390c2f0901b5df8358b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:03.479961 root [ERROR] 6600f39fc2f0901b5df83593: Marketech Integrated Manufacturing Company Limited 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f39fc2f0901b5df83593', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:05.954402 root [ERROR] 6600f3bec2f0901b5df835bf: Marketech International Sdn. Bhd 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f3bec2f0901b5df835bf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:08.570559 root [ERROR] 6600f3c9c2f0901b5df835c7: Marketech Netherlands B.V. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f3c9c2f0901b5df835c7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:11.098337 root [ERROR] 6600f3d4c2f0901b5df835cf: 亞達科技股份有限公司(亞達) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f3d4c2f0901b5df835cf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:13.984584 root [ERROR] 6600f3ecc2f0901b5df835d7: Marketech International Corporation USA 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f3ecc2f0901b5df835d7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:16.476242 root [ERROR] 6600f3f8c2f0901b5df835df: MIC Healthcare Korea Co., Ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f3f8c2f0901b5df835df', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:18.965681 root [ERROR] 6600f403c2f0901b5df835e7: 億宣應用科技股份有限公司(億宣) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f403c2f0901b5df835e7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:21.153684 root [ERROR] 6600f40fc2f0901b5df835ef: 無錫啟華電子科技有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f40fc2f0901b5df835ef', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:24.054215 root [ERROR] 6600f41ac2f0901b5df835f7: 華友化工國際貿易(上海)有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f41ac2f0901b5df835f7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:26.815223 root [ERROR] 6600f426c2f0901b5df835ff: 上海吉威電子系統工程有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f426c2f0901b5df835ff', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:29.275339 root [ERROR] 6600f43ac2f0901b5df83607: 上海茂華電子工程技術有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f43ac2f0901b5df83607', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:32.256649 root [ERROR] 6600f445c2f0901b5df8360f: 南通建瑞光電科技有限公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f445c2f0901b5df8360f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:34.869238 root [ERROR] 6600f44fc2f0901b5df83617: Marketech Integrated Construction Co., Ltd. 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6600f44fc2f0901b5df83617', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:37.536007 root [ERROR] 66023177c2f0901b5df8d86c: JB Enterprise 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66023177c2f0901b5df8d86c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:40.088354 root [ERROR] 66023177c2f0901b5df8d871: JB Top ups 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66023177c2f0901b5df8d871', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:43.411246 root [ERROR] 660231c3c2f0901b5df8d8a4: JB Lunch 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660231c3c2f0901b5df8d8a4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:46.085059 root [ERROR] 6602321ec2f0901b5df8dbfb: JBS Top ups 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6602321ec2f0901b5df8dbfb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:48.824210 root [ERROR] 6602321ec2f0901b5df8dc00: JBS Enterprise 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6602321ec2f0901b5df8dc00', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:51.736004 root [ERROR] 6602321ec2f0901b5df8dc05: JBS Lunch 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6602321ec2f0901b5df8dc05', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:04:55.395415 root [INFO] 6604dec6c2f0901b5dfcb7af tw 執行成功！
+2024-05-10 12:04:58.213418 root [ERROR] 66052aafc2f0901b5dfd74fb: National Power Supply 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66052aafc2f0901b5dfd74fb', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:01.274014 root [INFO] 66064cd9c2f0901b5dfda875 tw 執行成功！
+2024-05-10 12:05:03.539661 root [ERROR] 66064f51c2f0901b5dfdaeed: Magnetic 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66064f51c2f0901b5dfdaeed', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:06.728599 root [ERROR] 66064fd9c2f0901b5dfdb01a: LGS 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66064fd9c2f0901b5dfdb01a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:09.890159 root [ERROR] 66065063c2f0901b5dfdb16f: My World 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66065063c2f0901b5dfdb16f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:14.161504 root [INFO] 660663ebc2f0901b5dfdd04a tw 執行成功！
+2024-05-10 12:05:16.773922 root [ERROR] 66066497c2f0901b5dfdd3d7: Once 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66066497c2f0901b5dfdd3d7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:19.571482 root [INFO] 66068b4dc2f0901b5dfe24b4 tw 執行成功！
+2024-05-10 12:05:22.370728 root [ERROR] 66069bc5c2f0901b5dfe3e6e: Test Company 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66069bc5c2f0901b5dfe3e6e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:27.576967 root [INFO] 66069c0ac2f0901b5dfe3e76 tw 執行成功！
+2024-05-10 12:05:30.771230 root [ERROR] 66069c7bc2f0901b5dfe3fa2: Subsidiary Oneee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66069c7bc2f0901b5dfe3fa2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:33.451994 root [ERROR] 660bb05b96502d7ddfbdf538: GIBS 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660bb05b96502d7ddfbdf538', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:37.353681 root [INFO] 660bb79496502d7ddfbe9155 tw 執行成功！
+2024-05-10 12:05:40.107339 root [ERROR] 660bc69a96502d7ddfbf719e: 永續測試A公司 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660bc69a96502d7ddfbf719e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:42.774822 root [ERROR] 660bc70696502d7ddfbf76e6: 中 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660bc70696502d7ddfbf76e6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:45.428257 root [ERROR] 660cc68596502d7ddfc041d4: New Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660cc68596502d7ddfc041d4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:48.291549 root [INFO] 660cdbac96502d7ddfc05735 tw 執行成功！
+2024-05-10 12:05:50.751157 root [ERROR] 660cdbe596502d7ddfc05863: SG Sports School - Subsidiary 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660cdbe596502d7ddfc05863', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:53.636577 root [ERROR] 660cdc1a96502d7ddfc05994: SG Sports School - Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660cdc1a96502d7ddfc05994', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:05:58.858909 root [INFO] 660e2fda96502d7ddfc1ed2c tw 執行成功！
+2024-05-10 12:06:01.669342 root [ERROR] 660e302396502d7ddfc1eeb4: ABC1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660e302396502d7ddfc1eeb4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:04.294819 root [ERROR] 660e30ef96502d7ddfc1fa19: ABC2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660e30ef96502d7ddfc1fa19', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:07.291916 root [ERROR] 660e312e96502d7ddfc2064f: ABC3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660e312e96502d7ddfc2064f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:10.114918 root [ERROR] 660e319c96502d7ddfc21a89: ABC1 Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660e319c96502d7ddfc21a89', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:13.066123 root [INFO] 660e58fc96502d7ddfc26ca6 tw 執行成功！
+2024-05-10 12:06:15.582907 root [ERROR] 660e592c96502d7ddfc26dd8: Admin Company 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660e592c96502d7ddfc26dd8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:17.694811 root [ERROR] 660e59ac96502d7ddfc26f0d: Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '660e59ac96502d7ddfc26f0d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:20.309209 root [ERROR] 6614c7b096502d7ddfc63216: NPP3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6614c7b096502d7ddfc63216', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:23.003919 root [ERROR] 6614c7b096502d7ddfc6321b: NPP5A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6614c7b096502d7ddfc6321b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:25.704677 root [ERROR] 6614c7b096502d7ddfc63220: BEA 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6614c7b096502d7ddfc63220', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:28.329219 root [ERROR] 6614c7fb96502d7ddfc6326b: NPS 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6614c7fb96502d7ddfc6326b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:30.796849 root [ERROR] 6614c83896502d7ddfc632c9: NPS1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6614c83896502d7ddfc632c9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:33.534002 root [ERROR] 6614c83896502d7ddfc632ce: NPS2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6614c83896502d7ddfc632ce', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:38.749849 root [INFO] 6614f87696502d7ddfc6ca6b tw 執行成功！
+2024-05-10 12:06:41.335452 root [ERROR] 66168566274c927cf55dfba9: 南科五廠、善化倉 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66168566274c927cf55dfba9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:44.890679 root [ERROR] 66168599274c927cf55dfbda: 南科五廠 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66168599274c927cf55dfbda', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:48.217895 root [ERROR] 661685ae274c927cf55dfbe2: 善化倉 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '661685ae274c927cf55dfbe2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:51.058532 root [ERROR] 661756bc274c927cf55e59b0: ESO1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '661756bc274c927cf55e59b0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:53.607912 root [ERROR] 66175746274c927cf55e5b1e: ESO2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66175746274c927cf55e5b1e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:56.273834 root [ERROR] 6617579b274c927cf55e5ced: ESO3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6617579b274c927cf55e5ced', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:06:58.786506 root [ERROR] 661757ef274c927cf55e5e24: ESO4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '661757ef274c927cf55e5e24', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:01.593290 root [ERROR] 6618aa0d56d9378184853f4f: CarbonFootPrint 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6618aa0d56d9378184853f4f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:04.257514 root [ERROR] 6618c7c356d9378184855f76: itri004 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6618c7c356d9378184855f76', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:07.320064 root [ERROR] 6620d0deb943877bd5ab507d: Evercomm-Cedar 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6620d0deb943877bd5ab507d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:09.664183 root [ERROR] 6621bfa1b943877bd5ab8b6c: CL 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621bfa1b943877bd5ab8b6c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:12.126594 root [ERROR] 6621bfa1b943877bd5ab8b71: NE 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621bfa1b943877bd5ab8b71', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:14.366933 root [ERROR] 6621bfa1b943877bd5ab8b76: TY 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621bfa1b943877bd5ab8b76', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:18.602281 root [INFO] 6621eb83b943877bd5abdaf3 tw 執行成功！
+2024-05-10 12:07:21.130480 root [ERROR] 6621f034b943877bd5abdd1c: goCMP1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f034b943877bd5abdd1c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:23.599306 root [ERROR] 6621f060b943877bd5abde56: goCMP2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f060b943877bd5abde56', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:25.799747 root [ERROR] 6621f087b943877bd5abdf90: goCMP3 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f087b943877bd5abdf90', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:28.271883 root [ERROR] 6621f0a7b943877bd5abe0ca: goCMP4 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f0a7b943877bd5abe0ca', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:30.866969 root [ERROR] 6621f0c5b943877bd5abe204: goCMP5 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f0c5b943877bd5abe204', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:33.279953 root [ERROR] 6621f0e5b943877bd5abe33e: goCMP6 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f0e5b943877bd5abe33e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:35.925989 root [ERROR] 6621f10bb943877bd5abe478: goCMP7 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f10bb943877bd5abe478', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:39.736026 root [ERROR] 6621f12ab943877bd5abe5b2: goCMP8 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f12ab943877bd5abe5b2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:42.216502 root [ERROR] 6621f146b943877bd5abe6ec: goCMP9 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f146b943877bd5abe6ec', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:44.689051 root [ERROR] 6621f164b943877bd5abe826: goCMP10 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f164b943877bd5abe826', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:47.260624 root [ERROR] 6621f184b943877bd5abe960: Carbon management program 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f184b943877bd5abe960', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:49.614826 root [ERROR] 6621f1c8b943877bd5abea9a: NYP Material Science 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6621f1c8b943877bd5abea9a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:52.338259 root [ERROR] 6625e9ff419291d6060599f0: THS-A 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6625e9ff419291d6060599f0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:55.083421 root [ERROR] 6625e9ff419291d6060599f5: THS-B 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6625e9ff419291d6060599f5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:07:57.824216 root [ERROR] 6625ea78419291d606059a32: THS - 1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6625ea78419291d606059a32', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:08:01.452293 root [INFO] 66261b7f419291d6060629ae tw 執行成功！
+2024-05-10 12:08:03.830996 root [ERROR] 662721de419291d60606795f: Demo#02 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '662721de419291d60606795f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:08:06.193966 root [ERROR] 66272247419291d606067ab9: Demo#03 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66272247419291d606067ab9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:08:10.427391 root [INFO] 662722b5419291d606067c13 tw 執行成功！
+2024-05-10 12:08:14.492895 root [INFO] 6627234c419291d606067dd1 tw 執行成功！
+2024-05-10 12:08:18.840303 root [INFO] 662723f1419291d606068280 tw 執行成功！
+2024-05-10 12:08:23.531769 root [INFO] 6627244f419291d6060688c8 tw 執行成功！
+2024-05-10 12:08:27.553928 root [INFO] 662728d6419291d606069ac9 tw 執行成功！
+2024-05-10 12:08:31.642469 root [INFO] 6627296b419291d606069c27 tw 執行成功！
+2024-05-10 12:08:35.351651 root [INFO] 662729dd419291d606069db6 tw 執行成功！
+2024-05-10 12:08:39.426414 root [INFO] 66272a4d419291d606069f10 tw 執行成功！
+2024-05-10 12:08:43.633963 root [INFO] 66272abb419291d60606a06a tw 執行成功！
+2024-05-10 12:08:48.518723 root [INFO] 66272b12419291d60606a1c4 tw 執行成功！
+2024-05-10 12:08:52.455428 root [INFO] 66272b5b419291d60606a5c6 tw 執行成功！
+2024-05-10 12:08:56.332987 root [INFO] 66272f0c419291d60606b015 tw 執行成功！
+2024-05-10 12:08:58.961956 root [ERROR] 66272f6c419291d60606b233: Demo#16 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66272f6c419291d60606b233', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:01.513922 root [ERROR] 66272fd8419291d60606b38d: Demo#17 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66272fd8419291d60606b38d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:03.953933 root [ERROR] 6627304f419291d60606b4e7: Demo#18 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6627304f419291d60606b4e7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:06.413256 root [ERROR] 6627311e419291d60606b624: Demo#19 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6627311e419291d60606b624', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:08.999853 root [ERROR] 66273194419291d60606b79b: Demo#20 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66273194419291d60606b79b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:12.728813 root [INFO] 662732d3419291d60606b8fd tw 執行成功！
+2024-05-10 12:09:15.554878 root [ERROR] 6627338b419291d60606bcaf: BV Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6627338b419291d60606bcaf', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:18.346214 root [ERROR] 662733c3419291d60606c038: BV Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '662733c3419291d60606c038', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:20.844943 root [ERROR] 662883ba419291d606082016: 9 Pioneer View 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '662883ba419291d606082016', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:24.931672 root [INFO] 662a314d419291d6060b2e83 tw 執行成功！
+2024-05-10 12:09:27.339894 root [ERROR] 662a31b7419291d6060b2fde: Evercomm Taiwan 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '662a31b7419291d6060b2fde', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:29.727617 root [ERROR] 662b56a2419291d6060b943f: 5 Changi North 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '662b56a2419291d6060b943f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:32.426218 root [INFO] 662c81054f92f1ae916d1768 tw 執行成功！
+2024-05-10 12:09:35.244088 root [ERROR] 662c85e4a38f98bd75d4aa19: 11 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '662c85e4a38f98bd75d4aa19', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:38.007530 root [ERROR] 663086cea38f98bd75d78cca: test 30042024 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663086cea38f98bd75d78cca', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:40.681472 root [ERROR] 66308c05a38f98bd75d7b08f: Poty 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c05a38f98bd75d7b08f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:42.909808 root [ERROR] 66308c0ca38f98bd75d7b09f: paitoon 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c0ca38f98bd75d7b09f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:45.436616 root [ERROR] 66308c10a38f98bd75d7b0b0: Annopmonsakul 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c10a38f98bd75d7b0b0', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:48.199160 root [ERROR] 66308c19a38f98bd75d7b0c2: jutathiplee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c19a38f98bd75d7b0c2', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:51.008337 root [ERROR] 66308c22a38f98bd75d7b31a: chalida 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c22a38f98bd75d7b31a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:53.691956 root [ERROR] 66308c62a38f98bd75d7b344: adisak 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c62a38f98bd75d7b344', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:56.357017 root [ERROR] 66308c7aa38f98bd75d7b354: Sukonthip Permsin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c7aa38f98bd75d7b354', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:09:58.925508 root [ERROR] 66308c7ba38f98bd75d7b361: Potiwat 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c7ba38f98bd75d7b361', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:01.727747 root [ERROR] 66308c7fa38f98bd75d7b37f: Panupong Thongchai  語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308c7fa38f98bd75d7b37f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:04.343167 root [ERROR] 66308cbba38f98bd75d7bb63: Saichon 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308cbba38f98bd75d7bb63', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:06.858577 root [ERROR] 66308cd5a38f98bd75d7bb8a: NaruedomOndee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308cd5a38f98bd75d7bb8a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:09.357812 root [ERROR] 66308cdaa38f98bd75d7bb95: jutathip 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308cdaa38f98bd75d7bb95', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:11.939796 root [ERROR] 66308ceca38f98bd75d7bbb5: Sittikulwanich 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308ceca38f98bd75d7bbb5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:14.173857 root [ERROR] 66308cf4a38f98bd75d7bbc4: Wirinsonsrettee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308cf4a38f98bd75d7bbc4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:16.691426 root [ERROR] 66308cfaa38f98bd75d7bbd6: Pakdee Jaisue 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308cfaa38f98bd75d7bbd6', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:19.396996 root [ERROR] 66308d02a38f98bd75d7bbf5: Kwang 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308d02a38f98bd75d7bbf5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:22.023359 root [ERROR] 66308d19a38f98bd75d7bc09: wongdeeying 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308d19a38f98bd75d7bc09', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:24.366662 root [ERROR] 66308d1ea38f98bd75d7bc14: Pakdee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308d1ea38f98bd75d7bc14', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:26.693737 root [ERROR] 66308d23a38f98bd75d7bc1f: Panupong  語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308d23a38f98bd75d7bc1f', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:29.370347 root [ERROR] 66308d2aa38f98bd75d7bc30: sirioran 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308d2aa38f98bd75d7bc30', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:32.000911 root [ERROR] 66308d30a38f98bd75d7bc49: Sonsrettee 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66308d30a38f98bd75d7bc49', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:34.237005 root [ERROR] 663451cba38f98bd75da0f39: testing  語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663451cba38f98bd75da0f39', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:36.754684 root [ERROR] 663453e4a38f98bd75da1a4c: tt 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663453e4a38f98bd75da1a4c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:39.282314 root [ERROR] 663470b3a38f98bd75da50ca: lsjkflksjlwfow 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663470b3a38f98bd75da50ca', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:41.465787 root [ERROR] 6634710aa38f98bd75da5351: Hlaing Phillip 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '6634710aa38f98bd75da5351', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:44.224919 root [INFO] 66385f873f93d7e0c37b314a tw 執行成功！
+2024-05-10 12:10:46.715304 root [ERROR] 663860533f93d7e0c37b33a9: Boardroom Admin 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663860533f93d7e0c37b33a9', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:48.938143 root [ERROR] 663861003f93d7e0c37b3589: Boardroom Facility 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663861003f93d7e0c37b3589', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:53.178819 root [INFO] 66388bae3f93d7e0c37bb136 tw 執行成功！
+2024-05-10 12:10:55.612622 root [ERROR] 66388c003f93d7e0c37bb559: Sub1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66388c003f93d7e0c37bb559', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:10:58.164876 root [ERROR] 66388c003f93d7e0c37bb55e: Sub2 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66388c003f93d7e0c37bb55e', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:00.369914 root [ERROR] 66388c0f3f93d7e0c37bb571: Fac1 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '66388c0f3f93d7e0c37bb571', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:02.574260 root [ERROR] 663aeb5a3f93d7e0c3808eca: Hsu Hnin Htet (SG) 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663aeb5a3f93d7e0c3808eca', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:05.506378 root [INFO] 663aebbd3f93d7e0c38098e2 tw 執行成功！
+2024-05-10 12:11:08.189948 root [ERROR] 663b2ce03f93d7e0c3819c16: Demo#21 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b2ce03f93d7e0c3819c16', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:10.939332 root [ERROR] 663b2fc03f93d7e0c381a124: Demo#22 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b2fc03f93d7e0c381a124', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:13.535893 root [ERROR] 663b30433f93d7e0c381a2e1: Demo#23 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b30433f93d7e0c381a2e1', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:15.803006 root [ERROR] 663b310d3f93d7e0c381a75b: Demo#24 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b310d3f93d7e0c381a75b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:18.383932 root [ERROR] 663b316d3f93d7e0c381a8d7: Demo#25 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b316d3f93d7e0c381a8d7', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:21.737904 root [ERROR] 663b31ee3f93d7e0c381aa26: Demo#26 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b31ee3f93d7e0c381aa26', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:25.464039 root [ERROR] 663b32533f93d7e0c381abfd: Demo#27 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b32533f93d7e0c381abfd', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:28.204581 root [ERROR] 663b32c13f93d7e0c381ad4c: Demo#28 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b32c13f93d7e0c381ad4c', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:30.954228 root [ERROR] 663b33443f93d7e0c381ae9b: Demo#29 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b33443f93d7e0c381ae9b', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:33.475297 root [ERROR] 663b33913f93d7e0c381afea: Demo#30 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b33913f93d7e0c381afea', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:35.636435 root [ERROR] 663b35423f93d7e0c381bb64: Demo#31 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b35423f93d7e0c381bb64', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:38.172625 root [ERROR] 663b35da3f93d7e0c381bd07: Demo#32 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b35da3f93d7e0c381bd07', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:40.900744 root [ERROR] 663b36373f93d7e0c381bf16: Demo#33 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b36373f93d7e0c381bf16', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:43.568270 root [ERROR] 663b37c53f93d7e0c381cac8: Demo#34 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b37c53f93d7e0c381cac8', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:46.398703 root [ERROR] 663b38163f93d7e0c381cca4: Demo#35 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b38163f93d7e0c381cca4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:48.911236 root [ERROR] 663b38733f93d7e0c381cea4: Demo#36 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b38733f93d7e0c381cea4', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:51.399950 root [ERROR] 663b38e93f93d7e0c381d157: Demo#37 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b38e93f93d7e0c381d157', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:54.220380 root [ERROR] 663b393a3f93d7e0c381d5b3: Demo#38 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b393a3f93d7e0c381d5b3', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:56.948983 root [ERROR] 663b39973f93d7e0c381d8e5: Demo#39 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b39973f93d7e0c381d8e5', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:11:59.633252 root [ERROR] 663b39ec3f93d7e0c381db0a: Demo#40 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663b39ec3f93d7e0c381db0a', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:12:02.129223 root [ERROR] 663c47023f93d7e0c3835b6d: MarketplaceTestAccount 語言: tw 執行Python腳本時出錯: Command '['python3', 'ghg_report.py', '663c47023f93d7e0c3835b6d', '2024', 'production', 'tw']' returned non-zero exit status 1.
+2024-05-10 12:12:02.190882 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-10 12:12:02.191710 root [INFO] 執行時間: 2684.1488020420074 秒

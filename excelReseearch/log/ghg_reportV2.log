@@ -1,0 +1,15 @@
+2024-05-17 09:25:56.648071 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-17 09:25:56.649263 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6646b2244b33c792dafaf0e3, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6646b2244b33c792dafaf0e3"}, "remainingTimeMS": 29}
+2024-05-17 09:25:57.562587 root [INFO] 生成 1-基本資料
+2024-05-17 09:25:57.567994 root [INFO] 生成 2-定性盤查
+2024-05-17 09:25:58.226739 root [INFO] 生成 2.1-重大性准則
+2024-05-17 09:26:00.218323 root [INFO] 生成 3-定量盤查
+2024-05-17 09:26:00.278924 root [INFO] 生成 3.1-排放係數
+2024-05-17 09:26:00.296276 root [INFO] 生成 3.2-上遊運輸
+2024-05-17 09:26:00.298666 root [INFO] 生成 3.3-下遊運輸
+2024-05-17 09:26:00.302531 root [INFO] 生成 4-數據品質管理
+2024-05-17 09:26:00.331901 root [INFO] 生成 5-不確定性之評估
+2024-05-17 09:26:00.399886 root [INFO] 生成 6-彙總表
+2024-05-17 09:26:00.404408 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-17 09:26:00.405623 root [INFO] 生成 附表一、行業代碼
+2024-05-17 09:26:00.415026 root [INFO] 生成 附表二、含氟氣體之GWP值

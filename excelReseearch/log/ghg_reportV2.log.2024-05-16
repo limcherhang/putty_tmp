@@ -1,0 +1,22 @@
+2024-05-16 08:46:28.098191 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-16 08:46:28.099144 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6645576443efb4b66c60d41f, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6645576443efb4b66c60d41f"}, "remainingTimeMS": 29}
+2024-05-16 08:46:28.704159 root [INFO] 生成 1-基本資料
+2024-05-16 08:46:28.707684 root [INFO] 生成 2-定性盤查
+2024-05-16 08:48:30.298308 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-16 08:48:30.299245 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664557debeb088838f7bb891, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664557debeb088838f7bb891"}, "remainingTimeMS": 29}
+2024-05-16 08:48:30.999263 root [INFO] 生成 1-基本資料
+2024-05-16 08:48:31.001891 root [INFO] 生成 2-定性盤查
+2024-05-16 08:48:32.717766 root [INFO] {5: {1: {'filePath': '/home/azureuser/dev/NXMap_API/upload/data/bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': '/home/azureuser/dev/NXMap_API/upload/data/f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '/home/azureuser/dev/NXMap_API/upload/data/0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': '/home/azureuser/dev/NXMap_API/upload/data/c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '/home/azureuser/dev/NXMap_API/upload/data/4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': '/home/azureuser/dev/NXMap_API/upload/data/d084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}, 21: {7: {'filePath': '/home/azureuser/dev/NXMap_API/upload/data/d084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': 'test 1', 'createdDate': '2024-04-18 02:31:55', 'activityData': 500}}}
+2024-05-16 08:48:32.734208 root [INFO] 生成 2.1-重大性准則
+2024-05-16 08:48:34.191587 root [INFO] 生成 3-定量盤查
+2024-05-16 08:48:34.252357 root [INFO] 生成 3.1-排放係數
+2024-05-16 08:48:34.267190 root [INFO] 生成 3.2-上遊運輸
+2024-05-16 08:48:34.269690 root [INFO] 生成 3.3-下遊運輸
+2024-05-16 08:48:34.272096 root [INFO] 生成 4-數據品質管理
+2024-05-16 08:48:34.299895 root [INFO] 生成 5-不確定性之評估
+2024-05-16 08:48:34.342146 root [INFO] 生成 6-彙總表
+2024-05-16 08:48:34.347174 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-16 08:48:34.349294 root [INFO] 生成 附表一、行業代碼
+2024-05-16 08:48:34.361882 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-16 08:48:34.757041 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-16 08:48:34.757761 root [INFO] Time used for generating Evercomm Taiwan Pte Ltd's GHG inventory report: 4 sec.

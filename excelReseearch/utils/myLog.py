@@ -16,7 +16,7 @@ def dir(log_dir: str):
     except:
         pass
         
-def get_logger(logPath: str, filename: str, db_env: str, level: str=logging.DEBUG, level_db: str=logging.ERROR):
+def get_logger(logPath: str, filename: str, level: str=logging.DEBUG):
     
     dir(logPath)
     logfile = f"{logPath}/log/{filename}"
@@ -30,8 +30,6 @@ def get_logger(logPath: str, filename: str, db_env: str, level: str=logging.DEBU
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     user_home_dir = os.path.expanduser("~")
-    db_handler = DatabaseLogHandler(db_env, (logPath[len(user_home_dir):])+'/log', filename, level=level_db)
-    logger.addHandler(db_handler)
 
     return logger
 

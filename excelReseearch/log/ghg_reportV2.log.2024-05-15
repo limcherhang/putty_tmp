@@ -1,0 +1,233 @@
+2024-05-15 13:54:49.040317 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 13:54:49.401896 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 13:54:49.432943 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 13:54:49.433681 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66444e291ee33461914c8756, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66444e291ee33461914c8756"}, "remainingTimeMS": 29}
+2024-05-15 13:54:50.041501 root [INFO] 生成 1-基本資料
+2024-05-15 13:54:50.043942 root [INFO] 生成 2-定性盤查
+2024-05-15 13:54:50.615044 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 13:54:50.710259 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}}
+2024-05-15 13:54:50.761681 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}}
+2024-05-15 13:54:50.813538 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {}}
+2024-05-15 13:54:50.864600 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {}}
+2024-05-15 13:54:51.071508 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 13:54:51.487137 paramiko.transport.sftp [INFO] [chan 1] sftp session closed.
+2024-05-15 13:54:51.527364 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}}}
+2024-05-15 13:54:51.782560 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 13:54:52.149348 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 13:54:52.184927 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}}}
+2024-05-15 13:54:52.449281 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 13:54:52.814609 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 13:54:52.854724 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}}
+2024-05-15 13:54:53.108377 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 13:54:53.204810 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}}
+2024-05-15 13:54:53.412015 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 13:54:53.561790 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}}
+2024-05-15 13:54:53.613450 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}}
+2024-05-15 13:54:53.818194 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 13:54:53.968879 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}, 21: {7: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': 'test 1', 'createdDate': '2024-04-18 02:31:55', 'activityData': 500}}}
+2024-05-15 13:54:54.398340 root [INFO] 生成 2.1-重大性准則
+2024-05-15 13:54:55.849575 root [INFO] 生成 3-定量盤查
+2024-05-15 13:54:55.899019 root [INFO] 生成 3.1-排放係數
+2024-05-15 13:54:55.911049 root [INFO] 生成 3.2-上遊運輸
+2024-05-15 13:54:55.913048 root [INFO] 生成 3.3-下遊運輸
+2024-05-15 13:54:55.914602 root [INFO] 生成 4-數據品質管理
+2024-05-15 13:54:55.942404 root [INFO] 生成 5-不確定性之評估
+2024-05-15 13:54:55.978965 root [INFO] 生成 6-彙總表
+2024-05-15 13:54:55.983158 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-15 13:54:55.984335 root [INFO] 生成 附表一、行業代碼
+2024-05-15 13:54:55.993290 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-15 13:54:56.438576 paramiko.transport.sftp [INFO] [chan 7] Opened sftp connection (server version 3)
+2024-05-15 13:54:56.439480 root [INFO] Downloading bd740475-9431-4f8c-885c-4898c68bb57d.png from bd740475-9431-4f8c-885c-4898c68bb57d.png...
+2024-05-15 13:59:04.840897 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 13:59:05.198605 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 13:59:05.307327 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 13:59:05.308203 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66444f29bbf265f4c84862ab, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66444f29bbf265f4c84862ab"}, "remainingTimeMS": 29}
+2024-05-15 13:59:05.923057 root [INFO] 生成 1-基本資料
+2024-05-15 13:59:05.926934 root [INFO] 生成 2-定性盤查
+2024-05-15 13:59:06.495380 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 13:59:06.944186 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 13:59:07.337280 paramiko.transport.sftp [INFO] [chan 1] sftp session closed.
+2024-05-15 13:59:07.619964 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 13:59:07.966438 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 13:59:08.249147 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 13:59:08.610389 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 13:59:08.893294 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 13:59:09.177231 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 13:59:09.556993 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 13:59:10.156895 root [INFO] 生成 2.1-重大性准則
+2024-05-15 13:59:11.670659 root [INFO] 生成 3-定量盤查
+2024-05-15 13:59:11.742437 root [INFO] 生成 3.1-排放係數
+2024-05-15 13:59:11.762138 root [INFO] 生成 3.2-上遊運輸
+2024-05-15 13:59:11.766796 root [INFO] 生成 3.3-下遊運輸
+2024-05-15 13:59:11.769305 root [INFO] 生成 4-數據品質管理
+2024-05-15 13:59:11.804899 root [INFO] 生成 5-不確定性之評估
+2024-05-15 13:59:11.851688 root [INFO] 生成 6-彙總表
+2024-05-15 13:59:11.856510 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-15 13:59:11.858670 root [INFO] 生成 附表一、行業代碼
+2024-05-15 13:59:11.870235 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-15 13:59:12.429084 paramiko.transport.sftp [INFO] [chan 7] Opened sftp connection (server version 3)
+2024-05-15 13:59:12.430139 root [INFO] Downloading bd740475-9431-4f8c-885c-4898c68bb57d.png from bd740475-9431-4f8c-885c-4898c68bb57d.png...
+2024-05-15 14:00:07.267169 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 14:00:07.629852 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 14:00:07.661285 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 14:00:07.661993 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66444f672937f41311cfa6d5, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66444f672937f41311cfa6d5"}, "remainingTimeMS": 29}
+2024-05-15 14:00:08.253041 root [INFO] 生成 1-基本資料
+2024-05-15 14:00:08.256029 root [INFO] 生成 2-定性盤查
+2024-05-15 14:00:08.811488 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 14:00:09.269680 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 14:00:09.699540 paramiko.transport.sftp [INFO] [chan 1] sftp session closed.
+2024-05-15 14:00:09.998329 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 14:00:10.396958 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 14:00:10.738954 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 14:00:11.109773 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 14:00:11.423810 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 14:00:11.747172 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 14:00:12.178538 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 14:00:12.739652 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}, 21: {7: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': 'test 1', 'createdDate': '2024-04-18 02:31:55', 'activityData': 500}}}
+2024-05-15 14:00:12.781840 root [INFO] 生成 2.1-重大性准則
+2024-05-15 14:00:14.258002 root [INFO] 生成 3-定量盤查
+2024-05-15 14:00:14.327818 root [INFO] 生成 3.1-排放係數
+2024-05-15 14:00:14.344015 root [INFO] 生成 3.2-上遊運輸
+2024-05-15 14:00:14.346450 root [INFO] 生成 3.3-下遊運輸
+2024-05-15 14:00:14.348674 root [INFO] 生成 4-數據品質管理
+2024-05-15 14:00:14.381433 root [INFO] 生成 5-不確定性之評估
+2024-05-15 14:00:14.425802 root [INFO] 生成 6-彙總表
+2024-05-15 14:00:14.431145 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-15 14:00:14.432843 root [INFO] 生成 附表一、行業代碼
+2024-05-15 14:00:14.445873 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-15 14:00:14.947873 paramiko.transport.sftp [INFO] [chan 7] Opened sftp connection (server version 3)
+2024-05-15 14:00:14.948889 root [INFO] Downloading bd740475-9431-4f8c-885c-4898c68bb57d.png from bd740475-9431-4f8c-885c-4898c68bb57d.png...
+2024-05-15 14:02:52.676314 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 14:02:53.036209 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 14:02:53.063620 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 14:02:53.064168 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6644500dd0e5d8040dcd4dd3, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6644500dd0e5d8040dcd4dd3"}, "remainingTimeMS": 29}
+2024-05-15 14:02:53.830558 root [INFO] 生成 1-基本資料
+2024-05-15 14:02:53.833114 root [INFO] 生成 2-定性盤查
+2024-05-15 14:02:56.165717 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 14:02:56.625147 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 14:02:57.038835 paramiko.transport.sftp [INFO] [chan 1] sftp session closed.
+2024-05-15 14:02:57.333571 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 14:02:57.692898 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 14:02:57.984621 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 14:02:58.358194 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 14:02:58.648810 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 14:02:58.945797 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 14:02:59.341296 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 14:02:59.905129 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}, 21: {7: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': 'test 1', 'createdDate': '2024-04-18 02:31:55', 'activityData': 500}}}
+2024-05-15 14:02:59.920783 root [INFO] 生成 2.1-重大性准則
+2024-05-15 14:03:01.834150 root [INFO] 生成 3-定量盤查
+2024-05-15 14:03:01.879360 root [INFO] 生成 3.1-排放係數
+2024-05-15 14:03:01.897795 root [INFO] 生成 3.2-上遊運輸
+2024-05-15 14:03:01.900178 root [INFO] 生成 3.3-下遊運輸
+2024-05-15 14:03:01.902412 root [INFO] 生成 4-數據品質管理
+2024-05-15 14:03:01.924946 root [INFO] 生成 5-不確定性之評估
+2024-05-15 14:03:01.960546 root [INFO] 生成 6-彙總表
+2024-05-15 14:03:01.964822 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-15 14:03:01.966175 root [INFO] 生成 附表一、行業代碼
+2024-05-15 14:03:01.975332 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-15 14:04:53.437279 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 14:04:53.807081 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 14:04:53.846563 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 14:04:53.847404 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664450855c7f36c95c48b41b, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664450855c7f36c95c48b41b"}, "remainingTimeMS": 29}
+2024-05-15 14:04:54.445905 root [INFO] 生成 1-基本資料
+2024-05-15 14:04:54.448750 root [INFO] 生成 2-定性盤查
+2024-05-15 14:04:55.013677 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 14:04:55.474336 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 14:04:55.911418 paramiko.transport.sftp [INFO] [chan 1] sftp session closed.
+2024-05-15 14:04:56.234743 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 14:04:56.619058 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 14:04:56.923532 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 14:04:57.300618 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 14:04:57.607115 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 14:04:57.918206 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 14:04:58.325749 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 14:04:58.885732 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}, 21: {7: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': 'test 1', 'createdDate': '2024-04-18 02:31:55', 'activityData': 500}}}
+2024-05-15 14:04:58.904326 root [INFO] 生成 2.1-重大性准則
+2024-05-15 14:05:00.346964 root [INFO] 生成 3-定量盤查
+2024-05-15 14:05:00.407682 root [INFO] 生成 3.1-排放係數
+2024-05-15 14:05:00.420986 root [INFO] 生成 3.2-上遊運輸
+2024-05-15 14:05:00.423285 root [INFO] 生成 3.3-下遊運輸
+2024-05-15 14:05:00.424829 root [INFO] 生成 4-數據品質管理
+2024-05-15 14:05:00.450667 root [INFO] 生成 5-不確定性之評估
+2024-05-15 14:05:00.490903 root [INFO] 生成 6-彙總表
+2024-05-15 14:05:00.495530 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-15 14:05:00.496769 root [INFO] 生成 附表一、行業代碼
+2024-05-15 14:05:00.505705 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-15 14:09:51.406745 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 14:09:51.779180 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 14:09:51.811631 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 14:09:51.812280 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664451af78c63c52875028cd, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664451af78c63c52875028cd"}, "remainingTimeMS": 29}
+2024-05-15 14:09:52.462736 root [INFO] 生成 1-基本資料
+2024-05-15 14:09:52.467299 root [INFO] 生成 2-定性盤查
+2024-05-15 14:09:53.358390 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 14:10:05.217031 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 14:10:05.579497 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 14:10:05.614413 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 14:10:05.615056 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664451bd2fc0868f36e77d6d, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664451bd2fc0868f36e77d6d"}, "remainingTimeMS": 29}
+2024-05-15 14:10:06.225321 root [INFO] 生成 1-基本資料
+2024-05-15 14:10:06.228852 root [INFO] 生成 2-定性盤查
+2024-05-15 14:10:06.896477 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 14:10:06.952697 root [INFO] cannot download /home/azureuser/dev/NXMap_API/upload/data/bd740475-9431-4f8c-885c-4898c68bb57d.png, fileId: 6613b90b96502d7ddfc551cf
+2024-05-15 14:10:07.354899 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 14:10:07.787099 paramiko.transport.sftp [INFO] [chan 1] sftp session closed.
+2024-05-15 14:10:08.083284 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 14:10:08.462932 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 14:10:08.754924 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 14:10:09.114000 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 14:10:09.408252 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 14:10:09.462422 root [INFO] cannot download /home/azureuser/dev/NXMap_API/upload/data/4499d8cf-bc05-41a6-81d3-9a59e87acae2.png, fileId: 6613b54396502d7ddfc54c56
+2024-05-15 14:10:09.694022 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 14:10:09.796044 root [INFO] cannot download /home/azureuser/dev/NXMap_API/upload/data/d084e91a-3cb3-4baa-9f47-fb22ec2e4031.png, fileId: 661f776cb943877bd5a8e517
+2024-05-15 14:10:10.086204 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 14:10:10.194531 root [INFO] cannot download /home/azureuser/dev/NXMap_API/upload/data/d084e91a-3cb3-4baa-9f47-fb22ec2e4031.png, fileId: 661f776cb943877bd5a8e517
+2024-05-15 14:10:10.678625 root [INFO] {5: {1: {'filePath': 'bd740475-9431-4f8c-885c-4898c68bb57d.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '測試1', 'createdDate': '2024-04-08 09:29:53', 'activityData': 111}}, 12: {}, 14: {2: {'filePath': 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:08', 'activityData': 1000}, 3: {'filePath': '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:41:23', 'activityData': 1200}, 4: {'filePath': 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '07022024', 'createdDate': '2024-02-07 06:49:38', 'activityData': 2000}}, 15: {5: {'filePath': '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '0204', 'createdDate': '2024-04-08 09:13:47', 'activityData': 101010}}, 18: {6: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': '10042024', 'createdDate': '2024-04-17 07:17:20', 'activityData': 100}}, 21: {7: {'filePath': 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png', 'companyName': 'Evercomm Taiwan Pte Ltd', 'assetName': 'test 1', 'createdDate': '2024-04-18 02:31:55', 'activityData': 500}}}
+2024-05-15 14:10:10.705933 root [INFO] 生成 2.1-重大性准則
+2024-05-15 14:10:12.201091 root [INFO] 生成 3-定量盤查
+2024-05-15 14:10:12.263505 root [INFO] 生成 3.1-排放係數
+2024-05-15 14:10:12.279476 root [INFO] 生成 3.2-上遊運輸
+2024-05-15 14:10:12.282152 root [INFO] 生成 3.3-下遊運輸
+2024-05-15 14:10:12.283974 root [INFO] 生成 4-數據品質管理
+2024-05-15 14:10:12.310333 root [INFO] 生成 5-不確定性之評估
+2024-05-15 14:10:12.358553 root [INFO] 生成 6-彙總表
+2024-05-15 14:10:12.365986 root [INFO] 生成 7.1 佐證資料-1.1固定式燃燒
+2024-05-15 14:10:12.367271 root [INFO] 生成 附表一、行業代碼
+2024-05-15 14:10:12.377140 root [INFO] 生成 附表二、含氟氣體之GWP值
+2024-05-15 14:29:42.275866 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 14:29:42.645755 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 14:29:42.672422 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 14:29:42.673195 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66445656190d6184a6949df1, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66445656190d6184a6949df1"}, "remainingTimeMS": 29}
+2024-05-15 14:29:43.285150 root [INFO] 生成 1-基本資料
+2024-05-15 14:29:43.287806 root [INFO] 生成 2-定性盤查
+2024-05-15 14:29:43.767155 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 14:29:44.022860 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 14:29:44.334794 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 14:29:44.769834 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 14:29:44.984029 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 14:29:45.359805 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 14:29:45.569855 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 14:29:46.001312 paramiko.transport.sftp [INFO] [chan 4] sftp session closed.
+2024-05-15 14:29:46.211781 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 14:29:46.592015 paramiko.transport.sftp [INFO] [chan 5] sftp session closed.
+2024-05-15 14:29:46.801160 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 14:29:47.076437 paramiko.transport.sftp [INFO] [chan 7] Opened sftp connection (server version 3)
+2024-05-15 14:29:47.599182 paramiko.transport.sftp [INFO] [chan 8] Opened sftp connection (server version 3)
+2024-05-15 14:30:14.163456 paramiko.transport [INFO] Connected (version 2.0, client OpenSSH_8.2p1)
+2024-05-15 14:30:14.536629 paramiko.transport [INFO] Authentication (publickey) successful!
+2024-05-15 14:30:14.569525 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-15 14:30:14.570506 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664456764f6d78053a5ac5cd, topology_type: Unknown, servers: [<ServerDescription ('4.145.84.18', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664456764f6d78053a5ac5cd"}, "remainingTimeMS": 29}
+2024-05-15 14:30:15.191307 root [INFO] 生成 1-基本資料
+2024-05-15 14:30:15.194039 root [INFO] 生成 2-定性盤查
+2024-05-15 14:30:15.718126 paramiko.transport.sftp [INFO] [chan 0] Opened sftp connection (server version 3)
+2024-05-15 14:30:15.975839 paramiko.transport.sftp [INFO] [chan 1] Opened sftp connection (server version 3)
+2024-05-15 14:30:16.298997 paramiko.transport.sftp [INFO] [chan 2] Opened sftp connection (server version 3)
+2024-05-15 14:30:16.737514 paramiko.transport.sftp [INFO] [chan 2] sftp session closed.
+2024-05-15 14:30:17.045726 paramiko.transport.sftp [INFO] [chan 3] Opened sftp connection (server version 3)
+2024-05-15 14:30:17.433855 paramiko.transport.sftp [INFO] [chan 3] sftp session closed.
+2024-05-15 14:30:17.644344 paramiko.transport.sftp [INFO] [chan 4] Opened sftp connection (server version 3)
+2024-05-15 14:30:18.026089 paramiko.transport.sftp [INFO] [chan 4] sftp session closed.
+2024-05-15 14:30:18.238645 paramiko.transport.sftp [INFO] [chan 5] Opened sftp connection (server version 3)
+2024-05-15 14:30:18.617765 paramiko.transport.sftp [INFO] [chan 5] sftp session closed.
+2024-05-15 14:30:18.838612 paramiko.transport.sftp [INFO] [chan 6] Opened sftp connection (server version 3)
+2024-05-15 14:30:19.109355 paramiko.transport.sftp [INFO] [chan 7] Opened sftp connection (server version 3)
+2024-05-15 14:30:19.426820 paramiko.transport.sftp [INFO] [chan 8] Opened sftp connection (server version 3)
+2024-05-15 14:30:19.573965 root [INFO] {ObjectId('64e4724ccdc4042568ad5482'): '4e711db3-0298-4690-bf40-ba66a4f87c8c.png', ObjectId('650ced5f8cc7c084845151ca'): '8aa732fa-4a4d-4ef2-899a-64a0cefb0253.png', ObjectId('65c32586737c80a701a07137'): 'f20b2aae-a3af-47b5-993b-32cfb4276d93.pdf', ObjectId('65c325db737c80a701a071f1'): '0da242ac-2354-4e3a-891e-70492a965ad3.pdf', ObjectId('65c327ab737c80a701a07d9e'): 'b435b2c1-7f04-4d20-8be4-e68c23b25bb3.jpg', ObjectId('65c327f1737c80a701a07ecd'): 'c8fb7cfb-df1c-4250-aeb5-fcef968382cd.pdf', ObjectId('6613b54396502d7ddfc54c56'): '4499d8cf-bc05-41a6-81d3-9a59e87acae2.png', ObjectId('6613b90b96502d7ddfc551cf'): 'bd740475-9431-4f8c-885c-4898c68bb57d.png', ObjectId('661f776cb943877bd5a8e517'): 'd084e91a-3cb3-4baa-9f47-fb22ec2e4031.png'}
