@@ -1,0 +1,112 @@
+2024-05-24 10:45:47.512610 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 10:46:03.459210 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 10:46:03.474416 root [INFO] 生成 Source
+2024-05-24 10:46:03.476295 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664fff6b9c159e1298e77301, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664fff6b9c159e1298e77301"}, "remainingTimeMS": 29}
+2024-05-24 10:46:23.783514 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 10:46:23.803234 root [INFO] 生成 Source
+2024-05-24 10:46:23.805445 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664fff7fc4ec390d8ddd92dd, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664fff7fc4ec390d8ddd92dd"}, "remainingTimeMS": 29}
+2024-05-24 10:46:33.353706 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 10:46:33.367146 root [INFO] 生成 Source
+2024-05-24 10:46:33.368945 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664fff890d51a4c1e5c0ef4e, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664fff890d51a4c1e5c0ef4e"}, "remainingTimeMS": 29}
+2024-05-24 10:47:05.525452 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 10:47:05.539077 root [INFO] 生成 Source
+2024-05-24 10:47:05.540708 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 664fffa940ae5937e066c876, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "664fffa940ae5937e066c876"}, "remainingTimeMS": 29}
+2024-05-24 11:04:46.047555 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:05:43.748915 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:05:43.774081 root [INFO] 生成 Source
+2024-05-24 11:05:43.776611 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500407c84e8ae0859b26f8, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500407c84e8ae0859b26f8"}, "remainingTimeMS": 29}
+2024-05-24 11:06:37.175086 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:06:37.190635 root [INFO] 生成 Source
+2024-05-24 11:06:37.193449 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6650043dcc617206570b2202, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6650043dcc617206570b2202"}, "remainingTimeMS": 29}
+2024-05-24 11:23:09.305288 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:23:09.320321 root [INFO] 生成 Source
+2024-05-24 11:23:09.322086 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6650081d2aaf24674295b24c, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6650081d2aaf24674295b24c"}, "remainingTimeMS": 29}
+2024-05-24 11:24:01.147722 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:24:01.162944 root [INFO] 生成 Source
+2024-05-24 11:24:01.164798 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 665008514fbfe9b37f24eddd, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "665008514fbfe9b37f24eddd"}, "remainingTimeMS": 29}
+2024-05-24 11:24:43.494757 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:24:48.304975 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:24:48.326905 root [INFO] 生成 Source
+2024-05-24 11:24:48.328678 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 665008806cc363a85f5a2292, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "665008806cc363a85f5a2292"}, "remainingTimeMS": 29}
+2024-05-24 11:25:04.106709 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:25:04.120391 root [INFO] 生成 Source
+2024-05-24 11:25:04.122022 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500890e62a5c4e1f21150d, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500890e62a5c4e1f21150d"}, "remainingTimeMS": 29}
+2024-05-24 11:25:23.112964 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:25:23.126808 root [INFO] 生成 Source
+2024-05-24 11:25:23.128520 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 665008a34518a7cac4324599, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "665008a34518a7cac4324599"}, "remainingTimeMS": 29}
+2024-05-24 11:25:43.839406 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:25:43.854644 root [INFO] 生成 Source
+2024-05-24 11:25:43.856712 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 665008b7e6179ba08e44e3e8, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "665008b7e6179ba08e44e3e8"}, "remainingTimeMS": 29}
+2024-05-24 11:31:05.022196 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:31:05.039160 root [INFO] 生成 Source
+2024-05-24 11:31:05.041288 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 665009f96c71e8181962427b, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "665009f96c71e8181962427b"}, "remainingTimeMS": 29}
+2024-05-24 11:31:05.928102 root [INFO] 生成 Table
+2024-05-24 11:34:55.002237 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:34:55.015400 root [INFO] 生成 Source
+2024-05-24 11:34:55.017005 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500adeba1d29e022c9bd78, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500adeba1d29e022c9bd78"}, "remainingTimeMS": 29}
+2024-05-24 11:34:55.912362 root [INFO] 生成 Table
+2024-05-24 11:35:23.746244 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:35:23.762304 root [INFO] 生成 Source
+2024-05-24 11:35:23.763994 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500afb7b33e4c40ebc14de, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500afb7b33e4c40ebc14de"}, "remainingTimeMS": 29}
+2024-05-24 11:35:36.528344 root [INFO] 生成 Table
+2024-05-24 11:36:32.450820 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:36:32.465721 root [INFO] 生成 Source
+2024-05-24 11:36:32.468464 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500b40b8d1977f2a57a6ee, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500b40b8d1977f2a57a6ee"}, "remainingTimeMS": 29}
+2024-05-24 11:36:33.365826 root [INFO] 生成 Table
+2024-05-24 11:36:33.446370 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 11:36:33.446815 root [INFO] Time used: 1 sec.
+2024-05-24 11:37:57.959097 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:37:57.972420 root [INFO] 生成 Source
+2024-05-24 11:37:57.974039 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500b95bbb91c2efd4091f7, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500b95bbb91c2efd4091f7"}, "remainingTimeMS": 29}
+2024-05-24 11:37:58.827911 root [INFO] 生成 Table
+2024-05-24 11:37:58.913956 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 11:37:58.914513 root [INFO] Time used: 1 sec.
+2024-05-24 11:40:33.474090 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:40:33.489368 root [INFO] 生成 Source
+2024-05-24 11:40:33.491122 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500c3136f6325f158cf827, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500c3136f6325f158cf827"}, "remainingTimeMS": 29}
+2024-05-24 11:40:40.836027 root [INFO] 生成 Table
+2024-05-24 11:40:40.928559 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 11:40:40.929708 root [INFO] Time used: 7 sec.
+2024-05-24 11:41:13.430733 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:41:13.455911 root [INFO] 生成 Source
+2024-05-24 11:41:13.459034 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500c5988a19a237b2118db, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500c5988a19a237b2118db"}, "remainingTimeMS": 29}
+2024-05-24 11:41:15.001322 root [INFO] 生成 Table
+2024-05-24 11:41:15.086919 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 11:41:15.087503 root [INFO] Time used: 2 sec.
+2024-05-24 11:42:00.609362 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:42:00.622856 root [INFO] 生成 Source
+2024-05-24 11:42:00.624894 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500c8881d01bf09d523b41, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500c8881d01bf09d523b41"}, "remainingTimeMS": 29}
+2024-05-24 11:42:01.589624 root [INFO] 生成 Table
+2024-05-24 11:42:01.672284 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 11:42:01.673072 root [INFO] Time used: 1 sec.
+2024-05-24 11:44:47.044812 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:44:47.058628 root [INFO] 生成 Source
+2024-05-24 11:44:47.061165 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500d2fceb0c0b5c9ace8b3, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500d2fceb0c0b5c9ace8b3"}, "remainingTimeMS": 29}
+2024-05-24 11:44:48.001572 root [INFO] 生成 Table
+2024-05-24 11:44:48.081707 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 11:44:48.082114 root [INFO] Time used: 1 sec.
+2024-05-24 11:45:52.295911 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:45:52.311634 root [INFO] 生成 Source
+2024-05-24 11:45:52.314021 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 66500d70e3f35fec621e2fea, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500d70e3f35fec621e2fea"}, "remainingTimeMS": 29}
+2024-05-24 11:45:53.144731 root [INFO] 生成 Table
+2024-05-24 11:45:53.237434 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 11:45:53.237892 root [INFO] Time used: 1 sec.
+2024-05-24 11:56:28.226788 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 11:56:28.241158 root [INFO] 生成 Source
+2024-05-24 11:56:28.244433 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "distinct", "topologyDescription": "<TopologyDescription id: 66500fec0a61868e6ff89e7f, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66500fec0a61868e6ff89e7f"}, "remainingTimeMS": 29}
+2024-05-24 13:07:32.528191 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 13:07:32.545760 root [INFO] 生成 Source
+2024-05-24 13:07:32.549184 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "distinct", "topologyDescription": "<TopologyDescription id: 66502094dcb487c061824cdc, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "66502094dcb487c061824cdc"}, "remainingTimeMS": 29}
+2024-05-24 13:07:55.287984 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 13:07:55.302491 root [INFO] 生成 Source
+2024-05-24 13:07:55.305496 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "distinct", "topologyDescription": "<TopologyDescription id: 665020abb1d2370e53dea202, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "665020abb1d2370e53dea202"}, "remainingTimeMS": 29}
+2024-05-24 13:08:50.543642 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 13:08:50.559564 root [INFO] 生成 Source
+2024-05-24 13:08:50.562682 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "distinct", "topologyDescription": "<TopologyDescription id: 665020e25bf7272bade0a282, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "665020e25bf7272bade0a282"}, "remainingTimeMS": 29}
+2024-05-24 13:08:50.944591 root [INFO] 生成 Table
+2024-05-24 13:10:50.018514 connection.mongo_connection [INFO] Connected to MongoDB
+2024-05-24 13:10:50.033074 root [INFO] 生成 Source
+2024-05-24 13:10:50.036018 pymongo.serverSelection [INFO] {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "distinct", "topologyDescription": "<TopologyDescription id: 6650215a0813c4ebbc68754c, topology_type: Unknown, servers: [<ServerDescription ('20.212.250.116', 27018) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6650215a0813c4ebbc68754c"}, "remainingTimeMS": 29}
+2024-05-24 13:10:50.393505 root [INFO] 生成 Table
+2024-05-24 13:10:50.463340 connection.mongo_connection [INFO] Closed MongoDB connection
+2024-05-24 13:10:50.463872 root [INFO] Time used: 0 sec.

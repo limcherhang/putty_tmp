@@ -916,9 +916,13 @@ if __name__ == "__main__":
         filecollectors = db.filecollectors.find({"company": ObjectId(companyId)})
         for filecollector in filecollectors:
             filePath = filecollector["filePath"]
+            category = filecollector["category"]
+
             if filePath:
                 catch_file = file_catch_path + filePath
-                file4supportData[filecollector["_id"]] = catch_file
+                if category not in file4supportData:
+                    file4supportData[category] = {}
+                file4supportData[category][filecollector["_id"]] = catch_file
         
         # 取得公司各個排放活動的資訊以及數據等等
         asset_datas = db.assetdatas.find({"company": ObjectId(companyId), "consumption_data.year": inventory_year}, {"_id": 0, "consumption_data.$": 1, "emission_data": 1})
@@ -1211,7 +1215,7 @@ if __name__ == "__main__":
                                 if current_index not in file_info and linkedFileId is not None:
                                     file_info[current_index] = {}
                                 if linkedFileId:
-                                    _file = file4supportData.get(linkedFileId)
+                                    _file = file4supportData[category].get(linkedFileId)
                                     if _file is None:
                                         continue
                                     file_info[current_index][file_index] = {
@@ -1398,9 +1402,13 @@ if __name__ == "__main__":
             sub_filecollectors = db.filecollectors.find({"company": ObjectId(_id)})
             for sub_filecollector in sub_filecollectors:
                 sub_filePath = sub_filecollector["filePath"]
+                sub_category = sub_filecollector["category"]
+        
                 if sub_filePath:
                     sub_catch_file = file_catch_path + sub_filePath
-                    sub_file4supportData[sub_filecollector["_id"]] = sub_catch_file
+                    if sub_category not in sub_file4supportData:
+                        sub_file4supportData[sub_category] = {}
+                    sub_file4supportData[sub_category][sub_filecollector["_id"]] = sub_catch_file
 
             sub_asset_info = {}
 
@@ -1679,7 +1687,7 @@ if __name__ == "__main__":
                                     if current_index not in file_info and sub_linkedFileId is not None:
                                         file_info[current_index] = {}
                                     if sub_linkedFileId:
-                                        sub_file = sub_file4supportData.get(sub_linkedFileId)
+                                        sub_file = sub_file4supportData[sub_category].get(sub_linkedFileId)
                                         if sub_file is None:
                                             continue
                                         file_info[current_index][file_index] = {
